@@ -13,7 +13,7 @@ const config: Configuration = {
     main: ["webpack-hot-middleware/client", "./client"],
   },
   output: {
-    path: path.join(__dirname, "..", "..", "docs", "bundle"),
+    path: path.join(__dirname, "..", "..", "dist", "bundle"),
     filename: "[name].js",
     sourceMapFilename: "[file].map",
     chunkFilename: "[id].js",
