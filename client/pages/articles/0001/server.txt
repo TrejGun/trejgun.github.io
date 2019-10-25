@@ -1,0 +1,29 @@
+import {Server, CustomTransportStrategy, MessageHandler} from "@nestjs/microservices";
+import {Ticker} from "./ticker";
+
+
+export class TickerServer extends Server implements CustomTransportStrategy {
+  private ticker: Ticker;
+
+  public listen(callback: () => void): void {
+    this.ticker = new Ticker();
+    this.ticker.start();
+    this.ticker.on("data", (e: number) => {
+      this.listener(e);
+    });
+    callback();
+  }
+
+  public async listener(e: number): Promise<void> {
+    const handler: MessageHandler | undefined = this.messageHandlers.get("TICK");
+    if (!handler) {
+      return;
+    }
+    const result = await handler(e);
+    console.log(result);
+  }
+
+  public close(): void {
+    this.ticker.stop();
+  }
+}

@@ -1,148 +1,16 @@
 {
-  "extends": [
-    "standard",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:import/errors",
-    "plugin:import/typescript",
-    "plugin:import/warnings",
-    "plugin:react/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 9,
-    "project": "./tsconfig.json",
-    "sourceType": "module"
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "import",
-    "standard",
-    "react"
-  ],
   "root": true,
-  "rules": {
-    "@typescript-eslint/ban-ts-ignore": "off",
-    "@typescript-eslint/interface-name-prefix": [
-      2,
-      {
-        "prefixWithI": "always"
-      }
-    ],
-    "@typescript-eslint/no-empty-interface": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-namespace": [
-      2,
-      {
-        "allowDeclarations": true
-      }
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "args": "after-used",
-        "argsIgnorePattern": "^_",
-        "vars": "all",
-        "varsIgnorePattern": "^_"
-      }
-    ],
-    "arrow-parens": [
-      "error",
-      "as-needed"
-    ],
-    "comma-dangle": [
-      2,
-      "always-multiline"
-    ],
-    "import/newline-after-import": [
-      "error",
-      {
-        "count": 2
-      }
-    ],
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 120,
-        "ignoreRegExpLiterals": true,
-        "ignoreTemplateLiterals": true
-      }
-    ],
-    "multiline-ternary": [
-      "error",
-      "always-multiline"
-    ],
-    "no-console": [
-      "error"
-    ],
-    "no-multiple-empty-lines": [
-      "error",
-      {
-        "max": 2,
-        "maxEOF": 1
-      }
-    ],
-    "no-unused-vars": [
-      "error"
-    ],
-    "no-void": "off",
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
-    "operator-linebreak": [
-      "error",
-      "before"
-    ],
-    "quotes": [
-      "error",
-      "double"
-    ],
-    "react/display-name": [
-      0
-    ],
-    "react/jsx-closing-bracket-location": [
-      1,
-      "line-aligned"
-    ],
-    "react/jsx-tag-spacing": [
-      "error",
-      {
-        "afterOpening": "never",
-        "beforeClosing": "allow",
-        "beforeSelfClosing": "always",
-        "closingSlash": "never"
-      }
-    ],
-    "react/jsx-wrap-multilines": "error",
-    "react/prop-types": "off",
-    "semi": [
-      "error",
-      "always"
-    ]
+  "parserOptions": {
+    "project": "./tsconfig.json"
   },
+  "extends": [
+    "@trejgun/eslint-config/presets/tsx"
+  ],
   "settings": {
     "import/resolver": {
-      "ts": {
-        "alwaysTryTypes": true
+      "node": {
+        "extensions": [".js", ".jsx", ".txt"]
       }
-    },
-    "react": {
-      "pragma": "React",
-      "version": "16.9.0"
     }
   }
 }

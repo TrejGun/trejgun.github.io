@@ -17,7 +17,7 @@ const config: Configuration = {
     filename: "[name].js",
     sourceMapFilename: "[file].map",
     chunkFilename: "[id].js",
-    publicPath: "/bundle/",
+    publicPath: "/dist/bundle/",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
@@ -64,7 +64,11 @@ const config: Configuration = {
         ],
       },
       {
-        test: /\.(ts|js)x?$/,
+        test: /\.txt$/i,
+        use: "raw-loader",
+      },
+      {
+        test: /\.[tj]sx?$/,
         exclude: [/node_modules/],
         use: [
           {

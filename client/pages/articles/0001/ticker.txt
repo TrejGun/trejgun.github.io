@@ -1,0 +1,18 @@
+import {EventEmitter} from "events";
+
+
+export class Ticker extends EventEmitter {
+  private intervalId: NodeJS.Timeout | null = null;
+
+  start(): void {
+    this.intervalId = setInterval(() => {
+      this.emit("data", Date.now());
+    }, 1000);
+  }
+
+  stop(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+  }
+}

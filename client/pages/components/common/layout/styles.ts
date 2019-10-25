@@ -11,7 +11,7 @@ export default makeStyles(
       position: "relative",
     },
     container: theme.mixins.gutters({
-      paddingTop: theme.spacing(8), // equals to AppBar height
+      paddingTop: theme.spacing(10), // equals to AppBar height
     }),
   }),
   {name: "Layout"},

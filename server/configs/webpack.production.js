@@ -18,7 +18,7 @@ module.exports = {
     // filename: "[name].js",
     // sourceMapFilename: "[file].map",
     // chunkFilename: "[id].js",
-    publicPath: "/bundle/",
+    publicPath: "/dist/bundle/",
   },
   externals: {
     react: "React",
@@ -42,6 +42,10 @@ module.exports = {
             loader: "file-loader?name=[name].[ext]?[hash]",
           },
         ],
+      },
+      {
+        test: /\.txt$/i,
+        use: "raw-loader",
       },
       {
         test: /\.(ts|js)x?$/,
