@@ -15,6 +15,7 @@
     "@babel/preset-typescript": "7.6.0",
     "@hot-loader/react-dom": "16.10.2",
     "@material-ui/core": "4.5.1",
+    "@trejgun/eslint-config": "0.0.1",
     "@types/dotenv": "6.1.1",
     "@types/dotenv-webpack": "1.7.0",
     "@types/mini-css-extract-plugin": "0.8.0",
@@ -24,11 +25,13 @@
     "@types/react-dom": "16.9.3",
     "@types/react-router": "5.1.2",
     "@types/react-router-dom": "5.1.0",
+    "@types/react-syntax-highlighter": "11.0.1",
     "@types/webpack-dev-middleware": "2.0.3",
     "@types/webpack-hot-middleware": "2.16.5",
     "@typescript-eslint/eslint-plugin": "2.5.0",
     "@typescript-eslint/parser": "2.5.0",
     "babel-loader": "8.0.6",
+    "babel-watch": "7.0.0",
     "dotenv": "8.2.0",
     "dotenv-webpack": "1.7.0",
     "eslint": "6.6.0",
@@ -46,11 +49,13 @@
     "morgan": "1.9.1",
     "prettier": "1.18.2",
     "progress-bar-webpack-plugin": "1.12.1",
+    "raw-loader": "3.1.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-hot-loader": "4.12.15",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
+    "react-syntax-highlighter": "11.0.2",
     "size-plugin": "2.0.1",
     "typescript": "3.6.4",
     "webpack": "4.41.2",
@@ -58,12 +63,12 @@
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0"
   },
+  "description": "personal blog",
   "engines": {
     "node": ">=8"
   },
-  "description": "personal blog",
-  "main": "./server/index.ts",
   "license": "UNLICENSED",
+  "main": "./server/index.ts",
   "name": "trejgun.github.io",
   "repository": {
     "type": "git",
@@ -71,8 +76,8 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack --config server/configs/webpack.production.js",
-    "lint": "eslint . --fix --ext \".js,jsx,.ts,.tsx\"",
-    "start": "NODE_ENV=${NODE_ENV:=development} babel-node --extensions \".js,jsx,.ts,.tsx\" server/index.ts"
+    "lint": "eslint . --fix --ext \".js,.jsx,.ts,.tsx\"",
+    "start": "NODE_ENV=${NODE_ENV:=development} babel-watch --extensions \".js,.jsx,.ts,.tsx\" server/index.ts"
   },
   "title": "TrejGun`s blog",
   "version": "0.0.1"

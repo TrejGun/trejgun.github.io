@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
   router.use(webpack);
 }
 
-router.use("/*", serveStatic(path.join(__dirname, "../../../index.html")));
+router.use("/", serveStatic(path.join(__dirname, "../../../")));
+router.use("/*", serveStatic(path.join(__dirname, "../../../")));
 
 export default router;

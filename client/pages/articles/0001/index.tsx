@@ -1,6 +1,7 @@
 import * as React from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
+import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
 import ticker from "./ticker.txt";
 import server from "./server.txt";
@@ -10,8 +11,9 @@ import controller from "./controller.txt";
 export const Page0001: React.FC = () => {
   return (
     <div>
+      <MyDate date={"2019-10-25T17:42:20.324Z"} />
       <Typography component="h2" variant="h4">
-        Tutorial: Custom Transport for Nest.js
+        Custom Transport for Nest.js
       </Typography>
 
       <p>

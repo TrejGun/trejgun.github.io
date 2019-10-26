@@ -5,12 +5,5 @@
   },
   "extends": [
     "@trejgun/eslint-config/presets/tsx"
-  ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".txt"]
-      }
-    }
-  }
+  ]
 }

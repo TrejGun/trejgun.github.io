@@ -5,23 +5,6 @@
     ,
     function(e, t, a) {
       "use strict";
-      function n() {
-        return (n =
-          Object.assign ||
-          function(e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var a = arguments[t];
-              for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-            }
-            return e;
-          }).apply(this, arguments);
-      }
-      a.d(t, "a", function() {
-        return n;
-      });
-    },
-    function(e, t, a) {
-      "use strict";
       var n = a(6),
         r = a(0),
         i = a.n(r),
@@ -134,7 +117,7 @@
             return (l.contextTypes = (((n = {})[i] = o.a.object), n)), {Provider: s, Consumer: l};
           },
         E = a(4),
-        S = a(2),
+        S = a(3),
         g = a(13),
         T = a.n(g),
         b = (a(14), a(7));
@@ -281,7 +264,7 @@
           l = a.sensitive,
           _ = void 0 !== l && l;
         return [].concat(n).reduce(function(t, a) {
-          if (!a) return null;
+          if (!a && "" !== a) return null;
           if (t) return t;
           var n = (function(e, t) {
               var a = "" + t.end + t.strict + t.sensitive,
@@ -402,6 +385,23 @@
     },
     function(e, t, a) {
       "use strict";
+      function n() {
+        return (n =
+          Object.assign ||
+          function(e) {
+            for (var t = 1; t < arguments.length; t++) {
+              var a = arguments[t];
+              for (var n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+            }
+            return e;
+          }).apply(this, arguments);
+      }
+      a.d(t, "a", function() {
+        return n;
+      });
+    },
+    function(e, t, a) {
+      "use strict";
       var n = !0,
         r = "Invariant failed";
       t.a = function(e, t) {
@@ -410,7 +410,7 @@
     },
     function(e, t, a) {
       "use strict";
-      var n = a(2);
+      var n = a(3);
       function r(e) {
         return "/" === e.charAt(0);
       }
@@ -1034,14 +1034,14 @@
         return d;
       }),
         a.d(t, "b", function() {
-          return S;
+          return g;
         });
-      var n = a(3),
+      var n = a(2),
         r = a(6),
         i = a(0),
         s = a.n(i),
         o = a(5),
-        l = (a(8), a(2)),
+        l = (a(8), a(3)),
         _ = a(7),
         c = a(4),
         d = (function(e) {
@@ -1064,21 +1064,18 @@
         u = function(e, t) {
           return "string" == typeof e ? Object(o.c)(e, null, null, t) : e;
         },
-        m = s.a.forwardRef;
-      void 0 === m &&
-        (m = function(e) {
+        m = function(e) {
           return e;
-        });
-      var E = m(function(e, t) {
+        },
+        E = s.a.forwardRef;
+      void 0 === E && (E = m);
+      var S = E(function(e, t) {
         var a = e.innerRef,
           n = e.navigate,
           r = e.onClick,
           i = Object(_.a)(e, ["innerRef", "navigate", "onClick"]),
-          o = i.target;
-        return s.a.createElement(
-          "a",
-          Object(l.a)({}, i, {
-            ref: t || a,
+          o = i.target,
+          c = Object(l.a)({}, i, {
             onClick: function(e) {
               try {
                 r && r(e);
@@ -1093,40 +1090,37 @@
                 })(e) ||
                 (e.preventDefault(), n());
             },
-          }),
-        );
+          });
+        return (c.ref = (m !== E && t) || a), s.a.createElement("a", c);
       });
-      var S = m(function(e, t) {
+      var g = E(function(e, t) {
           var a = e.component,
-            r = void 0 === a ? E : a,
+            r = void 0 === a ? S : a,
             i = e.replace,
             o = e.to,
             d = e.innerRef,
-            m = Object(_.a)(e, ["component", "replace", "to", "innerRef"]);
+            g = Object(_.a)(e, ["component", "replace", "to", "innerRef"]);
           return s.a.createElement(n.e.Consumer, null, function(e) {
             e || Object(c.a)(!1);
             var a = e.history,
               n = u(p(o, e.location), e.location),
-              _ = n ? a.createHref(n) : "";
-            return s.a.createElement(
-              r,
-              Object(l.a)({}, m, {
-                ref: t || d,
+              _ = n ? a.createHref(n) : "",
+              S = Object(l.a)({}, g, {
                 href: _,
                 navigate: function() {
                   var t = p(o, e.location);
                   (i ? a.replace : a.push)(t);
                 },
-              }),
-            );
+              });
+            return m !== E ? (S.ref = t || d) : (S.innerRef = d), s.a.createElement(r, S);
           });
         }),
-        g = s.a.forwardRef;
-      void 0 === g &&
-        (g = function(e) {
+        T = function(e) {
           return e;
-        });
-      g(function(e, t) {
+        },
+        b = s.a.forwardRef;
+      void 0 === b && (b = T);
+      b(function(e, t) {
         var a = e["aria-current"],
           r = void 0 === a ? "page" : a,
           i = e.activeClassName,
@@ -1134,13 +1128,13 @@
           d = e.activeStyle,
           m = e.className,
           E = e.exact,
-          g = e.isActive,
-          T = e.location,
-          b = e.strict,
-          f = e.style,
-          C = e.to,
-          O = e.innerRef,
-          N = Object(_.a)(e, [
+          S = e.isActive,
+          f = e.location,
+          C = e.strict,
+          O = e.style,
+          N = e.to,
+          R = e.innerRef,
+          v = Object(_.a)(e, [
             "aria-current",
             "activeClassName",
             "activeStyle",
@@ -1155,13 +1149,13 @@
           ]);
         return s.a.createElement(n.e.Consumer, null, function(e) {
           e || Object(c.a)(!1);
-          var a = T || e.location,
-            i = u(p(C, a), a),
+          var a = f || e.location,
+            i = u(p(N, a), a),
             _ = i.pathname,
-            R = _ && _.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-            v = R ? Object(n.f)(a.pathname, {path: R, exact: E, strict: b}) : null,
-            I = !!(g ? g(v, a) : v),
-            h = I
+            I = _ && _.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            h = I ? Object(n.f)(a.pathname, {path: I, exact: E, strict: C}) : null,
+            A = !!(S ? S(h, a) : h),
+            y = A
               ? (function() {
                   for (var e = arguments.length, t = new Array(e), a = 0; a < e; a++) t[a] = arguments[a];
                   return t
@@ -1171,11 +1165,9 @@
                     .join(" ");
                 })(m, o)
               : m,
-            A = I ? Object(l.a)({}, f, {}, d) : f;
-          return s.a.createElement(
-            S,
-            Object(l.a)({ref: t || O, "aria-current": (I && r) || null, className: h, style: A, to: i}, N),
-          );
+            D = A ? Object(l.a)({}, O, {}, d) : O,
+            M = Object(l.a)({"aria-current": (A && r) || null, className: y, style: D, to: i}, v);
+          return T !== b ? (M.ref = t || R) : (M.innerRef = R), s.a.createElement(g, M);
         });
       });
     },
