@@ -1,16 +1,16 @@
 !(function(e) {
   function t(t) {
-    for (var r, l, i = t[0], s = t[1], c = t[2], m = 0, p = []; m < i.length; m++)
-      (l = i[m]), Object.prototype.hasOwnProperty.call(o, l) && o[l] && p.push(o[l][0]), (o[l] = 0);
-    for (r in s) Object.prototype.hasOwnProperty.call(s, r) && (e[r] = s[r]);
+    for (var r, l, s = t[0], i = t[1], c = t[2], m = 0, p = []; m < s.length; m++)
+      (l = s[m]), Object.prototype.hasOwnProperty.call(o, l) && o[l] && p.push(o[l][0]), (o[l] = 0);
+    for (r in i) Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
     for (u && u(t); p.length; ) p.shift()();
     return a.push.apply(a, c || []), n();
   }
   function n() {
     for (var e, t = 0; t < a.length; t++) {
-      for (var n = a[t], r = !0, i = 1; i < n.length; i++) {
-        var s = n[i];
-        0 !== o[s] && (r = !1);
+      for (var n = a[t], r = !0, s = 1; s < n.length; s++) {
+        var i = n[s];
+        0 !== o[i] && (r = !1);
       }
       r && (a.splice(t--, 1), (e = l((l.s = n[0]))));
     }
@@ -65,11 +65,11 @@
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
     (l.p = "/dist/bundle/");
-  var i = (window.webpackJsonp = window.webpackJsonp || []),
-    s = i.push.bind(i);
-  (i.push = t), (i = i.slice());
-  for (var c = 0; c < i.length; c++) t(i[c]);
-  var u = s;
+  var s = (window.webpackJsonp = window.webpackJsonp || []),
+    i = s.push.bind(s);
+  (s.push = t), (s = s.slice());
+  for (var c = 0; c < s.length; c++) t(s[c]);
+  var u = i;
   a.push([22, 1]), n();
 })({
   0: function(e, t) {
@@ -88,9 +88,9 @@
       o = n(20),
       a = n(2),
       l = n(1),
-      i = n(9);
-    function s() {
-      return (s =
+      s = n(9);
+    function i() {
+      return (i =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -123,7 +123,7 @@
     var u = r.forwardRef(function(e, t) {
         var n = e.to,
           o = c(e, ["to"]);
-        return r.createElement(i.b, s({innerRef: t, to: n}, o));
+        return r.createElement(s.b, i({innerRef: t, to: n}, o));
       }),
       m = Object(l.makeStyles)(
         function(e) {
@@ -160,7 +160,7 @@
           ),
         );
       },
-      d = Object(l.makeStyles)(
+      h = Object(l.makeStyles)(
         function(e) {
           return {
             root: {overflowY: "auto", overflowX: "hidden", display: "flex", minHeight: "100vh", position: "relative"},
@@ -169,9 +169,9 @@
         },
         {name: "Layout"},
       ),
-      h = function(e) {
+      d = function(e) {
         var t = e.children,
-          n = d();
+          n = h();
         return r.createElement(
           "div",
           {className: n.root},
@@ -190,6 +190,15 @@
             r.createElement(
               "li",
               null,
+              r.createElement(
+                l.Link,
+                {component: u, to: "/articles/ethereum-server-for-nestjs"},
+                "Ethereum Server for Nest.js",
+              ),
+            ),
+            r.createElement(
+              "li",
+              null,
               r.createElement(l.Link, {component: u, to: "/articles/nestjs-authorization"}, "Authorization in Nest.js"),
             ),
             r.createElement(
@@ -197,15 +206,15 @@
               null,
               r.createElement(
                 l.Link,
-                {component: u, to: "/articles/tutorial-custom-transport-for-nestjs"},
+                {component: u, to: "/articles/custom-transport-for-nestjs"},
                 "Custom Transport for Nest.js",
               ),
             ),
           ),
         );
       };
-    function g() {
-      return (g =
+    function b() {
+      return (b =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -216,10 +225,10 @@
         }).apply(this, arguments);
     }
     var v = r.forwardRef(function(e, t) {
-        var n = g({}, e);
-        return r.createElement(l.Link, g({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
+        var n = b({}, e);
+        return r.createElement(l.Link, b({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
       }),
-      b = Object(l.makeStyles)(
+      g = Object(l.makeStyles)(
         function() {
           return {date: {float: "right", color: "#c0c0c0"}};
         },
@@ -227,13 +236,13 @@
       ),
       y = function(e) {
         var t = e.date,
-          n = b();
+          n = g();
         return r.createElement("div", {className: n.date}, new Date(t).toISOString().split("T")[0]);
       },
       E = n(223),
-      w = n(222);
-    function j() {
-      return (j =
+      k = n(222);
+    function w() {
+      return (w =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -243,7 +252,7 @@
           return e;
         }).apply(this, arguments);
     }
-    function k(e, t) {
+    function j(e, t) {
       if (null == e) return {};
       var n,
         r,
@@ -266,10 +275,10 @@
     var O,
       T = function(e) {
         var t = e.children,
-          n = k(e, ["children"]);
-        return r.createElement(E.a, j({style: w.a}, n), t);
+          n = j(e, ["children"]);
+        return r.createElement(E.a, w({style: k.a}, n), t);
       },
-      x = function() {
+      S = function() {
         return r.createElement(
           "div",
           null,
@@ -344,12 +353,12 @@
           r.createElement("p", null, "This is all for today, good luck with your code!"),
         );
       },
-      I = function() {
+      x = function() {
         return r.createElement(
           "div",
           null,
           r.createElement(y, {date: "2019-10-26T14:08:19.626Z"}),
-          r.createElement(l.Typography, {component: "h2", variant: "h4"}, "Authorization in Nest.js"),
+          r.createElement(l.Typography, {component: "h2", variant: "h4"}, "Session based authorization for Nest.js"),
           r.createElement(
             "p",
             null,
@@ -373,8 +382,7 @@
           r.createElement(
             "p",
             null,
-            "But unfortunately there were no good docs covering this part of framework. I mean there are, couple of pages in official documentation",
-            " ",
+            "But unfortunately there were no good docs covering this part of framework. I mean there are, couple of pages in official documentation ",
             r.createElement(v, {href: "https://docs.nestjs.com/guards"}, "Guards"),
             ",",
             " ",
@@ -394,49 +402,92 @@
             "p",
             null,
             "This example is a fully functional",
+            " ",
             r.createElement(v, {href: "https://github.com/TrejGun/nestjs-authorization"}, "boilerplate"),
+            " ",
             "with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I also tried to make it simple, so you you have adjust it for your own needs",
           ),
-        );
-      },
-      S = function() {
-        return r.createElement(
-          a.d,
-          null,
-          r.createElement(a.b, {component: x, path: "/articles/tutorial-custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/nestjs-authorization", exact: !0}),
-          r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
       P = function() {
         return r.createElement(
           "div",
           null,
+          r.createElement(y, {date: "2019-10-27T10:11:34.152Z"}),
+          r.createElement(l.Typography, {component: "h2", variant: "h4"}, "Ethereum Server for Nest.js"),
+          r.createElement(
+            "p",
+            null,
+            "This is the second article about custom transports for Nest.js, you can find first one",
+            " ",
+            r.createElement(l.Link, {component: u, to: "/articles/custom-transport-for-nestjs"}, "here"),
+          ),
+          r.createElement(
+            "p",
+            null,
+            "Nets.js microservice can subscribe to events from any source, why not use a blockchain. In this example I will use Ethereum, but all other blockchains integration can be done easily using this pattern.",
+          ),
+          r.createElement(
+            "p",
+            null,
+            "Basic building block of any blockchain is a Block (deduction, man!) that is what server will listen to",
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {EMPTY, Observable} from "rxjs";\nimport {CustomTransportStrategy, MessageHandler, Server} from "@nestjs/microservices";\nimport Web3 from "web3";\nimport {Block, BlockHeader} from "web3/eth/types";\n\n\nexport class EthereumServer extends Server implements CustomTransportStrategy {\n  private subscription: any;\n\n  public listen(callback: () => void): void {\n    this.listenToBlocks();\n    callback();\n  }\n\n  private listenToBlocks(): void {\n    const web3: Web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.SOCKET_ADDRESS));\n    this.subscription = web3.eth.subscribe("newBlockHeaders", (error: Error, blockHeader: BlockHeader) => {\n      if (error) {\n        console.error(error);\n        return;\n      }\n\n      web3.eth.getBlock(blockHeader.number).then(async (block: Block) => {\n        return this.call("BLOCK", block).then(observable => {\n          observable.subscribe(console.log);\n        });\n      });\n    });\n  }\n\n  private call(pattern: string, data: Block): Promise<Observable<any>> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get(pattern);\n\n    if (!handler) {\n      return Promise.resolve(EMPTY);\n    }\n\n    return handler(data);\n  }\n\n  public close(): void {\n    this.subscription.unsubscribe();\n  }\n}\n',
+          ),
+          r.createElement(
+            "p",
+            null,
+            "Block has a list of transaction`s ids. This mean in the real life you probably want to get full information about those transactions and process it somehow, but in this example controller just returns a list of transactions back. There is no actual need to return information about processed transactions because fully processed Block is not going to be removed from blockchain, but it is useful for logging",
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
+          ),
+        );
+      },
+      I = function() {
+        return r.createElement(
+          a.d,
+          null,
+          r.createElement(a.b, {component: S, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: x, path: "/articles/nestjs-authorization", exact: !0}),
+          r.createElement(a.b, {component: P, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.a, {to: "/page-not-found"}),
+        );
+      },
+      C = function() {
+        return r.createElement(
+          "div",
+          null,
           r.createElement(l.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      C = Object(o.hot)(function() {
+      B = Object(o.hot)(function() {
         return r.createElement(
-          h,
+          d,
           null,
           r.createElement(
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: S}),
-            r.createElement(a.b, {path: "/page-not-found", component: P}),
+            r.createElement(a.b, {path: "/articles", component: I}),
+            r.createElement(a.b, {path: "/page-not-found", component: C}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      N = n(21);
-    (O = C),
-      N.hydrate(
+      M = n(21);
+    (O = B),
+      M.hydrate(
         r.createElement(
           l.MuiThemeProvider,
           {theme: Object(l.createMuiTheme)({typography: {fontSize: 16}})},
           r.createElement(l.CssBaseline, null),
-          r.createElement(i.a, null, r.createElement(O, null)),
+          r.createElement(s.a, null, r.createElement(O, null)),
         ),
         document.getElementById("app"),
       );

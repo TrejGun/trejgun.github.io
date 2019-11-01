@@ -12,12 +12,17 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/ethereum-server-for-nestjs">
+            Ethereum Server for Nest.js
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/nestjs-authorization">
             Authorization in Nest.js
           </Link>
         </li>
         <li>
-          <Link component={LinkAdapter} to="/articles/tutorial-custom-transport-for-nestjs">
+          <Link component={LinkAdapter} to="/articles/custom-transport-for-nestjs">
             Custom Transport for Nest.js
           </Link>
         </li>

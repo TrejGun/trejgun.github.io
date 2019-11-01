@@ -9,7 +9,7 @@ export const Page0002: React.FC = () => {
     <div>
       <MyDate date={"2019-10-26T14:08:19.626Z"} />
       <Typography component="h2" variant="h4">
-        Authorization in Nest.js
+        Session based authorization for Nest.js
       </Typography>
 
       <p>
@@ -47,10 +47,10 @@ export const Page0002: React.FC = () => {
       </Typography>
 
       <p>
-        This example is a fully functional
-        <ExternalLink href="https://github.com/TrejGun/nestjs-authorization">boilerplate</ExternalLink>
-        with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I also
-        tried to make it simple, so you you have adjust it for your own needs
+        This example is a fully functional{" "}
+        <ExternalLink href="https://github.com/TrejGun/nestjs-authorization">boilerplate</ExternalLink> with all
+        features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I also tried to
+        make it simple, so you you have adjust it for your own needs
       </p>
     </div>
   );
