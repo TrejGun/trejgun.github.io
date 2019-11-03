@@ -1,6 +1,7 @@
 {
   "extends": ["config:base"],
   "rebaseStalePrs": true,
+  "automergeType": "pr",
   "automerge": true,
   "major": {
     "automerge": false
