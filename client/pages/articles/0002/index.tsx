@@ -15,7 +15,7 @@ export const Page0002: React.FC = () => {
       <p>
         I wrote this code some time ago and then made an example repo out of it because was going to write an article
         and publish it somewhere on medium or habr, but changed my plans and started this blog, where I don`t need to
-        have positive karma or any other kind rating to publish articles.
+        have positive karma or any other kind of rating to publish articles.
       </p>
 
       <Typography component="h3" variant="h5">
@@ -36,10 +36,10 @@ export const Page0002: React.FC = () => {
         official documentation <ExternalLink href="https://docs.nestjs.com/guards">Guards</ExternalLink>,{" "}
         <ExternalLink href="https://docs.nestjs.com/techniques/authentication">Authentication</ExternalLink>;{" "}
         <ExternalLink href="https://dev.to/nestjs/authentication-and-sessions-for-mvc-apps-with-nestjs-55a4">
-          one good article
+          one good article with code samples
         </ExternalLink>{" "}
-        from @johnbiundo about local authorization; several closed issues and a few outdated articles. And all these
-        links does not give you whole picture of how authorizations should be build.
+        from @johnbiundo about local authorization; several closed issues and a few outdated blog posts. All these links
+        did not give me a whole picture of how authorizations should be build.
       </p>
 
       <Typography component="h3" variant="h5">
@@ -48,9 +48,11 @@ export const Page0002: React.FC = () => {
 
       <p>
         This example is a fully functional{" "}
-        <ExternalLink href="https://github.com/TrejGun/nestjs-authorization">boilerplate</ExternalLink> with all
-        features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I also tried to
-        make it simple, so you you have adjust it for your own needs
+        <ExternalLink href="https://github.com/TrejGun/session-based-authorization-for-nestjs">
+          boilerplate
+        </ExternalLink>{" "}
+        with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I
+        tried to make it simple, so you can adjust it for your own needs
       </p>
     </div>
   );

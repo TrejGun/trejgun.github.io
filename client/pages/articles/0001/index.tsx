@@ -17,23 +17,17 @@ export const Page0001: React.FC = () => {
       </Typography>
 
       <p>
-        I really like <ExternalLink href="https://nestjs.com/">Nest.js</ExternalLink>, but the lack of documentation
-        sometimes drives me crazy so I decided to create it myself. Once I already had blog about coding, so I decided
-        to make second attempt, and post here some tutorials and gotchas
-      </p>
-
-      <p>
         Yesterday I tried to implement <em>CustomTransportStrategy</em> for Nest.js and after googling for half an hour
         I realize there are only examples for RabbitMQ like this{" "}
         <ExternalLink href="https://github.com/AlariCode/nestjs-rmq">nestjs-rmq</ExternalLink>, which is already
         included in <em>@nestjs/microservice</em> package. But there were nothing simple where one can see a logic
-        related only to nestjs itself untill now
+        related only to Nest.js itself until now
       </p>
 
       <p>
         For this example I will implement simple <em>EventEmitter</em> using setInterval, which emits timestamp each
-        second, but in real life it could be anything like TCP calls, queue in any kind of SQL/NOSQL database, AWS SQS
-        or Google pub/sub
+        second, but in real life it could be anything like TCP calls, queue in any kind of SQL/NOSQL database, ZeroMQ,
+        AWS SQS or Google pub/sub
       </p>
 
       <Code language="typescript">{ticker}</Code>

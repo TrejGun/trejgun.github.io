@@ -12,18 +12,28 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/jwt-based-authorization-for-nestjs">
+            JWT based authorization for Nest.js
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/ethereum-server-for-nestjs">
             Ethereum Server for Nest.js
           </Link>
         </li>
         <li>
-          <Link component={LinkAdapter} to="/articles/nestjs-authorization">
-            Authorization in Nest.js
+          <Link component={LinkAdapter} to="/articles/session-based-authorization-for-nestjs">
+            Session based authorization for Nest.js
           </Link>
         </li>
         <li>
           <Link component={LinkAdapter} to="/articles/custom-transport-for-nestjs">
             Custom Transport for Nest.js
+          </Link>
+        </li>
+        <li>
+          <Link component={LinkAdapter} to="/articles/introduction">
+            Introduction
           </Link>
         </li>
       </ul>
