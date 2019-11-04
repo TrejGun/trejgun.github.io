@@ -5,7 +5,11 @@ import {createMuiTheme, CssBaseline, MuiThemeProvider} from "@material-ui/core";
 
 
 export default (App: React.FunctionComponent): void => {
-  ReactDOM.hydrate(
+  const rootElement = document.getElementById("app");
+  if (!rootElement) {
+    return;
+  }
+  ReactDOM[rootElement.hasChildNodes() ? "hydrate" : "render"](
     <MuiThemeProvider
       theme={createMuiTheme({
         typography: {
@@ -18,6 +22,6 @@ export default (App: React.FunctionComponent): void => {
         <App />
       </BrowserRouter>
     </MuiThemeProvider>,
-    document.getElementById("app"),
+    rootElement,
   );
 };

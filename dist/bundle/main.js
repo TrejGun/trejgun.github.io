@@ -306,12 +306,13 @@
       return o;
     }
     var O,
-      S = function(e) {
+      S,
+      x = function(e) {
         var t = e.children,
           n = T(e, ["children"]);
         return r.createElement(k.a, j({style: w.a}, n), t);
       },
-      x = function() {
+      I = function() {
         return r.createElement(
           "div",
           null,
@@ -337,7 +338,7 @@
             " using setInterval, which emits timestamp each second, but in real life it could be anything like TCP calls, queue in any kind of SQL/NOSQL database, ZeroMQ, AWS SQS or Google pub/sub",
           ),
           r.createElement(
-            S,
+            x,
             {language: "typescript"},
             'import {EventEmitter} from "events";\n\n\nexport class Ticker extends EventEmitter {\n  private intervalId: NodeJS.Timeout | null = null;\n\n  start(): void {\n    this.intervalId = setInterval(() => {\n      this.emit("data", Date.now());\n    }, 1000);\n  }\n\n  stop(): void {\n    if (this.intervalId) {\n      clearInterval(this.intervalId);\n    }\n  }\n}\n',
           ),
@@ -353,7 +354,7 @@
             ".",
           ),
           r.createElement(
-            S,
+            x,
             {language: "typescript"},
             'import {Server, CustomTransportStrategy, MessageHandler} from "@nestjs/microservices";\nimport {Ticker} from "./ticker";\n\n\nexport class TickerServer extends Server implements CustomTransportStrategy {\n  private ticker: Ticker;\n\n  public listen(callback: () => void): void {\n    this.ticker = new Ticker();\n    this.ticker.start();\n    this.ticker.on("data", (e: number) => {\n      this.listener(e);\n    });\n    callback();\n  }\n\n  public async listener(e: number): Promise<void> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get("TICK");\n    if (!handler) {\n      return;\n    }\n    const result = await handler(e);\n    console.log(result);\n  }\n\n  public close(): void {\n    this.ticker.stop();\n  }\n}\n',
           ),
@@ -372,14 +373,14 @@
             " message, it is dead simple. The value returned from controller can be used to remove message from queue.",
           ),
           r.createElement(
-            S,
+            x,
             {language: "typescript"},
             'import {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\n\n@Controller()\nexport class TickerController {\n  @MessagePattern("TICK")\n  public ticker(data: number): Promise<number> {\n    return Promise.resolve(data);\n  }\n}\n',
           ),
           r.createElement("p", null, "This is all for today, good luck with your code!"),
         );
       },
-      I = function() {
+      P = function() {
         return r.createElement(
           "div",
           null,
@@ -439,7 +440,7 @@
           ),
         );
       },
-      P = function() {
+      C = function() {
         return r.createElement(
           "div",
           null,
@@ -463,7 +464,7 @@
             "Basic building block of any blockchain is a Block (deduction, man!) that is what server will listen to",
           ),
           r.createElement(
-            S,
+            x,
             {language: "typescript"},
             'import {EMPTY, Observable} from "rxjs";\nimport {CustomTransportStrategy, MessageHandler, Server} from "@nestjs/microservices";\nimport Web3 from "web3";\nimport {Block, BlockHeader} from "web3/eth/types";\n\n\nexport class EthereumServer extends Server implements CustomTransportStrategy {\n  private subscription: any;\n\n  public listen(callback: () => void): void {\n    this.listenToBlocks();\n    callback();\n  }\n\n  private listenToBlocks(): void {\n    const web3: Web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.SOCKET_ADDRESS));\n    this.subscription = web3.eth.subscribe("newBlockHeaders", (error: Error, blockHeader: BlockHeader) => {\n      if (error) {\n        console.error(error);\n        return;\n      }\n\n      web3.eth.getBlock(blockHeader.number).then(async (block: Block) => {\n        return this.call("BLOCK", block).then(observable => {\n          observable.subscribe(console.log);\n        });\n      });\n    });\n  }\n\n  private call(pattern: string, data: Block): Promise<Observable<any>> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get(pattern);\n\n    if (!handler) {\n      return Promise.resolve(EMPTY);\n    }\n\n    return handler(data);\n  }\n\n  public close(): void {\n    this.subscription.unsubscribe();\n  }\n}\n',
           ),
@@ -473,13 +474,13 @@
             "Block has a list of transaction`s ids. This mean in the real life you probably want to get full information about those transactions and process it somehow, but in this example controller just returns a list of transactions back. There is no actual need to return information about processed transactions because fully processed Block is not going to be removed from blockchain, but it is useful for logging",
           ),
           r.createElement(
-            S,
+            x,
             {language: "typescript"},
             'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
           ),
         );
       },
-      C = function() {
+      N = function() {
         return r.createElement(
           "div",
           null,
@@ -504,26 +505,26 @@
           ),
         );
       },
-      N = function() {
+      B = function() {
         return r.createElement(
           a.d,
           null,
           r.createElement(a.b, {component: y, path: "/articles/introduction", exact: !0}),
-          r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: P, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: I, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: C, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: N, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
-      B = function() {
+      M = function() {
         return r.createElement(
           "div",
           null,
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      M = Object(o.hot)(function() {
+      z = Object(o.hot)(function() {
         return r.createElement(
           h,
           null,
@@ -531,23 +532,24 @@
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: N}),
-            r.createElement(a.b, {path: "/page-not-found", component: B}),
+            r.createElement(a.b, {path: "/articles", component: B}),
+            r.createElement(a.b, {path: "/page-not-found", component: M}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      z = n(21);
-    (O = M),
-      z.hydrate(
-        r.createElement(
-          s.MuiThemeProvider,
-          {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
-          r.createElement(s.CssBaseline, null),
-          r.createElement(l.a, null, r.createElement(O, null)),
-        ),
-        document.getElementById("app"),
-      );
+      H = n(21);
+    (O = z),
+      (S = document.getElementById("app")) &&
+        H[S.hasChildNodes() ? "hydrate" : "render"](
+          r.createElement(
+            s.MuiThemeProvider,
+            {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
+            r.createElement(s.CssBaseline, null),
+            r.createElement(l.a, null, r.createElement(O, null)),
+          ),
+          S,
+        );
   },
   22: function(e, t, n) {
     e.exports = n(219);
