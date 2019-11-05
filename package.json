@@ -77,6 +77,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config server/configs/webpack.production.js",
     "lint": "eslint . --fix --ext \".js,.jsx,.ts,.tsx\"",
+    "prebuild": "cp -fr index.tpl.html index.html && rm -fr 200.html 404.html articles page-not-found",
     "postbuild": "react-snap",
     "start": "NODE_ENV=${NODE_ENV:=development} babel-watch --extensions \".js,.jsx,.ts,.tsx\" server/index.ts"
   },

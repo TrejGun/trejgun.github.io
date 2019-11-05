@@ -14,10 +14,10 @@ export const Page0004: React.FC = () => {
       </Typography>
 
       <p>
-        In my previous article I discussed
+        In my previous article I discussed{" "}
         <Link component={LinkAdapter} to="/articles/session-based-authorization-for-nestjs">
           session based authorization
-        </Link>
+        </Link>{" "}
         Today I`m going to publish solution which uses JWT. The main difference between these approaches is: Sessions
         are good for client-to-server communication, where you can store session id in cookies and get user specific
         data based on this id. JSON Web Token is good for server-to-server communication where there are no cookies and
@@ -27,7 +27,7 @@ export const Page0004: React.FC = () => {
       <p>
         I tried to make this code as much as possible similar to previous one so you can compare it and even use both
         approaches at the same time. For this I also added facebook support and redis session storage. As always you can
-        find code in my
+        find code in my{" "}
         <ExternalLink href="https://github.com/TrejGun/jwt-based-authorization-for-nestjs">github repo</ExternalLink>
       </p>
     </div>

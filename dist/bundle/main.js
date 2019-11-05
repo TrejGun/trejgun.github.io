@@ -1,16 +1,16 @@
 !(function(e) {
   function t(t) {
-    for (var r, s, l = t[0], i = t[1], c = t[2], m = 0, p = []; m < l.length; m++)
-      (s = l[m]), Object.prototype.hasOwnProperty.call(o, s) && o[s] && p.push(o[s][0]), (o[s] = 0);
-    for (r in i) Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
+    for (var r, s, i = t[0], l = t[1], c = t[2], m = 0, p = []; m < i.length; m++)
+      (s = i[m]), Object.prototype.hasOwnProperty.call(o, s) && o[s] && p.push(o[s][0]), (o[s] = 0);
+    for (r in l) Object.prototype.hasOwnProperty.call(l, r) && (e[r] = l[r]);
     for (u && u(t); p.length; ) p.shift()();
     return a.push.apply(a, c || []), n();
   }
   function n() {
     for (var e, t = 0; t < a.length; t++) {
-      for (var n = a[t], r = !0, l = 1; l < n.length; l++) {
-        var i = n[l];
-        0 !== o[i] && (r = !1);
+      for (var n = a[t], r = !0, i = 1; i < n.length; i++) {
+        var l = n[i];
+        0 !== o[l] && (r = !1);
       }
       r && (a.splice(t--, 1), (e = s((s.s = n[0]))));
     }
@@ -65,11 +65,11 @@
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
     (s.p = "/dist/bundle/");
-  var l = (window.webpackJsonp = window.webpackJsonp || []),
-    i = l.push.bind(l);
-  (l.push = t), (l = l.slice());
-  for (var c = 0; c < l.length; c++) t(l[c]);
-  var u = i;
+  var i = (window.webpackJsonp = window.webpackJsonp || []),
+    l = i.push.bind(i);
+  (i.push = t), (i = i.slice());
+  for (var c = 0; c < i.length; c++) t(i[c]);
+  var u = l;
   a.push([22, 1]), n();
 })({
   0: function(e, t) {
@@ -88,9 +88,9 @@
       o = n(20),
       a = n(2),
       s = n(1),
-      l = n(9);
-    function i() {
-      return (i =
+      i = n(9);
+    function l() {
+      return (l =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -123,7 +123,7 @@
     var u = r.forwardRef(function(e, t) {
         var n = e.to,
           o = c(e, ["to"]);
-        return r.createElement(l.b, i({innerRef: t, to: n}, o));
+        return r.createElement(i.b, l({innerRef: t, to: n}, o));
       }),
       m = Object(s.makeStyles)(
         function(e) {
@@ -160,7 +160,7 @@
           ),
         );
       },
-      d = Object(s.makeStyles)(
+      h = Object(s.makeStyles)(
         function(e) {
           return {
             root: {overflowY: "auto", overflowX: "hidden", display: "flex", minHeight: "100vh", position: "relative"},
@@ -169,9 +169,9 @@
         },
         {name: "Layout"},
       ),
-      h = function(e) {
+      d = function(e) {
         var t = e.children,
-          n = d();
+          n = h();
         return r.createElement(
           "div",
           {className: n.root},
@@ -187,6 +187,15 @@
           r.createElement(
             "ul",
             null,
+            r.createElement(
+              "li",
+              null,
+              r.createElement(
+                s.Link,
+                {component: u, to: "/articles/graphql-based-authorization-for-nestjs"},
+                "GraphQL based authorization for Nest.js",
+              ),
+            ),
             r.createElement(
               "li",
               null,
@@ -272,8 +281,8 @@
           ),
         );
       },
-      k = n(223),
-      w = n(222);
+      w = n(223),
+      k = n(222);
     function j() {
       return (j =
         Object.assign ||
@@ -310,7 +319,7 @@
       x = function(e) {
         var t = e.children,
           n = T(e, ["children"]);
-        return r.createElement(k.a, j({style: w.a}, n), t);
+        return r.createElement(w.a, j({style: k.a}, n), t);
       },
       I = function() {
         return r.createElement(
@@ -440,7 +449,7 @@
           ),
         );
       },
-      C = function() {
+      N = function() {
         return r.createElement(
           "div",
           null,
@@ -480,7 +489,7 @@
           ),
         );
       },
-      N = function() {
+      C = function() {
         return r.createElement(
           "div",
           null,
@@ -490,18 +499,45 @@
             "p",
             null,
             "In my previous article I discussed",
+            " ",
             r.createElement(
               s.Link,
               {component: u, to: "/articles/session-based-authorization-for-nestjs"},
               "session based authorization",
             ),
+            " ",
             "Today I`m going to publish solution which uses JWT. The main difference between these approaches is: Sessions are good for client-to-server communication, where you can store session id in cookies and get user specific data based on this id. JSON Web Token is good for server-to-server communication where there are no cookies and state could be retrieved from request itself",
           ),
           r.createElement(
             "p",
             null,
             "I tried to make this code as much as possible similar to previous one so you can compare it and even use both approaches at the same time. For this I also added facebook support and redis session storage. As always you can find code in my",
+            " ",
             r.createElement(E, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
+          ),
+        );
+      },
+      z = function() {
+        return r.createElement(
+          "div",
+          null,
+          r.createElement(v, {date: "2019-11-03T14:56:19.626Z"}),
+          r.createElement(s.Typography, {component: "h2", variant: "h4"}, "GraphQL based authorization for Nest.js"),
+          r.createElement(
+            "p",
+            null,
+            "This is already third article in a row about authorization in Nest.js. It is still the same codebase but instead of @Controllers it uses @Resolvers, all other stuff is pretty straight forward. User has to call GraphQL mutation using his email and password to obtain JWT accessToken and refreshToken. Then he has to put it in Bearer authentication header which will be processed by passport.js and resolved back into user. This user would be available in all Queries/Mutations using @User decorator. Decorators and Guards are a bit different for GraphQL but works in the same way so you would not even notice a difference in coding.",
+          ),
+          r.createElement(
+            "p",
+            null,
+            "As always you can find code in my",
+            " ",
+            r.createElement(
+              E,
+              {href: "https://github.com/TrejGun/graphql-based-authorization-for-nestjs"},
+              "github repo",
+            ),
           ),
         );
       },
@@ -512,8 +548,9 @@
           r.createElement(a.b, {component: y, path: "/articles/introduction", exact: !0}),
           r.createElement(a.b, {component: I, path: "/articles/custom-transport-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: C, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: N, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: N, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: z, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
@@ -524,9 +561,9 @@
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      z = Object(o.hot)(function() {
+      L = Object(o.hot)(function() {
         return r.createElement(
-          h,
+          d,
           null,
           r.createElement(
             a.d,
@@ -539,14 +576,14 @@
         );
       }),
       H = n(21);
-    (O = z),
+    (O = L),
       (S = document.getElementById("app")) &&
         H[S.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
-            r.createElement(l.a, null, r.createElement(O, null)),
+            r.createElement(i.a, null, r.createElement(O, null)),
           ),
           S,
         );

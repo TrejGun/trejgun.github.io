@@ -13,7 +13,8 @@ if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
   router.use(webpack);
 }
 
-router.use("/", serveStatic(path.join(__dirname, "../../../")));
-router.use("/*", serveStatic(path.join(__dirname, "../../../")));
+router.use("/", (_req, res) => {
+  res.sendFile(path.join(__dirname, "../../../index.tpl.html"));
+});
 
 export default router;
