@@ -7,12 +7,12 @@
     "url": "https://github.com/TrejGun/trejgun.github.io"
   },
   "dependencies": {
-    "@babel/cli": "7.6.4",
-    "@babel/core": "7.6.4",
-    "@babel/node": "7.6.3",
-    "@babel/preset-env": "7.6.3",
-    "@babel/preset-react": "7.6.3",
-    "@babel/preset-typescript": "7.6.0",
+    "@babel/cli": "7.7.0",
+    "@babel/core": "7.7.0",
+    "@babel/node": "7.7.0",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
+    "@babel/preset-typescript": "7.7.0",
     "@hot-loader/react-dom": "16.10.2",
     "@material-ui/core": "4.6.0",
     "@trejgun/eslint-config": "0.0.1",
