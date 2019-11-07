@@ -37,13 +37,13 @@ export const Landing: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link component={LinkAdapter} to="/articles/terms-and-conditions">
-            Introduction
+          <Link component={LinkAdapter} to="/terms-and-conditions">
+            Trams and Conditions
           </Link>
         </li>
         <li>
-          <Link component={LinkAdapter} to="/articles/introduction">
-            Introduction
+          <Link component={LinkAdapter} to="/about">
+            About this site
           </Link>
         </li>
       </ul>

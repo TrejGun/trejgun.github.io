@@ -235,61 +235,42 @@
             r.createElement(
               "li",
               null,
-              r.createElement(s.Link, {component: u, to: "/articles/terms-and-conditions"}, "Introduction"),
+              r.createElement(s.Link, {component: u, to: "/terms-and-conditions"}, "Trams and Conditions"),
             ),
-            r.createElement(
-              "li",
-              null,
-              r.createElement(s.Link, {component: u, to: "/articles/introduction"}, "Introduction"),
-            ),
+            r.createElement("li", null, r.createElement(s.Link, {component: u, to: "/about"}, "About this site")),
           ),
         );
-      },
-      b = Object(s.makeStyles)(
+      };
+    function b() {
+      return (b =
+        Object.assign ||
+        function(e) {
+          for (var t = 1; t < arguments.length; t++) {
+            var n = arguments[t];
+            for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+          }
+          return e;
+        }).apply(this, arguments);
+    }
+    var v = r.forwardRef(function(e, t) {
+        var n = b({}, e);
+        return r.createElement(s.Link, b({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
+      }),
+      g = Object(s.makeStyles)(
         function() {
           return {date: {float: "right", color: "#c0c0c0"}};
         },
         {name: "MyDate"},
       ),
-      v = function(e) {
+      E = function(e) {
         var t = e.date,
-          n = b();
+          n = g();
         return r.createElement("div", {className: n.date}, new Date(t).toISOString().split("T")[0]);
-      };
-    function g() {
-      return (g =
-        Object.assign ||
-        function(e) {
-          for (var t = 1; t < arguments.length; t++) {
-            var n = arguments[t];
-            for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-          }
-          return e;
-        }).apply(this, arguments);
-    }
-    var E = r.forwardRef(function(e, t) {
-        var n = g({}, e);
-        return r.createElement(s.Link, g({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
-      }),
-      y = function() {
-        return r.createElement(
-          "div",
-          null,
-          r.createElement(v, {date: "2019-11-03T15:25:20.324Z"}),
-          r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Introduction"),
-          r.createElement(
-            "p",
-            null,
-            "I used to code js for pretty long time, and was quite tired of doing same stuff over and over again. At some point I even thought server side js have faced some stagnation. An then someone, some where mentioned",
-            r.createElement(E, {href: "https://nestjs.com/"}, "Nest.js"),
-            ", one month later I tried it and felt in love. Unfortunately it looks like the documentation is not as great as framework itself, so I decided to to add my 2 cents to popularization on this awesome framework. Once I already had blog about coding and other related stuff, so I decided to make second attempt, and post here some tutorials and gotchas",
-          ),
-        );
       },
-      w = n(223),
-      k = n(222);
-    function j() {
-      return (j =
+      y = n(223),
+      w = n(222);
+    function k() {
+      return (k =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -299,7 +280,7 @@
           return e;
         }).apply(this, arguments);
     }
-    function T(e, t) {
+    function j(e, t) {
       if (null == e) return {};
       var n,
         r,
@@ -319,18 +300,18 @@
       }
       return o;
     }
-    var O,
-      S,
-      I = function(e) {
+    var T,
+      O,
+      S = function(e) {
         var t = e.children,
-          n = T(e, ["children"]);
-        return r.createElement(w.a, j({style: k.a}, n), t);
+          n = j(e, ["children"]);
+        return r.createElement(y.a, k({style: w.a}, n), t);
       },
       x = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-25T17:42:20.324Z"}),
+          r.createElement(E, {date: "2019-10-25T17:42:20.324Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Custom Transport for Nest.js"),
           r.createElement(
             "p",
@@ -339,7 +320,7 @@
             r.createElement("em", null, "CustomTransportStrategy"),
             " for Nest.js and after googling for half an hour I realize there are only examples for RabbitMQ like this",
             " ",
-            r.createElement(E, {href: "https://github.com/AlariCode/nestjs-rmq"}, "nestjs-rmq"),
+            r.createElement(v, {href: "https://github.com/AlariCode/nestjs-rmq"}, "nestjs-rmq"),
             ", which is already included in ",
             r.createElement("em", null, "@nestjs/microservice"),
             " package. But there were nothing simple where one can see a logic related only to Nest.js itself until now",
@@ -352,7 +333,7 @@
             " using setInterval, which emits timestamp each second, but in real life it could be anything like TCP calls, queue in any kind of SQL/NOSQL database, ZeroMQ, AWS SQS or Google pub/sub",
           ),
           r.createElement(
-            I,
+            S,
             {language: "typescript"},
             'import {EventEmitter} from "events";\n\n\nexport class Ticker extends EventEmitter {\n  private intervalId: NodeJS.Timeout | null = null;\n\n  start(): void {\n    this.intervalId = setInterval(() => {\n      this.emit("data", Date.now());\n    }, 1000);\n  }\n\n  stop(): void {\n    if (this.intervalId) {\n      clearInterval(this.intervalId);\n    }\n  }\n}\n',
           ),
@@ -368,7 +349,7 @@
             ".",
           ),
           r.createElement(
-            I,
+            S,
             {language: "typescript"},
             'import {Server, CustomTransportStrategy, MessageHandler} from "@nestjs/microservices";\nimport {Ticker} from "./ticker";\n\n\nexport class TickerServer extends Server implements CustomTransportStrategy {\n  private ticker: Ticker;\n\n  public listen(callback: () => void): void {\n    this.ticker = new Ticker();\n    this.ticker.start();\n    this.ticker.on("data", (e: number) => {\n      this.listener(e);\n    });\n    callback();\n  }\n\n  public async listener(e: number): Promise<void> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get("TICK");\n    if (!handler) {\n      return;\n    }\n    const result = await handler(e);\n    console.log(result);\n  }\n\n  public close(): void {\n    this.ticker.stop();\n  }\n}\n',
           ),
@@ -387,18 +368,18 @@
             " message, it is dead simple. The value returned from controller can be used to remove message from queue.",
           ),
           r.createElement(
-            I,
+            S,
             {language: "typescript"},
             'import {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\n\n@Controller()\nexport class TickerController {\n  @MessagePattern("TICK")\n  public ticker(data: number): Promise<number> {\n    return Promise.resolve(data);\n  }\n}\n',
           ),
           r.createElement("p", null, "This is all for today, good luck with your code!"),
         );
       },
-      P = function() {
+      I = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-26T14:08:19.626Z"}),
+          r.createElement(E, {date: "2019-10-26T14:08:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Session based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -424,14 +405,14 @@
             "p",
             null,
             "But unfortunately there were no good docs covering this part of framework. I mean there are, couple of pages in official documentation ",
-            r.createElement(E, {href: "https://docs.nestjs.com/guards"}, "Guards"),
+            r.createElement(v, {href: "https://docs.nestjs.com/guards"}, "Guards"),
             ",",
             " ",
-            r.createElement(E, {href: "https://docs.nestjs.com/techniques/authentication"}, "Authentication"),
+            r.createElement(v, {href: "https://docs.nestjs.com/techniques/authentication"}, "Authentication"),
             ";",
             " ",
             r.createElement(
-              E,
+              v,
               {href: "https://dev.to/nestjs/authentication-and-sessions-for-mvc-apps-with-nestjs-55a4"},
               "one good article with code samples",
             ),
@@ -445,7 +426,7 @@
             "This example is a fully functional",
             " ",
             r.createElement(
-              E,
+              v,
               {href: "https://github.com/TrejGun/session-based-authorization-for-nestjs"},
               "boilerplate",
             ),
@@ -454,11 +435,11 @@
           ),
         );
       },
-      N = function() {
+      P = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-27T10:11:34.152Z"}),
+          r.createElement(E, {date: "2019-10-27T10:11:34.152Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Ethereum Server for Nest.js"),
           r.createElement(
             "p",
@@ -478,7 +459,7 @@
             "Basic building block of any blockchain is a Block (deduction, man!) that is what server will listen to",
           ),
           r.createElement(
-            I,
+            S,
             {language: "typescript"},
             'import {EMPTY, Observable} from "rxjs";\nimport {CustomTransportStrategy, MessageHandler, Server} from "@nestjs/microservices";\nimport Web3 from "web3";\nimport {Block, BlockHeader} from "web3/eth/types";\n\n\nexport class EthereumServer extends Server implements CustomTransportStrategy {\n  private subscription: any;\n\n  public listen(callback: () => void): void {\n    this.listenToBlocks();\n    callback();\n  }\n\n  private listenToBlocks(): void {\n    const web3: Web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.SOCKET_ADDRESS));\n    this.subscription = web3.eth.subscribe("newBlockHeaders", (error: Error, blockHeader: BlockHeader) => {\n      if (error) {\n        console.error(error);\n        return;\n      }\n\n      web3.eth.getBlock(blockHeader.number).then(async (block: Block) => {\n        return this.call("BLOCK", block).then(observable => {\n          observable.subscribe(console.log);\n        });\n      });\n    });\n  }\n\n  private call(pattern: string, data: Block): Promise<Observable<any>> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get(pattern);\n\n    if (!handler) {\n      return Promise.resolve(EMPTY);\n    }\n\n    return handler(data);\n  }\n\n  public close(): void {\n    this.subscription.unsubscribe();\n  }\n}\n',
           ),
@@ -488,7 +469,7 @@
             "Block has a list of transaction`s ids. This mean in the real life you probably want to get full information about those transactions and process it somehow, but in this example controller just returns a list of transactions back. There is no actual need to return information about processed transactions because fully processed Block is not going to be removed from blockchain, but it is useful for logging",
           ),
           r.createElement(
-            I,
+            S,
             {language: "typescript"},
             'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
           ),
@@ -498,7 +479,7 @@
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-03T14:18:19.626Z"}),
+          r.createElement(E, {date: "2019-11-03T14:18:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "JWT based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -518,15 +499,15 @@
             null,
             "I tried to make this code as much as possible similar to previous one so you can compare it and even use both approaches at the same time. For this I also added facebook support and redis session storage. As always you can find code in my",
             " ",
-            r.createElement(E, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
+            r.createElement(v, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
           ),
         );
       },
-      z = function() {
+      N = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-03T14:56:19.626Z"}),
+          r.createElement(E, {date: "2019-11-03T14:56:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "GraphQL based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -539,24 +520,38 @@
             "As always you can find code in my",
             " ",
             r.createElement(
-              E,
+              v,
               {href: "https://github.com/TrejGun/graphql-based-authorization-for-nestjs"},
               "github repo",
             ),
           ),
         );
       },
-      B = function() {
+      z = function() {
         return r.createElement(
           a.d,
           null,
-          r.createElement(a.b, {component: y, path: "/articles/introduction", exact: !0}),
           r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: N, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: P, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: z, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: N, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.a, {to: "/page-not-found"}),
+        );
+      },
+      B = function() {
+        return r.createElement(
+          "div",
+          null,
+          r.createElement(E, {date: "2019-11-03T15:25:20.324Z"}),
+          r.createElement(s.Typography, {component: "h2", variant: "h4"}, "About this site"),
+          r.createElement(
+            "p",
+            null,
+            "I used to code js for pretty long time, and was quite tired of doing same stuff over and over again. At some point I even thought server side js have faced some stagnation. An then someone, some where mentioned",
+            r.createElement(v, {href: "https://nestjs.com/"}, "Nest.js"),
+            ", one month later I tried it and felt in love. Unfortunately it looks like the documentation is not as great as framework itself, so I decided to to add my 2 cents to popularization on this awesome framework. Once I already had blog about coding and other related stuff, so I decided to make second attempt, and post here some tutorials and gotchas",
+          ),
         );
       },
       M = function() {
@@ -576,7 +571,7 @@
             null,
             "This is a static website with",
             " ",
-            r.createElement(E, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
+            r.createElement(v, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
             " . It is not using cookies and/or not collecting any personal data by itself. All articles and source code of this site are available for education purposes under MIT license",
           ),
           r.createElement(
@@ -586,7 +581,7 @@
           ),
         );
       },
-      H = Object(o.hot)(function() {
+      A = Object(o.hot)(function() {
         return r.createElement(
           h,
           null,
@@ -594,24 +589,25 @@
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: B}),
+            r.createElement(a.b, {path: "/articles", component: z}),
+            r.createElement(a.b, {path: "/about", component: B}),
             r.createElement(a.b, {path: "/terms-and-conditions", component: L}),
             r.createElement(a.b, {path: "/page-not-found", component: M}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      A = n(21);
-    (O = H),
-      (S = document.getElementById("app")) &&
-        A[S.hasChildNodes() ? "hydrate" : "render"](
+      H = n(21);
+    (T = A),
+      (O = document.getElementById("app")) &&
+        H[O.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
-            r.createElement(i.a, null, r.createElement(O, null)),
+            r.createElement(i.a, null, r.createElement(T, null)),
           ),
-          S,
+          O,
         );
   },
   22: function(e, t, n) {

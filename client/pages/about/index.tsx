@@ -1,15 +1,15 @@
 import * as React from "react";
 import {Typography} from "@material-ui/core";
-import {MyDate} from "../../components/common/date";
-import {ExternalLink} from "../../components/common/external-link";
+import {MyDate} from "../components/common/date";
+import {ExternalLink} from "../components/common/external-link";
 
 
-export const Page0000: React.FC = () => {
+export const About: React.FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-03T15:25:20.324Z"} />
       <Typography component="h2" variant="h4">
-        Introduction
+        About this site
       </Typography>
 
       <p>
