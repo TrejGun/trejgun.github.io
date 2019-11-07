@@ -235,7 +235,7 @@
             r.createElement(
               "li",
               null,
-              r.createElement(s.Link, {component: u, to: "/terms-and-conditions"}, "Trams and Conditions"),
+              r.createElement(s.Link, {component: u, to: "/terms-and-conditions"}, "Terms and Conditions"),
             ),
             r.createElement("li", null, r.createElement(s.Link, {component: u, to: "/about"}, "About this site")),
           ),

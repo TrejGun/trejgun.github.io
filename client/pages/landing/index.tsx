@@ -38,7 +38,7 @@ export const Landing: React.FC = () => {
         </li>
         <li>
           <Link component={LinkAdapter} to="/terms-and-conditions">
-            Trams and Conditions
+            Terms and Conditions
           </Link>
         </li>
         <li>
