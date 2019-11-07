@@ -67,7 +67,7 @@
   "engines": {
     "node": ">=8"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "main": "./server/index.ts",
   "name": "trejgun.github.io",
   "repository": {
