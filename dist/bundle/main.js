@@ -160,7 +160,7 @@
           ),
         );
       },
-      h = Object(s.makeStyles)(
+      d = Object(s.makeStyles)(
         function(e) {
           return {
             root: {overflowY: "auto", overflowX: "hidden", display: "flex", minHeight: "100vh", position: "relative"},
@@ -169,9 +169,9 @@
         },
         {name: "Layout"},
       ),
-      d = function(e) {
+      h = function(e) {
         var t = e.children,
-          n = h();
+          n = d();
         return r.createElement(
           "div",
           {className: n.root},
@@ -561,24 +561,46 @@
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      L = Object(o.hot)(function() {
+      L = function() {
         return r.createElement(
-          d,
+          "div",
+          null,
+          r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Terms and conditions"),
+          r.createElement(
+            "p",
+            null,
+            "This is a static website with",
+            " ",
+            r.createElement(E, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
+            " ",
+            ". It is not using cookies and/or not collecting any personal data by itself. All articles and source code of this site are available for education purposes under MIT license",
+          ),
+          r.createElement(
+            "p",
+            null,
+            "Site also uses facebook`s comments, so facebook will track you, collect your data and use it for advertising purposes. This page exists only to fulfill facebook`s requirements.",
+          ),
+        );
+      },
+      H = Object(o.hot)(function() {
+        return r.createElement(
+          h,
           null,
           r.createElement(
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
             r.createElement(a.b, {path: "/articles", component: B}),
+            r.createElement(a.b, {path: "/terma-and-conditions", component: L}),
             r.createElement(a.b, {path: "/page-not-found", component: M}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      H = n(21);
-    (O = L),
+      A = n(21);
+    (O = H),
       (S = document.getElementById("app")) &&
-        H[S.hasChildNodes() ? "hydrate" : "render"](
+        A[S.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
