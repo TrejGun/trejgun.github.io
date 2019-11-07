@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Typography} from "@material-ui/core";
+import {FacebookProvider, Comments} from "react-facebook";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
@@ -53,6 +54,10 @@ export const Page0001: React.FC = () => {
       <Code language="typescript">{controller}</Code>
 
       <p>This is all for today, good luck with your code!</p>
+
+      <FacebookProvider appId={process.env.FACEBOOK_CLIENT_ID}>
+        <Comments href="https://trejgun.github.io/articles/custom-transport-for-nestjs" />
+      </FacebookProvider>
     </div>
   );
 };

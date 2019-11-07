@@ -70,7 +70,7 @@
   (i.push = t), (i = i.slice());
   for (var c = 0; c < i.length; c++) t(i[c]);
   var u = l;
-  a.push([22, 1]), n();
+  a.push([43, 1]), n();
 })({
   0: function(e, t) {
     e.exports = React;
@@ -78,17 +78,14 @@
   1: function(e, t) {
     e.exports = MaterialUI;
   },
-  21: function(e, t) {
-    e.exports = ReactDOM;
-  },
-  219: function(e, t, n) {
+  268: function(e, t, n) {
     "use strict";
     n.r(t);
     var r = n(0),
-      o = n(20),
-      a = n(2),
+      o = n(41),
+      a = n(4),
       s = n(1),
-      i = n(9);
+      i = n(25);
     function l() {
       return (l =
         Object.assign ||
@@ -160,7 +157,7 @@
           ),
         );
       },
-      d = Object(s.makeStyles)(
+      h = Object(s.makeStyles)(
         function(e) {
           return {
             root: {overflowY: "auto", overflowX: "hidden", display: "flex", minHeight: "100vh", position: "relative"},
@@ -169,9 +166,9 @@
         },
         {name: "Layout"},
       ),
-      h = function(e) {
+      d = function(e) {
         var t = e.children,
-          n = d();
+          n = h();
         return r.createElement(
           "div",
           {className: n.root},
@@ -240,9 +237,10 @@
             r.createElement("li", null, r.createElement(s.Link, {component: u, to: "/about"}, "About this site")),
           ),
         );
-      };
-    function b() {
-      return (b =
+      },
+      b = n(9);
+    function g() {
+      return (g =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -253,24 +251,24 @@
         }).apply(this, arguments);
     }
     var v = r.forwardRef(function(e, t) {
-        var n = b({}, e);
-        return r.createElement(s.Link, b({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
+        var n = g({}, e);
+        return r.createElement(s.Link, g({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
       }),
-      g = Object(s.makeStyles)(
+      E = Object(s.makeStyles)(
         function() {
           return {date: {float: "right", color: "#c0c0c0"}};
         },
         {name: "MyDate"},
       ),
-      E = function(e) {
+      y = function(e) {
         var t = e.date,
-          n = g();
+          n = E();
         return r.createElement("div", {className: n.date}, new Date(t).toISOString().split("T")[0]);
       },
-      y = n(223),
-      w = n(222);
-    function k() {
-      return (k =
+      j = n(272),
+      k = n(271);
+    function w() {
+      return (w =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -280,7 +278,7 @@
           return e;
         }).apply(this, arguments);
     }
-    function j(e, t) {
+    function T(e, t) {
       if (null == e) return {};
       var n,
         r,
@@ -300,18 +298,18 @@
       }
       return o;
     }
-    var T,
-      O,
+    var O,
+      I,
       S = function(e) {
         var t = e.children,
-          n = j(e, ["children"]);
-        return r.createElement(y.a, k({style: w.a}, n), t);
+          n = T(e, ["children"]);
+        return r.createElement(j.a, w({style: k.a}, n), t);
       },
       x = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-10-25T17:42:20.324Z"}),
+          r.createElement(y, {date: "2019-10-25T17:42:20.324Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Custom Transport for Nest.js"),
           r.createElement(
             "p",
@@ -373,13 +371,18 @@
             'import {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\n\n@Controller()\nexport class TickerController {\n  @MessagePattern("TICK")\n  public ticker(data: number): Promise<number> {\n    return Promise.resolve(data);\n  }\n}\n',
           ),
           r.createElement("p", null, "This is all for today, good luck with your code!"),
+          r.createElement(
+            b.FacebookProvider,
+            {appId: "471903663420767"},
+            r.createElement(b.Comments, {href: "https://trejgun.github.io/articles/custom-transport-for-nestjs"}),
+          ),
         );
       },
-      I = function() {
+      P = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-10-26T14:08:19.626Z"}),
+          r.createElement(y, {date: "2019-10-26T14:08:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Session based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -433,13 +436,20 @@
             " ",
             "with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I tried to make it simple, so you can adjust it for your own needs",
           ),
+          r.createElement(
+            b.FacebookProvider,
+            {appId: "471903663420767"},
+            r.createElement(b.Comments, {
+              href: "https://trejgun.github.io/articles/session-based-authorization-for-nestjs",
+            }),
+          ),
         );
       },
-      P = function() {
+      C = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-10-27T10:11:34.152Z"}),
+          r.createElement(y, {date: "2019-10-27T10:11:34.152Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Ethereum Server for Nest.js"),
           r.createElement(
             "p",
@@ -473,13 +483,18 @@
             {language: "typescript"},
             'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
           ),
+          r.createElement(
+            b.FacebookProvider,
+            {appId: "471903663420767"},
+            r.createElement(b.Comments, {href: "https://trejgun.github.io/articles/ethereum-server-for-nestjs"}),
+          ),
         );
       },
-      C = function() {
+      z = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-11-03T14:18:19.626Z"}),
+          r.createElement(y, {date: "2019-11-03T14:18:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "JWT based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -501,13 +516,20 @@
             " ",
             r.createElement(v, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
           ),
+          r.createElement(
+            b.FacebookProvider,
+            {appId: "471903663420767"},
+            r.createElement(b.Comments, {
+              href: "https://trejgun.github.io/articles/jwt-based-authorization-for-nestjs",
+            }),
+          ),
         );
       },
       N = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-11-03T14:56:19.626Z"}),
+          r.createElement(y, {date: "2019-11-03T14:56:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "GraphQL based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -525,25 +547,32 @@
               "github repo",
             ),
           ),
-        );
-      },
-      z = function() {
-        return r.createElement(
-          a.d,
-          null,
-          r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: P, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: N, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.a, {to: "/page-not-found"}),
+          r.createElement(
+            b.FacebookProvider,
+            {appId: "471903663420767"},
+            r.createElement(b.Comments, {
+              href: "https://trejgun.github.io/articles/graphql-based-authorization-for-nestjs",
+            }),
+          ),
         );
       },
       B = function() {
         return r.createElement(
+          a.d,
+          null,
+          r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: C, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: z, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: N, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.a, {to: "/page-not-found"}),
+        );
+      },
+      M = function() {
+        return r.createElement(
           "div",
           null,
-          r.createElement(E, {date: "2019-11-03T15:25:20.324Z"}),
+          r.createElement(y, {date: "2019-11-03T15:25:20.324Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "About this site"),
           r.createElement(
             "p",
@@ -554,14 +583,14 @@
           ),
         );
       },
-      M = function() {
+      L = function() {
         return r.createElement(
           "div",
           null,
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      L = function() {
+      A = function() {
         return r.createElement(
           "div",
           null,
@@ -581,37 +610,40 @@
           ),
         );
       },
-      A = Object(o.hot)(function() {
+      H = Object(o.hot)(function() {
         return r.createElement(
-          h,
+          d,
           null,
           r.createElement(
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: z}),
-            r.createElement(a.b, {path: "/about", component: B}),
-            r.createElement(a.b, {path: "/terms-and-conditions", component: L}),
-            r.createElement(a.b, {path: "/page-not-found", component: M}),
+            r.createElement(a.b, {path: "/articles", component: B}),
+            r.createElement(a.b, {path: "/about", component: M}),
+            r.createElement(a.b, {path: "/terms-and-conditions", component: A}),
+            r.createElement(a.b, {path: "/page-not-found", component: L}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      H = n(21);
-    (T = A),
-      (O = document.getElementById("app")) &&
-        H[O.hasChildNodes() ? "hydrate" : "render"](
+      G = n(42);
+    (O = H),
+      (I = document.getElementById("app")) &&
+        G[I.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
-            r.createElement(i.a, null, r.createElement(T, null)),
+            r.createElement(i.a, null, r.createElement(O, null)),
           ),
-          O,
+          I,
         );
   },
-  22: function(e, t, n) {
-    e.exports = n(219);
+  42: function(e, t) {
+    e.exports = ReactDOM;
+  },
+  43: function(e, t, n) {
+    e.exports = n(268);
   },
 });
 //# sourceMappingURL=main.js.map

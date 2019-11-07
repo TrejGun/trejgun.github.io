@@ -51,6 +51,7 @@
     "raw-loader": "3.1.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
+    "react-facebook": "8.0.4",
     "react-hot-loader": "4.12.16",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
@@ -70,6 +71,9 @@
   "license": "MIT",
   "main": "./server/index.ts",
   "name": "trejgun.github.io",
+  "reactSnap": {
+    "source": "/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/TrejGun/trejgun.github.io"
@@ -77,13 +81,10 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config server/configs/webpack.production.js",
     "lint": "eslint . --fix --ext \".js,.jsx,.ts,.tsx\"",
-    "prebuild": "cp -fr index.tpl.html index.html && rm -fr 200.html 404.html articles page-not-found about terms-and-conditions",
     "postbuild": "react-snap",
+    "prebuild": "cp -fr index.tpl.html index.html && rm -fr 200.html 404.html articles page-not-found about terms-and-conditions",
     "start": "NODE_ENV=${NODE_ENV:=development} babel-watch --extensions \".js,.jsx,.ts,.tsx\" server/index.ts"
   },
   "title": "TrejGun`s blog",
-  "version": "0.0.1",
-  "reactSnap": {
-    "source": "/"
-  }
+  "version": "0.0.1"
 }
