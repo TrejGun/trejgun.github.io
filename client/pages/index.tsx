@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Switch>
         <Route path="/" component={Landing} exact />
         <Route path="/articles" component={Articles} />
-        <Route path="/terma-and-conditions" component={TermsAndConditions} />
+        <Route path="/terms-and-conditions" component={TermsAndConditions} />
         <Route path="/page-not-found" component={PageNotFound} />
         <Redirect to="/page-not-found" />
       </Switch>

@@ -235,6 +235,11 @@
             r.createElement(
               "li",
               null,
+              r.createElement(s.Link, {component: u, to: "/articles/terms-and-conditions"}, "Introduction"),
+            ),
+            r.createElement(
+              "li",
+              null,
               r.createElement(s.Link, {component: u, to: "/articles/introduction"}, "Introduction"),
             ),
           ),
@@ -316,12 +321,12 @@
     }
     var O,
       S,
-      x = function(e) {
+      I = function(e) {
         var t = e.children,
           n = T(e, ["children"]);
         return r.createElement(w.a, j({style: k.a}, n), t);
       },
-      I = function() {
+      x = function() {
         return r.createElement(
           "div",
           null,
@@ -347,7 +352,7 @@
             " using setInterval, which emits timestamp each second, but in real life it could be anything like TCP calls, queue in any kind of SQL/NOSQL database, ZeroMQ, AWS SQS or Google pub/sub",
           ),
           r.createElement(
-            x,
+            I,
             {language: "typescript"},
             'import {EventEmitter} from "events";\n\n\nexport class Ticker extends EventEmitter {\n  private intervalId: NodeJS.Timeout | null = null;\n\n  start(): void {\n    this.intervalId = setInterval(() => {\n      this.emit("data", Date.now());\n    }, 1000);\n  }\n\n  stop(): void {\n    if (this.intervalId) {\n      clearInterval(this.intervalId);\n    }\n  }\n}\n',
           ),
@@ -363,7 +368,7 @@
             ".",
           ),
           r.createElement(
-            x,
+            I,
             {language: "typescript"},
             'import {Server, CustomTransportStrategy, MessageHandler} from "@nestjs/microservices";\nimport {Ticker} from "./ticker";\n\n\nexport class TickerServer extends Server implements CustomTransportStrategy {\n  private ticker: Ticker;\n\n  public listen(callback: () => void): void {\n    this.ticker = new Ticker();\n    this.ticker.start();\n    this.ticker.on("data", (e: number) => {\n      this.listener(e);\n    });\n    callback();\n  }\n\n  public async listener(e: number): Promise<void> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get("TICK");\n    if (!handler) {\n      return;\n    }\n    const result = await handler(e);\n    console.log(result);\n  }\n\n  public close(): void {\n    this.ticker.stop();\n  }\n}\n',
           ),
@@ -382,7 +387,7 @@
             " message, it is dead simple. The value returned from controller can be used to remove message from queue.",
           ),
           r.createElement(
-            x,
+            I,
             {language: "typescript"},
             'import {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\n\n@Controller()\nexport class TickerController {\n  @MessagePattern("TICK")\n  public ticker(data: number): Promise<number> {\n    return Promise.resolve(data);\n  }\n}\n',
           ),
@@ -473,7 +478,7 @@
             "Basic building block of any blockchain is a Block (deduction, man!) that is what server will listen to",
           ),
           r.createElement(
-            x,
+            I,
             {language: "typescript"},
             'import {EMPTY, Observable} from "rxjs";\nimport {CustomTransportStrategy, MessageHandler, Server} from "@nestjs/microservices";\nimport Web3 from "web3";\nimport {Block, BlockHeader} from "web3/eth/types";\n\n\nexport class EthereumServer extends Server implements CustomTransportStrategy {\n  private subscription: any;\n\n  public listen(callback: () => void): void {\n    this.listenToBlocks();\n    callback();\n  }\n\n  private listenToBlocks(): void {\n    const web3: Web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.SOCKET_ADDRESS));\n    this.subscription = web3.eth.subscribe("newBlockHeaders", (error: Error, blockHeader: BlockHeader) => {\n      if (error) {\n        console.error(error);\n        return;\n      }\n\n      web3.eth.getBlock(blockHeader.number).then(async (block: Block) => {\n        return this.call("BLOCK", block).then(observable => {\n          observable.subscribe(console.log);\n        });\n      });\n    });\n  }\n\n  private call(pattern: string, data: Block): Promise<Observable<any>> {\n    const handler: MessageHandler | undefined = this.messageHandlers.get(pattern);\n\n    if (!handler) {\n      return Promise.resolve(EMPTY);\n    }\n\n    return handler(data);\n  }\n\n  public close(): void {\n    this.subscription.unsubscribe();\n  }\n}\n',
           ),
@@ -483,7 +488,7 @@
             "Block has a list of transaction`s ids. This mean in the real life you probably want to get full information about those transactions and process it somehow, but in this example controller just returns a list of transactions back. There is no actual need to return information about processed transactions because fully processed Block is not going to be removed from blockchain, but it is useful for logging",
           ),
           r.createElement(
-            x,
+            I,
             {language: "typescript"},
             'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
           ),
@@ -546,7 +551,7 @@
           a.d,
           null,
           r.createElement(a.b, {component: y, path: "/articles/introduction", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: N, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
@@ -572,8 +577,7 @@
             "This is a static website with",
             " ",
             r.createElement(E, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
-            " ",
-            ". It is not using cookies and/or not collecting any personal data by itself. All articles and source code of this site are available for education purposes under MIT license",
+            " . It is not using cookies and/or not collecting any personal data by itself. All articles and source code of this site are available for education purposes under MIT license",
           ),
           r.createElement(
             "p",
@@ -591,7 +595,7 @@
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
             r.createElement(a.b, {path: "/articles", component: B}),
-            r.createElement(a.b, {path: "/terma-and-conditions", component: L}),
+            r.createElement(a.b, {path: "/terms-and-conditions", component: L}),
             r.createElement(a.b, {path: "/page-not-found", component: M}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
