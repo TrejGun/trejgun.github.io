@@ -2,7 +2,7 @@ import * as React from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
-import {Comments, FacebookProvider} from "react-facebook";
+import {Comments} from "../../components/common/comments";
 
 
 export const Page0002: React.FC = () => {
@@ -56,9 +56,7 @@ export const Page0002: React.FC = () => {
         tried to make it simple, so you can adjust it for your own needs
       </p>
 
-      <FacebookProvider appId={process.env.FACEBOOK_CLIENT_ID}>
-        <Comments href="https://trejgun.github.io/articles/session-based-authorization-for-nestjs" />
-      </FacebookProvider>
+      <Comments slug="session-based-authorization-for-nestjs" />
     </div>
   );
 };

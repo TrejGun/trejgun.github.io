@@ -2,7 +2,7 @@ import * as React from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
-import {Comments, FacebookProvider} from "react-facebook";
+import {Comments} from "../../components/common/comments";
 
 
 export const Page0005: React.FC = () => {
@@ -29,9 +29,7 @@ export const Page0005: React.FC = () => {
         </ExternalLink>
       </p>
 
-      <FacebookProvider appId={process.env.FACEBOOK_CLIENT_ID}>
-        <Comments href="https://trejgun.github.io/articles/graphql-based-authorization-for-nestjs" />
-      </FacebookProvider>
+      <Comments slug="graphql-based-authorization-for-nestjs" />
     </div>
   );
 };

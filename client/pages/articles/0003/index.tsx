@@ -5,7 +5,7 @@ import {Code} from "../../components/common/code";
 import server from "./server.txt";
 import controller from "./controller.txt";
 import {LinkAdapter} from "../../components/common/link-adapter";
-import {Comments, FacebookProvider} from "react-facebook";
+import {Comments} from "../../components/common/comments";
 
 
 export const Page0003: React.FC = () => {
@@ -41,9 +41,7 @@ export const Page0003: React.FC = () => {
 
       <Code language="typescript">{controller}</Code>
 
-      <FacebookProvider appId={process.env.FACEBOOK_CLIENT_ID}>
-        <Comments href="https://trejgun.github.io/articles/ethereum-server-for-nestjs" />
-      </FacebookProvider>
+      <Comments slug="ethereum-server-for-nestjs" />
     </div>
   );
 };

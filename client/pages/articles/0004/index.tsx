@@ -3,7 +3,7 @@ import {Link, Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 import {LinkAdapter} from "../../components/common/link-adapter";
-import {Comments, FacebookProvider} from "react-facebook";
+import {Comments} from "../../components/common/comments";
 
 
 export const Page0004: React.FC = () => {
@@ -32,9 +32,7 @@ export const Page0004: React.FC = () => {
         <ExternalLink href="https://github.com/TrejGun/jwt-based-authorization-for-nestjs">github repo</ExternalLink>
       </p>
 
-      <FacebookProvider appId={process.env.FACEBOOK_CLIENT_ID}>
-        <Comments href="https://trejgun.github.io/articles/jwt-based-authorization-for-nestjs" />
-      </FacebookProvider>
+      <Comments slug="jwt-based-authorization-for-nestjs" />
     </div>
   );
 };
