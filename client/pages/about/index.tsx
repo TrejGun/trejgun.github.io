@@ -16,9 +16,9 @@ export const About: React.FC = () => {
         I used to code js for pretty long time, and was quite tired of doing same stuff over and over again. At some
         point I even thought server side js have faced some stagnation. An then someone, some where mentioned
         <ExternalLink href="https://nestjs.com/">Nest.js</ExternalLink>, one month later I tried it and felt in love.
-        Unfortunately it looks like the documentation is not as great as framework itself, so I decided to to add my 2
+        Unfortunately it looks like the documentation is not as great as framework itself, so I decided to add my 2
         cents to popularization on this awesome framework. Once I already had blog about coding and other related stuff,
-        so I decided to make second attempt, and post here some tutorials and gotchas
+        so I decided to make second attempt, and post here some tutorials and gotchas.
       </p>
     </div>
   );

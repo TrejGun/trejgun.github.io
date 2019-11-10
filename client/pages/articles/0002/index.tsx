@@ -34,11 +34,11 @@ export const Page0002: React.FC = () => {
 
       <p>
         But unfortunately there were no good docs covering this part of framework. I mean there are, couple of pages in
-        official documentation <ExternalLink href="https://docs.nestjs.com/guards">Guards</ExternalLink>,{" "}
-        <ExternalLink href="https://docs.nestjs.com/techniques/authentication">Authentication</ExternalLink>;{" "}
+        official documentation <ExternalLink href="https://docs.nestjs.com/guards">Guards</ExternalLink>,
+        <ExternalLink href="https://docs.nestjs.com/techniques/authentication">Authentication</ExternalLink>;
         <ExternalLink href="https://dev.to/nestjs/authentication-and-sessions-for-mvc-apps-with-nestjs-55a4">
           one good article with code samples
-        </ExternalLink>{" "}
+        </ExternalLink>
         from @johnbiundo about local authorization; several closed issues and a few outdated blog posts. All these links
         did not give me a whole picture of how authorizations should be build.
       </p>
@@ -48,10 +48,10 @@ export const Page0002: React.FC = () => {
       </Typography>
 
       <p>
-        This example is a fully functional{" "}
+        This example is a fully functional
         <ExternalLink href="https://github.com/TrejGun/session-based-authorization-for-nestjs">
           boilerplate
-        </ExternalLink>{" "}
+        </ExternalLink>
         with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I
         tried to make it simple, so you can adjust it for your own needs
       </p>

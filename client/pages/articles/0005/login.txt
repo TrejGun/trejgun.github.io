@@ -1,0 +1,11 @@
+mutation {
+  login(
+    email: "trejgun@gmail.com",
+    password: "My5up3r5tr0ngP@55w0rd"
+  ) {
+    accessToken
+    refreshToken
+    accessTokenExpiry
+    refreshTokenExpiry
+  }
+}

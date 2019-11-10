@@ -19,7 +19,7 @@ export const Page0001: React.FC = () => {
 
       <p>
         Yesterday I tried to implement <em>CustomTransportStrategy</em> for Nest.js and after googling for half an hour
-        I realize there are only examples for RabbitMQ like this{" "}
+        I realize there are only examples for RabbitMQ like this
         <ExternalLink href="https://github.com/AlariCode/nestjs-rmq">nestjs-rmq</ExternalLink>, which is already
         included in <em>@nestjs/microservice</em> package. But there were nothing simple where one can see a logic
         related only to Nest.js itself until now

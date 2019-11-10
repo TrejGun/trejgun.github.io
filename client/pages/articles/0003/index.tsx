@@ -17,7 +17,7 @@ export const Page0003: React.FC = () => {
       </Typography>
 
       <p>
-        This is the second article about custom transports for Nest.js, you can find first one{" "}
+        This is the second article about custom transports for Nest.js, you can find first one
         <Link component={LinkAdapter} to="/articles/custom-transport-for-nestjs">
           here
         </Link>

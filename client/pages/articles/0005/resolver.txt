@@ -1,0 +1,25 @@
+import {Query, Resolver} from "@nestjs/graphql";
+
+import {User, Roles} from "../common/decorators";
+import {UserRole} from "./interfaces";
+import {UserEntity} from "./user.entity";
+import {UserService} from "./user.service";
+import {UserListType} from "./types";
+
+
+@Resolver(() => UserEntity)
+export class UserResolver {
+  constructor(private readonly userService: UserService) {}
+
+  @Query(_returns => UserEntity)
+  public profile(@User() user: UserEntity): UserEntity {
+    return user;
+  }
+
+  @Roles(UserRole.Admin)
+  @Query(_returns => UserListType)
+  public listUsers(): Promise<UserListType> {
+    return this.userService.findAndCount().then(([list, count]) => ({list, count}));
+  }
+
+}

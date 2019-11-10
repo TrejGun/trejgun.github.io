@@ -12,6 +12,11 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/nova-poshta-google-maps-widget">
+            Nova Poshta Google Maps widget
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/graphql-based-authorization-for-nestjs">
             GraphQL based authorization for Nest.js
           </Link>

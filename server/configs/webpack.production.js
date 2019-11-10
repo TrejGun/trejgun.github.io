@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.(ts|js)x?$/,
-        exclude: [/node_modules/],
+        exclude: /node_modules\/(?!(@trejgun)\/).*/,
         use: [
           {
             loader: "babel-loader",

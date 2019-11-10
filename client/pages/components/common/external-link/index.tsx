@@ -3,6 +3,9 @@ import {Link} from "@material-ui/core";
 import {LinkProps} from "@material-ui/core/Link";
 
 
-export const ExternalLink = React.forwardRef<HTMLAnchorElement, LinkProps>(({...props}: LinkProps, ref) => (
-  <Link innerRef={ref} rel="noopener noreferrer nofollow" target="_blank" {...props} />
+export const ExternalLink = React.forwardRef<HTMLAnchorElement, LinkProps>(({children, ...props}: LinkProps, ref) => (
+  <Link innerRef={ref} rel="noopener noreferrer nofollow" target="_blank" {...props}>
+    {" "}
+    {children}{" "}
+  </Link>
 ));
