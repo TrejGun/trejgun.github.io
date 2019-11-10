@@ -1,16 +1,16 @@
 !(function(e) {
   function t(t) {
-    for (var r, s, i = t[0], l = t[1], c = t[2], m = 0, p = []; m < i.length; m++)
-      (s = i[m]), Object.prototype.hasOwnProperty.call(o, s) && o[s] && p.push(o[s][0]), (o[s] = 0);
-    for (r in l) Object.prototype.hasOwnProperty.call(l, r) && (e[r] = l[r]);
+    for (var r, s, l = t[0], i = t[1], c = t[2], m = 0, p = []; m < l.length; m++)
+      (s = l[m]), Object.prototype.hasOwnProperty.call(o, s) && o[s] && p.push(o[s][0]), (o[s] = 0);
+    for (r in i) Object.prototype.hasOwnProperty.call(i, r) && (e[r] = i[r]);
     for (u && u(t); p.length; ) p.shift()();
     return a.push.apply(a, c || []), n();
   }
   function n() {
     for (var e, t = 0; t < a.length; t++) {
-      for (var n = a[t], r = !0, i = 1; i < n.length; i++) {
-        var l = n[i];
-        0 !== o[l] && (r = !1);
+      for (var n = a[t], r = !0, l = 1; l < n.length; l++) {
+        var i = n[l];
+        0 !== o[i] && (r = !1);
       }
       r && (a.splice(t--, 1), (e = s((s.s = n[0]))));
     }
@@ -65,11 +65,11 @@
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
     (s.p = "/dist/bundle/");
-  var i = (window.webpackJsonp = window.webpackJsonp || []),
-    l = i.push.bind(i);
-  (i.push = t), (i = i.slice());
-  for (var c = 0; c < i.length; c++) t(i[c]);
-  var u = l;
+  var l = (window.webpackJsonp = window.webpackJsonp || []),
+    i = l.push.bind(l);
+  (l.push = t), (l = l.slice());
+  for (var c = 0; c < l.length; c++) t(l[c]);
+  var u = i;
   a.push([44, 1]), n();
 })({
   0: function(e, t) {
@@ -88,9 +88,9 @@
       o = n(43),
       a = n(5),
       s = n(1),
-      i = n(26);
-    function l() {
-      return (l =
+      l = n(26);
+    function i() {
+      return (i =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -123,7 +123,7 @@
     var u = r.forwardRef(function(e, t) {
         var n = e.to,
           o = c(e, ["to"]);
-        return r.createElement(i.b, l({innerRef: t, to: n}, o));
+        return r.createElement(l.b, i({innerRef: t, to: n}, o));
       }),
       m = Object(s.makeStyles)(
         function(e) {
@@ -304,9 +304,9 @@
         return r.createElement("div", {className: n.date}, new Date(t).toISOString().split("T")[0]);
       },
       w = n(275),
-      j = n(273);
-    function k() {
-      return (k =
+      k = n(273);
+    function j() {
+      return (j =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -339,10 +339,10 @@
     var S = function(e) {
         var t = e.children,
           n = T(e, ["children"]);
-        return r.createElement(w.a, k({style: j.a}, n), t);
+        return r.createElement(w.a, j({style: k.a}, n), t);
       },
       O = n(34),
-      x = function(e) {
+      P = function(e) {
         var t = e.slug;
         return "ReactSnap" === navigator.userAgent
           ? null
@@ -352,7 +352,7 @@
               r.createElement(O.Comments, {href: "https://trejgun.github.io/articles/".concat(t)}),
             );
       },
-      P = function() {
+      x = function() {
         return r.createElement(
           "div",
           null,
@@ -417,7 +417,7 @@
             'import {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\n\n@Controller()\nexport class TickerController {\n  @MessagePattern("TICK")\n  public ticker(data: number): Promise<number> {\n    return Promise.resolve(data);\n  }\n}\n',
           ),
           r.createElement("p", null, "This is all for today, good luck with your code!"),
-          r.createElement(x, {slug: "custom-transport-for-nestjs"}),
+          r.createElement(P, {slug: "custom-transport-for-nestjs"}),
         );
       },
       I = function() {
@@ -473,7 +473,7 @@
             ),
             "with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I tried to make it simple, so you can adjust it for your own needs",
           ),
-          r.createElement(x, {slug: "session-based-authorization-for-nestjs"}),
+          r.createElement(P, {slug: "session-based-authorization-for-nestjs"}),
         );
       },
       N = function() {
@@ -513,7 +513,7 @@
             {language: "typescript"},
             'import {Observable} from "rxjs";\nimport {Controller} from "@nestjs/common";\nimport {MessagePattern} from "@nestjs/microservices";\nimport {Block} from "web3/eth/types";\n\nimport {EthereumService} from "./ethereum.service";\n\n@Controller()\nexport class EthereumController {\n  constructor(private readonly ethereumService: EthereumService) {}\n\n  @MessagePattern("BLOCK")\n  public block(block: Block): Observable<object> {\n    return from(block.transactions);\n  }\n}\n',
           ),
-          r.createElement(x, {slug: "ethereum-server-for-nestjs"}),
+          r.createElement(P, {slug: "ethereum-server-for-nestjs"}),
         );
       },
       C = function() {
@@ -556,7 +556,7 @@
             "As always you can find code in my",
             r.createElement(v, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
           ),
-          r.createElement(x, {slug: "jwt-based-authorization-for-nestjs"}),
+          r.createElement(P, {slug: "jwt-based-authorization-for-nestjs"}),
         );
       },
       A = function() {
@@ -605,20 +605,49 @@
               "github repo",
             ),
           ),
-          r.createElement(x, {slug: "graphql-based-authorization-for-nestjs"}),
+          r.createElement(P, {slug: "graphql-based-authorization-for-nestjs"}),
         );
       },
-      z = n(274),
-      U = Object(s.makeStyles)(
+      M = n(274),
+      z = Object(s.makeStyles)(
         function() {
           return {
             map: {width: 600, height: 400, backgroundColor: "#c0c0c0", position: "relative"},
             spinner: {top: "50%", left: "50%", position: "absolute", marginTop: -20, marginLeft: -20},
+            input: {width: 600, display: "block"},
           };
         },
         {name: "NovaPoshta"},
-      );
-    function G(e, t) {
+      ),
+      G = function(e) {
+        var t = e.setWarehouse,
+          n = e.googleMapsApiKey,
+          o = e.novaPoshtaApiKey,
+          a = z();
+        return n && o
+          ? "ReactSnap" === navigator.userAgent
+            ? null
+            : r.createElement(
+                M.a,
+                {
+                  onError: console.error.bind(console),
+                  googleMapsApiKey: n,
+                  novaPoshtaApiKey: o,
+                  className: a.map,
+                  onSelect: t,
+                  getCoordinates: function(e, t) {
+                    e({lat: 50.45466, lng: 30.5238}),
+                      window.navigator.geolocation.getCurrentPosition(function(t) {
+                        e({lat: t.coords.latitude, lng: t.coords.longitude});
+                      }, t);
+                  },
+                  options: {zoomControlOptions: {position: "RIGHT_CENTER"}},
+                },
+                r.createElement(s.CircularProgress, {className: a.spinner}),
+              )
+          : null;
+      };
+    function U(e, t) {
       return (
         (function(e) {
           if (Array.isArray(e)) return e;
@@ -631,15 +660,15 @@
             a = void 0;
           try {
             for (
-              var s, i = e[Symbol.iterator]();
-              !(r = (s = i.next()).done) && (n.push(s.value), !t || n.length !== t);
+              var s, l = e[Symbol.iterator]();
+              !(r = (s = l.next()).done) && (n.push(s.value), !t || n.length !== t);
               r = !0
             );
           } catch (e) {
             (o = !0), (a = e);
           } finally {
             try {
-              r || null == i.return || i.return();
+              r || null == l.return || l.return();
             } finally {
               if (o) throw a;
             }
@@ -651,13 +680,19 @@
         })()
       );
     }
-    var M,
-      R,
-      L = function() {
-        var e = U(),
-          t = G(r.useState(null), 2),
+    var R,
+      L,
+      B = function() {
+        var e = z(),
+          t = U(r.useState(null), 2),
           n = t[0],
-          o = t[1];
+          o = t[1],
+          a = U(r.useState(""), 2),
+          l = a[0],
+          i = a[1],
+          c = U(r.useState(""), 2),
+          u = c[0],
+          m = c[1];
         return r.createElement(
           "div",
           null,
@@ -668,23 +703,23 @@
             null,
             "I`m working not only with Nest.js and server side JS in my practice, so today let me show you dead simple widget for selecting Nova Poshta warehouse on Google map, which obviously should have been written by Nova Poshta itself, but obviously had not been.",
           ),
-          r.createElement(
-            z.a,
-            {
-              onError: console.error.bind(console),
-              googleMapsApiKey: "AIzaSyAbdx-pji0rQcRzfFwjRK_f8e9qmULLHyo",
-              novaPoshtaApiKey: "37dd619051dc066c7a22a1f149032ffd",
-              className: e.map,
-              onSelect: o,
-              getCoordinates: function(e, t) {
-                window.navigator.geolocation.getCurrentPosition(function(t) {
-                  e({lat: t.coords.latitude, lng: t.coords.longitude});
-                }, t);
-              },
-              options: {zoomControlOptions: {position: "RIGHT_CENTER"}},
+          r.createElement("p", null, "You can play with example but have to enter your valid API keys."),
+          r.createElement(s.Input, {
+            className: e.input,
+            placeholder: "Google Maps API key",
+            onChange: function(e) {
+              return i(e.target.value);
             },
-            r.createElement(s.CircularProgress, {className: e.spinner}),
-          ),
+          }),
+          r.createElement(s.Input, {
+            className: e.input,
+            placeholder: "Nova Poshta API key",
+            onChange: function(e) {
+              return m(e.target.value);
+            },
+          }),
+          r.createElement("br", null),
+          r.createElement(G, {setWarehouse: o, googleMapsApiKey: l, novaPoshtaApiKey: u}),
           r.createElement("p", null, "Selected: ", n ? n.Description : "N/A"),
           r.createElement(
             "p",
@@ -697,23 +732,23 @@
             "As always you can find code in my",
             r.createElement(v, {href: "https://github.com/TrejGun/trejgun-nova-poshta-google-maps"}, "github repo"),
           ),
-          r.createElement(x, {slug: "nova-poshta-google-maps-widget"}),
+          r.createElement(P, {slug: "nova-poshta-google-maps-widget"}),
         );
       },
-      B = function() {
+      H = function() {
         return r.createElement(
           a.d,
           null,
-          r.createElement(a.b, {component: P, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: x, path: "/articles/custom-transport-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: N, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: C, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: A, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: L, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
+          r.createElement(a.b, {component: B, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
           r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
-      H = function() {
+      q = function() {
         return r.createElement(
           "div",
           null,
@@ -728,7 +763,7 @@
           ),
         );
       },
-      q = function() {
+      W = function() {
         return r.createElement(
           "div",
           null,
@@ -754,7 +789,7 @@
           ),
         );
       },
-      W = Object(o.hot)(function() {
+      K = Object(o.hot)(function() {
         return r.createElement(
           h,
           null,
@@ -762,25 +797,25 @@
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: B}),
-            r.createElement(a.b, {path: "/about", component: H}),
+            r.createElement(a.b, {path: "/articles", component: H}),
+            r.createElement(a.b, {path: "/about", component: q}),
             r.createElement(a.b, {path: "/terms-and-conditions", component: Q}),
-            r.createElement(a.b, {path: "/page-not-found", component: q}),
+            r.createElement(a.b, {path: "/page-not-found", component: W}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      _ = n(21);
-    (M = W),
-      (R = document.getElementById("app")) &&
-        _[R.hasChildNodes() ? "hydrate" : "render"](
+      D = n(21);
+    (R = K),
+      (L = document.getElementById("app")) &&
+        D[L.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
-            r.createElement(i.a, null, r.createElement(M, null)),
+            r.createElement(l.a, null, r.createElement(R, null)),
           ),
-          R,
+          L,
         );
   },
   44: function(e, t, n) {
