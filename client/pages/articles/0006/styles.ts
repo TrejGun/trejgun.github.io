@@ -16,6 +16,10 @@ export default makeStyles(
       marginTop: -20,
       marginLeft: -20,
     },
+    input: {
+      width: 600,
+      display: "block",
+    },
   }),
   {name: "NovaPoshta"},
 );

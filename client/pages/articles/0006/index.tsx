@@ -1,10 +1,10 @@
 import * as React from "react";
-import {NovaPoshtaMap} from "@trejgun/nova-poshta-google-maps";
-import {Typography, CircularProgress} from "@material-ui/core";
+import {Typography, Input} from "@material-ui/core";
 
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 import {Comments} from "../../components/common/comments";
+import {Map} from "./map";
 import useStyles from "./styles";
 
 
@@ -12,14 +12,8 @@ export const Page0006: React.FC = () => {
   const classes = useStyles();
   const [warehouse, setWarehouse] = React.useState<any>(null);
 
-  const getCoordinates = (setCoordinates: (coordinates: any) => {}, onError: PositionErrorCallback): void => {
-    window.navigator.geolocation.getCurrentPosition(position => {
-      setCoordinates({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      });
-    }, onError);
-  };
+  const [googleMapsApiKey, setGoogleMapsApiKey] = React.useState<string>("");
+  const [novaPoshtaApiKey, setNovaPoshtaApiKey] = React.useState<string>("");
 
   return (
     <div>
@@ -34,21 +28,22 @@ export const Page0006: React.FC = () => {
         itself, but obviously had not been.
       </p>
 
-      <NovaPoshtaMap
-        onError={console.error.bind(console)}
-        googleMapsApiKey="AIzaSyAbdx-pji0rQcRzfFwjRK_f8e9qmULLHyo"
-        novaPoshtaApiKey="37dd619051dc066c7a22a1f149032ffd"
-        className={classes.map}
-        onSelect={setWarehouse}
-        getCoordinates={getCoordinates}
-        options={{
-          zoomControlOptions: {
-            position: "RIGHT_CENTER",
-          },
-        }}
-      >
-        <CircularProgress className={classes.spinner} />
-      </NovaPoshtaMap>
+      <p>You can play with example but have to enter your valid API keys.</p>
+
+      <Input
+        className={classes.input}
+        placeholder={"Google Maps API key"}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => setGoogleMapsApiKey(e.target.value)}
+      />
+      <Input
+        className={classes.input}
+        placeholder={"Nova Poshta API key"}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => setNovaPoshtaApiKey(e.target.value)}
+      />
+
+      <br />
+
+      <Map setWarehouse={setWarehouse} googleMapsApiKey={googleMapsApiKey} novaPoshtaApiKey={novaPoshtaApiKey} />
 
       <p>Selected: {warehouse ? warehouse.Description : "N/A"}</p>
 
