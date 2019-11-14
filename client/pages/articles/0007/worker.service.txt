@@ -1,0 +1,21 @@
+import {FindConditions, Repository} from "typeorm";
+import {Injectable, NotFoundException} from "@nestjs/common";
+import {InjectRepository} from "@nestjs/typeorm";
+
+import {WorkerEntity} from "./worker.entity";
+
+
+@Injectable()
+export class WorkerService {
+  constructor(
+    @InjectRepository(WorkerEntity)
+    private readonly workerEntityRepository: Repository<WorkerEntity>,
+  ) {}
+
+  public getResult(where: FindConditions<WorkerEntity>): Promise<Array<WorkerEntity>> {
+    if (Math.random() < .01) {
+      throw new NotFoundException()
+    }
+    return this.workerEntityRepository.find(where);
+  }
+}
