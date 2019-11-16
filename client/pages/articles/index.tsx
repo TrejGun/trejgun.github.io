@@ -8,6 +8,7 @@ import {Page0004} from "./0004";
 import {Page0005} from "./0005";
 import {Page0006} from "./0006";
 import {Page0007} from "./0007";
+import {Page0008} from "./0008";
 
 
 export const Articles: React.FC = () => {
@@ -20,6 +21,7 @@ export const Articles: React.FC = () => {
       <Route component={Page0005} path="/articles/graphql-based-authorization-for-nestjs" exact />
       <Route component={Page0006} path="/articles/nova-poshta-google-maps-widget" exact />
       <Route component={Page0007} path="/articles/collecting-data-from-workers-in-nestjs" exact />
+      <Route component={Page0008} path="/articles/how-to-convert-http-exception-to-rpc-exception" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );

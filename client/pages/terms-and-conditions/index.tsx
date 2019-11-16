@@ -12,7 +12,7 @@ export const TermsAndConditions: React.FC = () => {
 
       <p>
         This is a static website with
-        <ExternalLink href="https://github.com/TrejGun/trejgun.github.io">open source code</ExternalLink> . It is not
+        <ExternalLink href="https://github.com/TrejGun/trejgun.github.io">open source code</ExternalLink>. It is not
         using cookies and/or not collecting any personal data by itself. All articles and source code of this site are
         available for education purposes under MIT license
       </p>

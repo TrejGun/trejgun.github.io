@@ -17,7 +17,7 @@ export const Page0006: React.FC = () => {
 
   return (
     <div>
-      <MyDate date={"2019-11-03T11:49:19.556Z"} />
+      <MyDate date={"2019-11-10T13:20:19.556Z"} />
       <Typography component="h2" variant="h4">
         Nova Poshta Google Maps widget
       </Typography>

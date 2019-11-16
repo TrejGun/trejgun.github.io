@@ -12,6 +12,11 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/how-to-convert-http-exception-to-rpc-exception">
+            How to convert HttpException to RpcException
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/collecting-data-from-workers-in-nestjs">
             Collecting data from workers in Nest.js
           </Link>

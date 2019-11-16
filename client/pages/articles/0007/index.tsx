@@ -12,7 +12,7 @@ import orchestratorService from "./orchestrator.service.txt";
 export const Page0007: React.FC = () => {
   return (
     <div>
-      <MyDate date={"2019-11-03T11:49:19.556Z"} />
+      <MyDate date={"2019-11-14T18:40:19.556Z"} />
       <Typography component="h2" variant="h4">
         Collecting data from workers in Nest.js
       </Typography>

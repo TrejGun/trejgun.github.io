@@ -4,7 +4,7 @@
     ,
     ,
     function(e, t, n) {
-      e.exports = n(45)();
+      e.exports = n(46)();
     },
     function(e, t) {
       e.exports = function(e) {
@@ -13,13 +13,13 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(17),
+      var a = n(16),
         r = n(0),
         i = n.n(r),
         o = n(2),
         s = n.n(o),
-        l = n(15),
-        c = n(5),
+        l = n(14),
+        c = n(32),
         _ = n.n(c),
         d = n(39),
         u = n.n(d),
@@ -124,11 +124,11 @@
             })(r.Component);
             return (l.contextTypes = (((a = {})[i] = s.a.object), a)), {Provider: o, Consumer: l};
           },
-        E = n(13),
+        E = n(12),
         g = n(9),
         S = n(33),
         f = n.n(S),
-        T = (n(35), n(19));
+        T = (n(35), n(18));
       n(40);
       n.d(t, "a", function() {
         return I;
@@ -343,12 +343,12 @@
           t
         );
       })(i.a.Component);
-      function w(e) {
+      function L(e) {
         return "/" === e.charAt(0) ? e : "/" + e;
       }
-      function L(e, t) {
+      function w(e, t) {
         if (!e) return t;
-        var n = w(e);
+        var n = L(e);
         return 0 !== t.pathname.indexOf(n) ? t : Object(g.a)({}, t, {pathname: t.pathname.substr(n.length)});
       }
       function P(e) {
@@ -391,6 +391,33 @@
       })(i.a.Component);
       i.a.useContext;
     },
+    function(e, t, n) {
+      var a = n(243);
+      function r() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (r = function() {
+            return e;
+          }),
+          e
+        );
+      }
+      e.exports = function(e) {
+        if (e && e.__esModule) return e;
+        if (null === e || ("object" !== a(e) && "function" != typeof e)) return {default: e};
+        var t = r();
+        if (t && t.has(e)) return t.get(e);
+        var n = {},
+          i = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var o in e)
+          if (Object.prototype.hasOwnProperty.call(e, o)) {
+            var s = i ? Object.getOwnPropertyDescriptor(e, o) : null;
+            s && (s.get || s.set) ? Object.defineProperty(n, o, s) : (n[o] = e[o]);
+          }
+        return (n.default = e), t && t.set(e, n), n;
+      };
+    },
     function(e, t) {
       e.exports = function(e, t) {
         (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
@@ -402,33 +429,6 @@
           t in e ? Object.defineProperty(e, t, {value: n, enumerable: !0, configurable: !0, writable: !0}) : (e[t] = n),
           e
         );
-      };
-    },
-    function(e, t) {
-      function n() {
-        if ("function" != typeof WeakMap) return null;
-        var e = new WeakMap();
-        return (
-          (n = function() {
-            return e;
-          }),
-          e
-        );
-      }
-      e.exports = function(e) {
-        if (e && e.__esModule) return e;
-        var t = n();
-        if (t && t.has(e)) return t.get(e);
-        var a = {};
-        if (null != e) {
-          var r = Object.defineProperty && Object.getOwnPropertyDescriptor;
-          for (var i in e)
-            if (Object.prototype.hasOwnProperty.call(e, i)) {
-              var o = r ? Object.getOwnPropertyDescriptor(e, i) : null;
-              o && (o.get || o.set) ? Object.defineProperty(a, i, o) : (a[i] = e[i]);
-            }
-        }
-        return (a.default = e), t && t.set(e, a), a;
       };
     },
     function(e, t) {
@@ -488,34 +488,7 @@
       };
     },
     function(e, t, n) {
-      e.exports = n(240);
-    },
-    function(e, t) {
-      function n(e, t, n, a, r, i, o) {
-        try {
-          var s = e[i](o),
-            l = s.value;
-        } catch (e) {
-          return void n(e);
-        }
-        s.done ? t(l) : Promise.resolve(l).then(a, r);
-      }
-      e.exports = function(e) {
-        return function() {
-          var t = this,
-            a = arguments;
-          return new Promise(function(r, i) {
-            var o = e.apply(t, a);
-            function s(e) {
-              n(o, r, i, s, l, "next", e);
-            }
-            function l(e) {
-              n(o, r, i, s, l, "throw", e);
-            }
-            s(void 0);
-          });
-        };
-      };
+      e.exports = n(244);
     },
     function(e, t, n) {
       "use strict";
@@ -527,14 +500,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
-      var i = r(n(16)),
-        o = r(n(5)),
-        s = r(n(6)),
+      var i = r(n(15)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(20)),
+        c = r(n(19)),
         _ = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
@@ -630,7 +603,7 @@
           }
           return !1;
         },
-        c = n(13);
+        c = n(12);
       function _(e) {
         return "/" === e.charAt(0) ? e : "/" + e;
       }
@@ -819,13 +792,13 @@
         function D(e) {
           (function(e) {
             return void 0 === e.state && -1 === navigator.userAgent.indexOf("CriOS");
-          })(e) || w(N(e.state));
+          })(e) || L(N(e.state));
         }
         function M() {
-          w(N(C()));
+          L(N(C()));
         }
         var x = !1;
-        function w(e) {
+        function L(e) {
           if (x) (x = !1), A();
           else {
             y.confirmTransitionTo(e, "POP", g, function(t) {
@@ -843,8 +816,8 @@
             });
           }
         }
-        var L = N(C()),
-          P = [L.key];
+        var w = N(C()),
+          P = [w.key];
         function k(e) {
           return R + m(e);
         }
@@ -861,7 +834,7 @@
         var Y = {
           length: n.length,
           action: "POP",
-          location: L,
+          location: w,
           createHref: k,
           push: function(e, t) {
             var a = E(e, t, I(), Y.location);
@@ -1007,10 +980,10 @@
           }
         }
         var x = I(),
-          w = g(x);
-        x !== w && y(w);
-        var L = h(),
-          P = [m(L)];
+          L = g(x);
+        x !== L && y(L);
+        var w = h(),
+          P = [m(w)];
         function k(e) {
           t.go(e);
         }
@@ -1022,7 +995,7 @@
         var G = {
           length: t.length,
           action: "POP",
-          location: L,
+          location: w,
           createHref: function(e) {
             var t = document.querySelector("base"),
               n = "";
@@ -1189,7 +1162,7 @@
           if (!r.default) return "https://www.facebook.com";
           return window.location.href;
         });
-      var r = a(n(29));
+      var r = a(n(28));
     },
     function(e, t, n) {
       "use strict";
@@ -1208,21 +1181,20 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
         o = r(n(11)),
-        s = r(n(12)),
-        l = r(n(5)),
-        c = r(n(6)),
-        _ = a(n(0)),
-        d = r(n(23)),
-        u = (function(e) {
+        s = r(n(6)),
+        l = r(n(7)),
+        c = a(n(0)),
+        _ = r(n(22)),
+        d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
           }
-          (0, l.default)(t, e);
+          (0, s.default)(t, e);
           var n = t.prototype;
           return (
             (n.componentDidMount = function() {
@@ -1231,32 +1203,27 @@
             (n.componentWillUnmount = function() {
               this.$isMounted = !1;
             }),
-            (n.prepare = (function() {
-              var e = (0, s.default)(
-                o.default.mark(function e() {
-                  var t, n, a, r;
-                  return o.default.wrap(
-                    function(e) {
-                      for (;;)
-                        switch ((e.prev = e.next)) {
-                          case 0:
-                            return (t = this.props), (n = t.onReady), (a = t.handleInit), (e.next = 3), a();
-                          case 3:
-                            (r = e.sent), n && this.$isMounted && n(r);
-                          case 5:
-                          case "end":
-                            return e.stop();
-                        }
-                    },
-                    e,
-                    this,
-                  );
-                }),
+            (n.prepare = function() {
+              var e, t, n, a;
+              return o.default.async(
+                function(r) {
+                  for (;;)
+                    switch ((r.prev = r.next)) {
+                      case 0:
+                        return (
+                          (e = this.props), (t = e.onReady), (n = e.handleInit), (r.next = 3), o.default.awrap(n())
+                        );
+                      case 3:
+                        (a = r.sent), t && this.$isMounted && t(a);
+                      case 5:
+                      case "end":
+                        return r.stop();
+                    }
+                },
+                null,
+                this,
               );
-              return function() {
-                return e.apply(this, arguments);
-              };
-            })()),
+            }),
             (n.render = function() {
               var e = this.props,
                 t = e.children,
@@ -1266,17 +1233,17 @@
             }),
             t
           );
-        })(_.Component);
-      (0, c.default)(u, "defaultProps", {onReady: void 0, api: void 0});
-      var p = (0, _.forwardRef)(function(e, t) {
-        return _.default.createElement(d.default.Consumer, null, function(n) {
+        })(c.Component);
+      (0, l.default)(d, "defaultProps", {onReady: void 0, api: void 0});
+      var u = (0, c.forwardRef)(function(e, t) {
+        return c.default.createElement(_.default.Consumer, null, function(n) {
           var a = n.handleInit,
             r = n.isReady,
             o = n.api;
-          return _.default.createElement(u, (0, i.default)({}, e, {handleInit: a, isReady: r, api: o, ref: t}));
+          return c.default.createElement(d, (0, i.default)({}, e, {handleInit: a, isReady: r, api: o, ref: t}));
         });
       });
-      t.default = p;
+      t.default = u;
     },
     ,
     function(e, t) {
@@ -1313,77 +1280,62 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(11)),
-        o = r(n(12)),
-        s = r(n(16)),
-        l = r(n(5)),
-        c = r(n(6)),
-        _ = a(n(0)),
-        d = r(n(20)),
-        u = (function(e) {
+        o = r(n(15)),
+        s = r(n(6)),
+        l = r(n(7)),
+        c = a(n(0)),
+        _ = r(n(19)),
+        d = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, c.default)((0, s.default)(t), "state", {api: void 0}),
-              (0, c.default)(
-                (0, s.default)(t),
-                "handleProcess",
-                (function() {
-                  var e = (0, o.default)(
-                    i.default.mark(function e(n, a) {
-                      var r, o;
-                      return i.default.wrap(
-                        function(e) {
-                          for (;;)
-                            switch ((e.prev = e.next)) {
-                              case 0:
-                                if (
-                                  (void 0 === a && (a = function() {}),
-                                  t.setState({data: void 0, error: void 0, loading: !0}),
-                                  (e.prev = 2),
-                                  (r = t.state.api))
-                                ) {
-                                  e.next = 6;
-                                  break;
-                                }
-                                throw new Error("Facebook is not initialized. Wait for isReady");
-                              case 6:
-                                return (e.next = 8), n(r);
-                              case 8:
-                                return (o = e.sent), t.setState({data: o, loading: !1}, a), e.abrupt("return", o);
-                              case 13:
-                                throw ((e.prev = 13),
-                                (e.t0 = e.catch(2)),
-                                t.setState({error: e.t0, loading: !1}),
-                                e.t0);
-                              case 17:
-                              case "end":
-                                return e.stop();
-                            }
-                        },
-                        e,
-                        null,
-                        [[2, 13]],
-                      );
-                    }),
-                  );
-                  return function(t, n) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
-              (0, c.default)((0, s.default)(t), "handleReady", function(e) {
+              (0, l.default)((0, o.default)(t), "state", {api: void 0}),
+              (0, l.default)((0, o.default)(t), "handleProcess", function(e, n) {
+                var a, r;
+                return i.default.async(
+                  function(o) {
+                    for (;;)
+                      switch ((o.prev = o.next)) {
+                        case 0:
+                          if (
+                            (void 0 === n && (n = function() {}),
+                            t.setState({data: void 0, error: void 0, loading: !0}),
+                            (o.prev = 2),
+                            (a = t.state.api))
+                          ) {
+                            o.next = 6;
+                            break;
+                          }
+                          throw new Error("Facebook is not initialized. Wait for isReady");
+                        case 6:
+                          return (o.next = 8), i.default.awrap(e(a));
+                        case 8:
+                          return (r = o.sent), t.setState({data: r, loading: !1}, n), o.abrupt("return", r);
+                        case 13:
+                          throw ((o.prev = 13), (o.t0 = o.catch(2)), t.setState({error: o.t0, loading: !1}), o.t0);
+                        case 17:
+                        case "end":
+                          return o.stop();
+                      }
+                  },
+                  null,
+                  null,
+                  [[2, 13]],
+                );
+              }),
+              (0, l.default)((0, o.default)(t), "handleReady", function(e) {
                 t.setState({api: e});
               }),
               t
             );
           }
           return (
-            (0, l.default)(t, e),
+            (0, s.default)(t, e),
             (t.prototype.render = function() {
               var e = this.props.children,
                 t = this.state,
@@ -1391,16 +1343,16 @@
                 a = t.loading,
                 r = t.data,
                 i = t.error;
-              return _.default.createElement(
-                d.default,
+              return c.default.createElement(
+                _.default,
                 {onReady: this.handleReady},
                 e({loading: !n || a, handleProcess: this.handleProcess, data: r, error: i}),
               );
             }),
             t
           );
-        })(_.Component);
-      t.default = u;
+        })(c.Component);
+      t.default = d;
     },
     function(e, t, n) {
       "use strict";
@@ -1411,13 +1363,13 @@
           return S;
         });
       var a = n(4),
-        r = n(17),
+        r = n(16),
         i = n(0),
         o = n.n(i),
-        s = n(15),
+        s = n(14),
         l = (n(2), n(9)),
-        c = n(19),
-        _ = n(13),
+        c = n(18),
+        _ = n(12),
         d = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
@@ -1546,7 +1498,7 @@
       });
     },
     function(e, t, n) {
-      var a = n(6);
+      var a = n(241);
       e.exports = function(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {},
@@ -1596,56 +1548,47 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(11)),
-        o = r(n(12)),
-        s = r(n(16)),
-        l = r(n(5)),
-        c = r(n(6)),
-        _ = a(n(0)),
-        d = r(n(20)),
-        u = (function(e) {
+        o = r(n(15)),
+        s = r(n(6)),
+        l = r(n(7)),
+        c = a(n(0)),
+        _ = r(n(19)),
+        d = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, c.default)((0, s.default)(t), "state", {}),
-              (0, c.default)(
-                (0, s.default)(t),
-                "handleReady",
-                (function() {
-                  var e = (0, o.default)(
-                    i.default.mark(function e(n) {
-                      var a;
-                      return i.default.wrap(function(e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                (a = t.props.event), t.setState({api: n}), (e.next = 4), n.subscribe(a, t.handleChange)
-                              );
-                            case 4:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
-              (0, c.default)((0, s.default)(t), "handleChange", function() {
+              (0, l.default)((0, o.default)(t), "state", {}),
+              (0, l.default)((0, o.default)(t), "handleReady", function(e) {
+                var n;
+                return i.default.async(function(a) {
+                  for (;;)
+                    switch ((a.prev = a.next)) {
+                      case 0:
+                        return (
+                          (n = t.props.event),
+                          t.setState({api: e}),
+                          (a.next = 4),
+                          i.default.awrap(e.subscribe(n, t.handleChange))
+                        );
+                      case 4:
+                      case "end":
+                        return a.stop();
+                    }
+                });
+              }),
+              (0, l.default)((0, o.default)(t), "handleChange", function() {
                 var e = t.props.onChange;
                 e && e.apply(void 0, arguments);
               }),
               t
             );
           }
-          (0, l.default)(t, e);
+          (0, s.default)(t, e);
           var n = t.prototype;
           return (
             (n.componentWillUnmount = function() {
@@ -1655,15 +1598,20 @@
             }),
             (n.render = function() {
               var e = this.props.children;
-              return _.default.createElement(d.default, {onReady: this.handleReady}, e);
+              return c.default.createElement(_.default, {onReady: this.handleReady}, e);
             }),
             t
           );
-        })(_.Component);
-      (t.default = u), (0, c.default)(u, "defaultProps", {onChange: void 0});
+        })(c.Component);
+      (t.default = d), (0, l.default)(d, "defaultProps", {onChange: void 0});
+    },
+    function(e, t) {
+      e.exports = function(e, t) {
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+      };
     },
     function(e, t, n) {
-      var a = n(48);
+      var a = n(49);
       (e.exports = p),
         (e.exports.parse = i),
         (e.exports.compile = function(e, t) {
@@ -1859,184 +1807,163 @@
       "use strict";
       var a = n(3);
       t.__esModule = !0;
-      var r = a(n(239));
+      var r = a(n(242));
       t.FacebookProvider = r.default;
-      var i = a(n(14));
+      var i = a(n(13));
       t.Parser = i.default;
-      var o = a(n(20));
+      var o = a(n(19));
       t.Initialize = o.default;
-      var s = a(n(242));
+      var s = a(n(246));
       t.Like = s.default;
-      var l = a(n(243));
+      var l = a(n(247));
       t.Send = l.default;
       var c = a(n(36));
       t.Share = c.default;
-      var _ = a(n(244));
+      var _ = a(n(248));
       t.ShareButton = _.default;
-      var d = a(n(245));
+      var d = a(n(249));
       t.Page = d.default;
       var u = a(n(37));
       t.Login = u.default;
-      var p = a(n(246));
+      var p = a(n(250));
       t.LoginButton = p.default;
-      var m = a(n(249));
+      var m = a(n(253));
       t.EmbeddedPost = m.default;
-      var E = a(n(250));
+      var E = a(n(254));
       t.EmbeddedVideo = E.default;
-      var g = a(n(251));
+      var g = a(n(255));
       t.Comments = g.default;
-      var S = a(n(252));
+      var S = a(n(256));
       t.CommentsCount = S.default;
-      var f = a(n(253));
+      var f = a(n(257));
       t.Feed = f.default;
-      var T = a(n(254));
+      var T = a(n(258));
       t.Group = T.default;
-      var b = a(n(32));
+      var b = a(n(31));
       t.Subscribe = b.default;
-      var h = a(n(255));
+      var h = a(n(259));
       t.Status = h.default;
-      var C = a(n(256));
+      var C = a(n(260));
       t.Profile = C.default;
-      var v = a(n(257));
+      var v = a(n(261));
       t.CustomChat = v.default;
-      var O = a(n(258));
+      var O = a(n(262));
       t.MessageUs = O.default;
-      var R = a(n(259));
+      var R = a(n(263));
       t.MessengerCheckbox = R.default;
-      var N = a(n(260));
+      var N = a(n(264));
       t.SendToMessenger = N.default;
-      var I = a(n(261));
+      var I = a(n(265));
       t.LikeSize = I.default;
-      var y = a(n(262));
+      var y = a(n(266));
       t.LikeLayout = y.default;
-      var A = a(n(263));
+      var A = a(n(267));
       t.ColorScheme = A.default;
-      var D = a(n(264));
+      var D = a(n(268));
       t.LikeAction = D.default;
-      var M = a(n(265));
+      var M = a(n(269));
       t.CommentsOrderBy = M.default;
-      var x = a(n(266));
+      var x = a(n(270));
       t.MessengerSize = x.default;
-      var w = a(n(267));
-      t.MessengerColor = w.default;
-      var L = a(n(30));
-      t.LoginStatus = L.default;
-      var P = a(n(31));
+      var L = a(n(271));
+      t.MessengerColor = L.default;
+      var w = a(n(29));
+      t.LoginStatus = w.default;
+      var P = a(n(30));
       t.Fields = P.default;
-      var k = a(n(23));
+      var k = a(n(22));
       t.FacebookContext = k.default;
-      var U = a(n(268));
+      var U = a(n(272));
       t.useShare = U.default;
       var F = a(n(38));
       t.useApi = F.default;
     },
     function(e, t, n) {
       "use strict";
-      e.exports = n(49);
+      e.exports = n(50);
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
         o = r(n(11)),
-        s = r(n(12)),
-        l = r(n(16)),
-        c = r(n(5)),
-        _ = r(n(6)),
-        d = a(n(0)),
-        u = r(n(18)),
+        s = r(n(15)),
+        l = r(n(6)),
+        c = r(n(7)),
+        _ = a(n(0)),
+        d = r(n(17)),
+        u = r(n(23)),
         p = r(n(24)),
-        m = r(n(25)),
-        E = (function(e) {
+        m = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, _.default)(
-                (0, l.default)(t),
-                "handleClick",
-                (function() {
-                  var e = (0, s.default)(
-                    o.default.mark(function e(n) {
-                      var a;
-                      return o.default.wrap(function(e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                n.preventDefault(),
-                                (a = t.props.handleProcess),
-                                e.abrupt(
-                                  "return",
-                                  a(
-                                    (function() {
-                                      var e = (0, s.default)(
-                                        o.default.mark(function e(n) {
-                                          var a, r, i, s, l, c, _, d, m, E;
-                                          return o.default.wrap(function(e) {
-                                            for (;;)
-                                              switch ((e.prev = e.next)) {
-                                                case 0:
-                                                  return (
-                                                    (a = t.props),
-                                                    (r = a.href),
-                                                    (i = void 0 === r ? (0, u.default)() : r),
-                                                    (s = a.display),
-                                                    (l = a.appId),
-                                                    (c = void 0 === l ? n.getAppId() : l),
-                                                    (_ = a.hashtag),
-                                                    (d = a.redirectURI),
-                                                    (m = a.quote),
-                                                    (E = a.mobileIframe),
-                                                    e.abrupt(
-                                                      "return",
-                                                      n.ui(
-                                                        (0, p.default)({
-                                                          method: "share",
-                                                          href: i,
-                                                          display: s,
-                                                          app_id: c,
-                                                          hashtag: _,
-                                                          redirect_uri: d,
-                                                          quote: m,
-                                                          mobile_iframe: E,
-                                                        }),
-                                                      ),
-                                                    )
-                                                  );
-                                                case 2:
-                                                case "end":
-                                                  return e.stop();
-                                              }
-                                          }, e);
-                                        }),
+              (0, c.default)((0, s.default)(t), "handleClick", function(e) {
+                var n;
+                return o.default.async(function(a) {
+                  for (;;)
+                    switch ((a.prev = a.next)) {
+                      case 0:
+                        return (
+                          e.preventDefault(),
+                          (n = t.props.handleProcess),
+                          a.abrupt(
+                            "return",
+                            n(function(e) {
+                              var n, a, r, i, s, l, c, _, p, m;
+                              return o.default.async(function(o) {
+                                for (;;)
+                                  switch ((o.prev = o.next)) {
+                                    case 0:
+                                      return (
+                                        (n = t.props),
+                                        (a = n.href),
+                                        (r = void 0 === a ? (0, d.default)() : a),
+                                        (i = n.display),
+                                        (s = n.appId),
+                                        (l = void 0 === s ? e.getAppId() : s),
+                                        (c = n.hashtag),
+                                        (_ = n.redirectURI),
+                                        (p = n.quote),
+                                        (m = n.mobileIframe),
+                                        o.abrupt(
+                                          "return",
+                                          e.ui(
+                                            (0, u.default)({
+                                              method: "share",
+                                              href: r,
+                                              display: i,
+                                              app_id: l,
+                                              hashtag: c,
+                                              redirect_uri: _,
+                                              quote: p,
+                                              mobile_iframe: m,
+                                            }),
+                                          ),
+                                        )
                                       );
-                                      return function(t) {
-                                        return e.apply(this, arguments);
-                                      };
-                                    })(),
-                                  ),
-                                )
-                              );
-                            case 3:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
+                                    case 2:
+                                    case "end":
+                                      return o.stop();
+                                  }
+                              });
+                            }),
+                          )
+                        );
+                      case 3:
+                      case "end":
+                        return a.stop();
+                    }
+                });
+              }),
               t
             );
           }
           return (
-            (0, c.default)(t, e),
+            (0, l.default)(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.children,
@@ -2047,8 +1974,8 @@
             }),
             t
           );
-        })(d.Component);
-      (0, _.default)(E, "defaultProps", {
+        })(_.Component);
+      (0, c.default)(m, "defaultProps", {
         href: void 0,
         hashtag: void 0,
         quote: void 0,
@@ -2057,142 +1984,124 @@
         appId: void 0,
         redirectURI: void 0,
       });
-      var g = (0, d.forwardRef)(function(e, t) {
-        return d.default.createElement(m.default, null, function(n) {
+      var E = (0, _.forwardRef)(function(e, t) {
+        return _.default.createElement(p.default, null, function(n) {
           var a = n.loading,
             r = n.handleProcess,
             o = n.data,
             s = n.error;
-          return d.default.createElement(
-            E,
+          return _.default.createElement(
+            m,
             (0, i.default)({}, e, {loading: a, handleProcess: r, data: o, error: s, ref: t}),
           );
         });
       });
-      t.default = g;
+      t.default = E;
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(11)),
         o = r(n(8)),
-        s = r(n(12)),
-        l = r(n(16)),
-        c = r(n(5)),
-        _ = r(n(6)),
-        d = a(n(0)),
-        u = r(n(25)),
-        p = r(n(31)),
-        m = (function(e) {
+        s = r(n(15)),
+        l = r(n(6)),
+        c = r(n(7)),
+        _ = a(n(0)),
+        d = r(n(24)),
+        u = r(n(30)),
+        p = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, _.default)(
-                (0, l.default)(t),
-                "handleClick",
-                (function() {
-                  var e = (0, s.default)(
-                    i.default.mark(function e(n) {
-                      var a, r, l, c, _;
-                      return i.default.wrap(
-                        function(e) {
-                          for (;;)
-                            switch ((e.prev = e.next)) {
-                              case 0:
-                                return (
-                                  n.preventDefault(),
-                                  (a = t.props),
-                                  (r = a.handleProcess),
-                                  (l = a.onCompleted),
-                                  (c = a.onError),
-                                  (_ = a.onSuccess),
-                                  (e.prev = 2),
-                                  (e.next = 5),
-                                  r(
-                                    (function() {
-                                      var e = (0, s.default)(
-                                        i.default.mark(function e(n) {
-                                          var a, r, s, c, _, d, u, p, m, E, g;
-                                          return i.default.wrap(function(e) {
-                                            for (;;)
-                                              switch ((e.prev = e.next)) {
-                                                case 0:
-                                                  return (
-                                                    (a = t.props),
-                                                    (r = a.scope),
-                                                    (s = a.fields),
-                                                    (c = a.returnScopes),
-                                                    (_ = a.rerequest),
-                                                    (d = a.reauthorize),
-                                                    (u = a.eventKey),
-                                                    (p = {scope: r}),
-                                                    (m = []),
-                                                    c && (p.return_scopes = !0),
-                                                    _ && m.push("rerequest"),
-                                                    d && m.push("reauthenticate"),
-                                                    m.length && (p.auth_type = m.join(",")),
-                                                    (e.next = 9),
-                                                    n.login(p)
-                                                  );
-                                                case 9:
-                                                  if ("connected" === (E = e.sent).status) {
-                                                    e.next = 12;
-                                                    break;
-                                                  }
-                                                  throw new Error("Unauthorized user");
-                                                case 12:
-                                                  return (e.next = 14), n.getTokenDetailWithProfile({fields: s}, E);
-                                                case 14:
-                                                  if (((g = e.sent), !l)) {
-                                                    e.next = 18;
-                                                    break;
-                                                  }
-                                                  return (e.next = 18), l((0, o.default)({}, g, {eventKey: u}));
-                                                case 18:
-                                                  return e.abrupt("return", g);
-                                                case 19:
-                                                case "end":
-                                                  return e.stop();
-                                              }
-                                          }, e);
-                                        }),
-                                      );
-                                      return function(t) {
-                                        return e.apply(this, arguments);
-                                      };
-                                    })(),
-                                    _,
-                                  )
-                                );
-                              case 5:
-                                e.next = 10;
-                                break;
-                              case 7:
-                                (e.prev = 7), (e.t0 = e.catch(2)), c && c(e.t0);
-                              case 10:
-                              case "end":
-                                return e.stop();
-                            }
-                        },
-                        e,
-                        null,
-                        [[2, 7]],
-                      );
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
+              (0, c.default)((0, s.default)(t), "handleClick", function(e) {
+                var n, a, r, s, l;
+                return i.default.async(
+                  function(c) {
+                    for (;;)
+                      switch ((c.prev = c.next)) {
+                        case 0:
+                          return (
+                            e.preventDefault(),
+                            (n = t.props),
+                            (a = n.handleProcess),
+                            (r = n.onCompleted),
+                            (s = n.onError),
+                            (l = n.onSuccess),
+                            (c.prev = 2),
+                            (c.next = 5),
+                            i.default.awrap(
+                              a(function(e) {
+                                var n, a, s, l, c, _, d, u, p, m, E;
+                                return i.default.async(function(g) {
+                                  for (;;)
+                                    switch ((g.prev = g.next)) {
+                                      case 0:
+                                        return (
+                                          (n = t.props),
+                                          (a = n.scope),
+                                          (s = n.fields),
+                                          (l = n.returnScopes),
+                                          (c = n.rerequest),
+                                          (_ = n.reauthorize),
+                                          (d = n.eventKey),
+                                          (u = {scope: a}),
+                                          (p = []),
+                                          l && (u.return_scopes = !0),
+                                          c && p.push("rerequest"),
+                                          _ && p.push("reauthenticate"),
+                                          p.length && (u.auth_type = p.join(",")),
+                                          (g.next = 9),
+                                          i.default.awrap(e.login(u))
+                                        );
+                                      case 9:
+                                        if ("connected" === (m = g.sent).status) {
+                                          g.next = 12;
+                                          break;
+                                        }
+                                        throw new Error("Unauthorized user");
+                                      case 12:
+                                        return (
+                                          (g.next = 14), i.default.awrap(e.getTokenDetailWithProfile({fields: s}, m))
+                                        );
+                                      case 14:
+                                        if (((E = g.sent), !r)) {
+                                          g.next = 18;
+                                          break;
+                                        }
+                                        return (g.next = 18), i.default.awrap(r((0, o.default)({}, E, {eventKey: d})));
+                                      case 18:
+                                        return g.abrupt("return", E);
+                                      case 19:
+                                      case "end":
+                                        return g.stop();
+                                    }
+                                });
+                              }, l),
+                            )
+                          );
+                        case 5:
+                          c.next = 10;
+                          break;
+                        case 7:
+                          (c.prev = 7), (c.t0 = c.catch(2)), s && s(c.t0);
+                        case 10:
+                        case "end":
+                          return c.stop();
+                      }
+                  },
+                  null,
+                  null,
+                  [[2, 7]],
+                );
+              }),
               t
             );
           }
           return (
-            (0, c.default)(t, e),
+            (0, l.default)(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.children,
@@ -2203,10 +2112,10 @@
             }),
             t
           );
-        })(d.Component);
-      (0, _.default)(m, "defaultProps", {
+        })(_.Component);
+      (0, c.default)(p, "defaultProps", {
         scope: "",
-        fields: p.default,
+        fields: u.default,
         returnScopes: !1,
         rerequest: !1,
         reauthorize: !1,
@@ -2214,57 +2123,52 @@
         onError: void 0,
         eventKey: void 0,
       });
-      var E = (0, d.forwardRef)(function(e, t) {
-        return d.default.createElement(u.default, null, function(n) {
+      var m = (0, _.forwardRef)(function(e, t) {
+        return _.default.createElement(d.default, null, function(n) {
           var a = n.loading,
             r = n.handleProcess,
             i = n.data,
             s = n.error;
-          return d.default.createElement(
-            m,
+          return _.default.createElement(
+            p,
             (0, o.default)({}, e, {loading: a, handleProcess: r, data: i, error: s, ref: t}),
           );
         });
       });
-      t.default = E;
+      t.default = m;
     },
     function(e, t, n) {
       "use strict";
       var a = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var r = a(n(11)),
-        i = a(n(12)),
-        o = n(0),
-        s = a(n(29)),
-        l = a(n(23));
+        i = n(0),
+        o = a(n(28)),
+        s = a(n(22));
       t.default = function(e) {
-        var t = (0, o.useContext)(l.default),
+        var t = (0, i.useContext)(s.default),
           n = t.handleInit,
           a = t.api;
         return (
-          (0, o.useState)(
-            (0, i.default)(
-              r.default.mark(function t() {
-                var a;
-                return r.default.wrap(function(t) {
-                  for (;;)
-                    switch ((t.prev = t.next)) {
-                      case 0:
-                        if (!s.default) {
-                          t.next = 5;
-                          break;
-                        }
-                        return (t.next = 3), n();
-                      case 3:
-                        (a = t.sent), e && e(a);
-                      case 5:
-                      case "end":
-                        return t.stop();
+          (0, i.useState)(function() {
+            var t;
+            return r.default.async(function(a) {
+              for (;;)
+                switch ((a.prev = a.next)) {
+                  case 0:
+                    if (!o.default) {
+                      a.next = 5;
+                      break;
                     }
-                }, t);
-              }),
-            ),
-          ),
+                    return (a.next = 3), r.default.awrap(n());
+                  case 3:
+                    (t = a.sent), e && e(t);
+                  case 5:
+                  case "end":
+                    return a.stop();
+                }
+            });
+          }),
           [a, n]
         );
       };
@@ -2276,7 +2180,7 @@
         e.exports = function() {
           return (t[n] = (t[n] || 0) + 1);
         };
-      }.call(this, n(47)));
+      }.call(this, n(48)));
     },
     function(e, t, n) {
       "use strict";
@@ -2331,196 +2235,196 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(50);
+      var a = n(51);
       (e.exports = a),
-        a.registerLanguage("1c", n(54)),
-        a.registerLanguage("abnf", n(55)),
-        a.registerLanguage("accesslog", n(56)),
-        a.registerLanguage("actionscript", n(57)),
-        a.registerLanguage("ada", n(58)),
-        a.registerLanguage("angelscript", n(59)),
-        a.registerLanguage("apache", n(60)),
-        a.registerLanguage("applescript", n(61)),
-        a.registerLanguage("arcade", n(62)),
-        a.registerLanguage("cpp", n(63)),
-        a.registerLanguage("arduino", n(64)),
-        a.registerLanguage("armasm", n(65)),
-        a.registerLanguage("xml", n(66)),
-        a.registerLanguage("asciidoc", n(67)),
-        a.registerLanguage("aspectj", n(68)),
-        a.registerLanguage("autohotkey", n(69)),
-        a.registerLanguage("autoit", n(70)),
-        a.registerLanguage("avrasm", n(71)),
-        a.registerLanguage("awk", n(72)),
-        a.registerLanguage("axapta", n(73)),
-        a.registerLanguage("bash", n(74)),
-        a.registerLanguage("basic", n(75)),
-        a.registerLanguage("bnf", n(76)),
-        a.registerLanguage("brainfuck", n(77)),
-        a.registerLanguage("cal", n(78)),
-        a.registerLanguage("capnproto", n(79)),
-        a.registerLanguage("ceylon", n(80)),
-        a.registerLanguage("clean", n(81)),
-        a.registerLanguage("clojure", n(82)),
-        a.registerLanguage("clojure-repl", n(83)),
-        a.registerLanguage("cmake", n(84)),
-        a.registerLanguage("coffeescript", n(85)),
-        a.registerLanguage("coq", n(86)),
-        a.registerLanguage("cos", n(87)),
-        a.registerLanguage("crmsh", n(88)),
-        a.registerLanguage("crystal", n(89)),
-        a.registerLanguage("cs", n(90)),
-        a.registerLanguage("csp", n(91)),
-        a.registerLanguage("css", n(92)),
-        a.registerLanguage("d", n(93)),
-        a.registerLanguage("markdown", n(94)),
-        a.registerLanguage("dart", n(95)),
-        a.registerLanguage("delphi", n(96)),
-        a.registerLanguage("diff", n(97)),
-        a.registerLanguage("django", n(98)),
-        a.registerLanguage("dns", n(99)),
-        a.registerLanguage("dockerfile", n(100)),
-        a.registerLanguage("dos", n(101)),
-        a.registerLanguage("dsconfig", n(102)),
-        a.registerLanguage("dts", n(103)),
-        a.registerLanguage("dust", n(104)),
-        a.registerLanguage("ebnf", n(105)),
-        a.registerLanguage("elixir", n(106)),
-        a.registerLanguage("elm", n(107)),
-        a.registerLanguage("ruby", n(108)),
-        a.registerLanguage("erb", n(109)),
-        a.registerLanguage("erlang-repl", n(110)),
-        a.registerLanguage("erlang", n(111)),
-        a.registerLanguage("excel", n(112)),
-        a.registerLanguage("fix", n(113)),
-        a.registerLanguage("flix", n(114)),
-        a.registerLanguage("fortran", n(115)),
-        a.registerLanguage("fsharp", n(116)),
-        a.registerLanguage("gams", n(117)),
-        a.registerLanguage("gauss", n(118)),
-        a.registerLanguage("gcode", n(119)),
-        a.registerLanguage("gherkin", n(120)),
-        a.registerLanguage("glsl", n(121)),
-        a.registerLanguage("gml", n(122)),
-        a.registerLanguage("go", n(123)),
-        a.registerLanguage("golo", n(124)),
-        a.registerLanguage("gradle", n(125)),
-        a.registerLanguage("groovy", n(126)),
-        a.registerLanguage("haml", n(127)),
-        a.registerLanguage("handlebars", n(128)),
-        a.registerLanguage("haskell", n(129)),
-        a.registerLanguage("haxe", n(130)),
-        a.registerLanguage("hsp", n(131)),
-        a.registerLanguage("htmlbars", n(132)),
-        a.registerLanguage("http", n(133)),
-        a.registerLanguage("hy", n(134)),
-        a.registerLanguage("inform7", n(135)),
-        a.registerLanguage("ini", n(136)),
-        a.registerLanguage("irpf90", n(137)),
-        a.registerLanguage("isbl", n(138)),
-        a.registerLanguage("java", n(139)),
-        a.registerLanguage("javascript", n(140)),
-        a.registerLanguage("jboss-cli", n(141)),
-        a.registerLanguage("json", n(142)),
-        a.registerLanguage("julia", n(143)),
-        a.registerLanguage("julia-repl", n(144)),
-        a.registerLanguage("kotlin", n(145)),
-        a.registerLanguage("lasso", n(146)),
-        a.registerLanguage("ldif", n(147)),
-        a.registerLanguage("leaf", n(148)),
-        a.registerLanguage("less", n(149)),
-        a.registerLanguage("lisp", n(150)),
-        a.registerLanguage("livecodeserver", n(151)),
-        a.registerLanguage("livescript", n(152)),
-        a.registerLanguage("llvm", n(153)),
-        a.registerLanguage("lsl", n(154)),
-        a.registerLanguage("lua", n(155)),
-        a.registerLanguage("makefile", n(156)),
-        a.registerLanguage("mathematica", n(157)),
-        a.registerLanguage("matlab", n(158)),
-        a.registerLanguage("maxima", n(159)),
-        a.registerLanguage("mel", n(160)),
-        a.registerLanguage("mercury", n(161)),
-        a.registerLanguage("mipsasm", n(162)),
-        a.registerLanguage("mizar", n(163)),
-        a.registerLanguage("perl", n(164)),
-        a.registerLanguage("mojolicious", n(165)),
-        a.registerLanguage("monkey", n(166)),
-        a.registerLanguage("moonscript", n(167)),
-        a.registerLanguage("n1ql", n(168)),
-        a.registerLanguage("nginx", n(169)),
-        a.registerLanguage("nimrod", n(170)),
-        a.registerLanguage("nix", n(171)),
-        a.registerLanguage("nsis", n(172)),
-        a.registerLanguage("objectivec", n(173)),
-        a.registerLanguage("ocaml", n(174)),
-        a.registerLanguage("openscad", n(175)),
-        a.registerLanguage("oxygene", n(176)),
-        a.registerLanguage("parser3", n(177)),
-        a.registerLanguage("pf", n(178)),
-        a.registerLanguage("pgsql", n(179)),
-        a.registerLanguage("php", n(180)),
-        a.registerLanguage("plaintext", n(181)),
-        a.registerLanguage("pony", n(182)),
-        a.registerLanguage("powershell", n(183)),
-        a.registerLanguage("processing", n(184)),
-        a.registerLanguage("profile", n(185)),
-        a.registerLanguage("prolog", n(186)),
-        a.registerLanguage("properties", n(187)),
-        a.registerLanguage("protobuf", n(188)),
-        a.registerLanguage("puppet", n(189)),
-        a.registerLanguage("purebasic", n(190)),
-        a.registerLanguage("python", n(191)),
-        a.registerLanguage("q", n(192)),
-        a.registerLanguage("qml", n(193)),
-        a.registerLanguage("r", n(194)),
-        a.registerLanguage("reasonml", n(195)),
-        a.registerLanguage("rib", n(196)),
-        a.registerLanguage("roboconf", n(197)),
-        a.registerLanguage("routeros", n(198)),
-        a.registerLanguage("rsl", n(199)),
-        a.registerLanguage("ruleslanguage", n(200)),
-        a.registerLanguage("rust", n(201)),
-        a.registerLanguage("sas", n(202)),
-        a.registerLanguage("scala", n(203)),
-        a.registerLanguage("scheme", n(204)),
-        a.registerLanguage("scilab", n(205)),
-        a.registerLanguage("scss", n(206)),
-        a.registerLanguage("shell", n(207)),
-        a.registerLanguage("smali", n(208)),
-        a.registerLanguage("smalltalk", n(209)),
-        a.registerLanguage("sml", n(210)),
-        a.registerLanguage("sqf", n(211)),
-        a.registerLanguage("sql", n(212)),
-        a.registerLanguage("stan", n(213)),
-        a.registerLanguage("stata", n(214)),
-        a.registerLanguage("step21", n(215)),
-        a.registerLanguage("stylus", n(216)),
-        a.registerLanguage("subunit", n(217)),
-        a.registerLanguage("swift", n(218)),
-        a.registerLanguage("taggerscript", n(219)),
-        a.registerLanguage("yaml", n(220)),
-        a.registerLanguage("tap", n(221)),
-        a.registerLanguage("tcl", n(222)),
-        a.registerLanguage("tex", n(223)),
-        a.registerLanguage("thrift", n(224)),
-        a.registerLanguage("tp", n(225)),
-        a.registerLanguage("twig", n(226)),
-        a.registerLanguage("typescript", n(227)),
-        a.registerLanguage("vala", n(228)),
-        a.registerLanguage("vbnet", n(229)),
-        a.registerLanguage("vbscript", n(230)),
-        a.registerLanguage("vbscript-html", n(231)),
-        a.registerLanguage("verilog", n(232)),
-        a.registerLanguage("vhdl", n(233)),
-        a.registerLanguage("vim", n(234)),
-        a.registerLanguage("x86asm", n(235)),
-        a.registerLanguage("xl", n(236)),
-        a.registerLanguage("xquery", n(237)),
-        a.registerLanguage("zephir", n(238));
+        a.registerLanguage("1c", n(55)),
+        a.registerLanguage("abnf", n(56)),
+        a.registerLanguage("accesslog", n(57)),
+        a.registerLanguage("actionscript", n(58)),
+        a.registerLanguage("ada", n(59)),
+        a.registerLanguage("angelscript", n(60)),
+        a.registerLanguage("apache", n(61)),
+        a.registerLanguage("applescript", n(62)),
+        a.registerLanguage("arcade", n(63)),
+        a.registerLanguage("cpp", n(64)),
+        a.registerLanguage("arduino", n(65)),
+        a.registerLanguage("armasm", n(66)),
+        a.registerLanguage("xml", n(67)),
+        a.registerLanguage("asciidoc", n(68)),
+        a.registerLanguage("aspectj", n(69)),
+        a.registerLanguage("autohotkey", n(70)),
+        a.registerLanguage("autoit", n(71)),
+        a.registerLanguage("avrasm", n(72)),
+        a.registerLanguage("awk", n(73)),
+        a.registerLanguage("axapta", n(74)),
+        a.registerLanguage("bash", n(75)),
+        a.registerLanguage("basic", n(76)),
+        a.registerLanguage("bnf", n(77)),
+        a.registerLanguage("brainfuck", n(78)),
+        a.registerLanguage("cal", n(79)),
+        a.registerLanguage("capnproto", n(80)),
+        a.registerLanguage("ceylon", n(81)),
+        a.registerLanguage("clean", n(82)),
+        a.registerLanguage("clojure", n(83)),
+        a.registerLanguage("clojure-repl", n(84)),
+        a.registerLanguage("cmake", n(85)),
+        a.registerLanguage("coffeescript", n(86)),
+        a.registerLanguage("coq", n(87)),
+        a.registerLanguage("cos", n(88)),
+        a.registerLanguage("crmsh", n(89)),
+        a.registerLanguage("crystal", n(90)),
+        a.registerLanguage("cs", n(91)),
+        a.registerLanguage("csp", n(92)),
+        a.registerLanguage("css", n(93)),
+        a.registerLanguage("d", n(94)),
+        a.registerLanguage("markdown", n(95)),
+        a.registerLanguage("dart", n(96)),
+        a.registerLanguage("delphi", n(97)),
+        a.registerLanguage("diff", n(98)),
+        a.registerLanguage("django", n(99)),
+        a.registerLanguage("dns", n(100)),
+        a.registerLanguage("dockerfile", n(101)),
+        a.registerLanguage("dos", n(102)),
+        a.registerLanguage("dsconfig", n(103)),
+        a.registerLanguage("dts", n(104)),
+        a.registerLanguage("dust", n(105)),
+        a.registerLanguage("ebnf", n(106)),
+        a.registerLanguage("elixir", n(107)),
+        a.registerLanguage("elm", n(108)),
+        a.registerLanguage("ruby", n(109)),
+        a.registerLanguage("erb", n(110)),
+        a.registerLanguage("erlang-repl", n(111)),
+        a.registerLanguage("erlang", n(112)),
+        a.registerLanguage("excel", n(113)),
+        a.registerLanguage("fix", n(114)),
+        a.registerLanguage("flix", n(115)),
+        a.registerLanguage("fortran", n(116)),
+        a.registerLanguage("fsharp", n(117)),
+        a.registerLanguage("gams", n(118)),
+        a.registerLanguage("gauss", n(119)),
+        a.registerLanguage("gcode", n(120)),
+        a.registerLanguage("gherkin", n(121)),
+        a.registerLanguage("glsl", n(122)),
+        a.registerLanguage("gml", n(123)),
+        a.registerLanguage("go", n(124)),
+        a.registerLanguage("golo", n(125)),
+        a.registerLanguage("gradle", n(126)),
+        a.registerLanguage("groovy", n(127)),
+        a.registerLanguage("haml", n(128)),
+        a.registerLanguage("handlebars", n(129)),
+        a.registerLanguage("haskell", n(130)),
+        a.registerLanguage("haxe", n(131)),
+        a.registerLanguage("hsp", n(132)),
+        a.registerLanguage("htmlbars", n(133)),
+        a.registerLanguage("http", n(134)),
+        a.registerLanguage("hy", n(135)),
+        a.registerLanguage("inform7", n(136)),
+        a.registerLanguage("ini", n(137)),
+        a.registerLanguage("irpf90", n(138)),
+        a.registerLanguage("isbl", n(139)),
+        a.registerLanguage("java", n(140)),
+        a.registerLanguage("javascript", n(141)),
+        a.registerLanguage("jboss-cli", n(142)),
+        a.registerLanguage("json", n(143)),
+        a.registerLanguage("julia", n(144)),
+        a.registerLanguage("julia-repl", n(145)),
+        a.registerLanguage("kotlin", n(146)),
+        a.registerLanguage("lasso", n(147)),
+        a.registerLanguage("ldif", n(148)),
+        a.registerLanguage("leaf", n(149)),
+        a.registerLanguage("less", n(150)),
+        a.registerLanguage("lisp", n(151)),
+        a.registerLanguage("livecodeserver", n(152)),
+        a.registerLanguage("livescript", n(153)),
+        a.registerLanguage("llvm", n(154)),
+        a.registerLanguage("lsl", n(155)),
+        a.registerLanguage("lua", n(156)),
+        a.registerLanguage("makefile", n(157)),
+        a.registerLanguage("mathematica", n(158)),
+        a.registerLanguage("matlab", n(159)),
+        a.registerLanguage("maxima", n(160)),
+        a.registerLanguage("mel", n(161)),
+        a.registerLanguage("mercury", n(162)),
+        a.registerLanguage("mipsasm", n(163)),
+        a.registerLanguage("mizar", n(164)),
+        a.registerLanguage("perl", n(165)),
+        a.registerLanguage("mojolicious", n(166)),
+        a.registerLanguage("monkey", n(167)),
+        a.registerLanguage("moonscript", n(168)),
+        a.registerLanguage("n1ql", n(169)),
+        a.registerLanguage("nginx", n(170)),
+        a.registerLanguage("nimrod", n(171)),
+        a.registerLanguage("nix", n(172)),
+        a.registerLanguage("nsis", n(173)),
+        a.registerLanguage("objectivec", n(174)),
+        a.registerLanguage("ocaml", n(175)),
+        a.registerLanguage("openscad", n(176)),
+        a.registerLanguage("oxygene", n(177)),
+        a.registerLanguage("parser3", n(178)),
+        a.registerLanguage("pf", n(179)),
+        a.registerLanguage("pgsql", n(180)),
+        a.registerLanguage("php", n(181)),
+        a.registerLanguage("plaintext", n(182)),
+        a.registerLanguage("pony", n(183)),
+        a.registerLanguage("powershell", n(184)),
+        a.registerLanguage("processing", n(185)),
+        a.registerLanguage("profile", n(186)),
+        a.registerLanguage("prolog", n(187)),
+        a.registerLanguage("properties", n(188)),
+        a.registerLanguage("protobuf", n(189)),
+        a.registerLanguage("puppet", n(190)),
+        a.registerLanguage("purebasic", n(191)),
+        a.registerLanguage("python", n(192)),
+        a.registerLanguage("q", n(193)),
+        a.registerLanguage("qml", n(194)),
+        a.registerLanguage("r", n(195)),
+        a.registerLanguage("reasonml", n(196)),
+        a.registerLanguage("rib", n(197)),
+        a.registerLanguage("roboconf", n(198)),
+        a.registerLanguage("routeros", n(199)),
+        a.registerLanguage("rsl", n(200)),
+        a.registerLanguage("ruleslanguage", n(201)),
+        a.registerLanguage("rust", n(202)),
+        a.registerLanguage("sas", n(203)),
+        a.registerLanguage("scala", n(204)),
+        a.registerLanguage("scheme", n(205)),
+        a.registerLanguage("scilab", n(206)),
+        a.registerLanguage("scss", n(207)),
+        a.registerLanguage("shell", n(208)),
+        a.registerLanguage("smali", n(209)),
+        a.registerLanguage("smalltalk", n(210)),
+        a.registerLanguage("sml", n(211)),
+        a.registerLanguage("sqf", n(212)),
+        a.registerLanguage("sql", n(213)),
+        a.registerLanguage("stan", n(214)),
+        a.registerLanguage("stata", n(215)),
+        a.registerLanguage("step21", n(216)),
+        a.registerLanguage("stylus", n(217)),
+        a.registerLanguage("subunit", n(218)),
+        a.registerLanguage("swift", n(219)),
+        a.registerLanguage("taggerscript", n(220)),
+        a.registerLanguage("yaml", n(221)),
+        a.registerLanguage("tap", n(222)),
+        a.registerLanguage("tcl", n(223)),
+        a.registerLanguage("tex", n(224)),
+        a.registerLanguage("thrift", n(225)),
+        a.registerLanguage("tp", n(226)),
+        a.registerLanguage("twig", n(227)),
+        a.registerLanguage("typescript", n(228)),
+        a.registerLanguage("vala", n(229)),
+        a.registerLanguage("vbnet", n(230)),
+        a.registerLanguage("vbscript", n(231)),
+        a.registerLanguage("vbscript-html", n(232)),
+        a.registerLanguage("verilog", n(233)),
+        a.registerLanguage("vhdl", n(234)),
+        a.registerLanguage("vim", n(235)),
+        a.registerLanguage("x86asm", n(236)),
+        a.registerLanguage("xl", n(237)),
+        a.registerLanguage("xquery", n(238)),
+        a.registerLanguage("zephir", n(239));
     },
     function(e, t, n) {
-      var a = n(22);
+      var a = n(240);
       e.exports = function(e, t) {
         if (null == e) return {};
         var n,
@@ -2534,6 +2438,23 @@
         return i;
       };
     },
+    function(e, t) {
+      function n() {
+        return (
+          (e.exports = n =
+            Object.assign ||
+            function(e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var a in n) Object.prototype.hasOwnProperty.call(n, a) && (e[a] = n[a]);
+              }
+              return e;
+            }),
+          n.apply(this, arguments)
+        );
+      }
+      e.exports = n;
+    },
     function(e, t, n) {
       t.hot = function(e) {
         return e;
@@ -2542,7 +2463,7 @@
     ,
     function(e, t, n) {
       "use strict";
-      var a = n(46);
+      var a = n(47);
       function r() {}
       function i() {}
       (i.resetWarningCache = r),
@@ -2744,8 +2665,8 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(51),
-        r = n(52);
+      var a = n(52),
+        r = n(53);
       function i() {}
       i.prototype = a;
       var o = new i();
@@ -2815,7 +2736,7 @@
           D = {},
           M = [],
           x = "",
-          w = 0;
+          L = 0;
         if ("string" != typeof e) throw r("Expected `string` for name, got `%s`", e);
         if ("string" != typeof t) throw r("Expected `string` for value, got `%s`", t);
         if (((o = I(e)), (f = _ = i || o), (b = A = []), !o)) throw r("Unknown language: `%s` is not registered", e);
@@ -2885,17 +2806,17 @@
         })(o);
         try {
           for (_.terminators.lastIndex = 0, C = 0, y = _.terminators.exec(t); y; )
-            (O = L(t.substring(C, y.index), y[0])),
+            (O = w(t.substring(C, y.index), y[0])),
               (C = y.index + O),
               (_.terminators.lastIndex = C),
               (y = _.terminators.exec(t));
-          for (L(t.substr(C)), f = _; f.parent; ) f.className && Y(), (f = f.parent);
-          return {relevance: w, value: b, language: e, top: _};
+          for (w(t.substr(C)), f = _; f.parent; ) f.className && Y(), (f = f.parent);
+          return {relevance: L, value: b, language: e, top: _};
         } catch (e) {
           if (-1 === e.message.indexOf("Illegal")) throw e;
           return {relevance: 0, value: F(t, [])};
         }
-        function L(e, t) {
+        function w(e, t) {
           var a, i, o;
           if (((x += e), void 0 === t)) return U(k(), b), 0;
           if (
@@ -2918,7 +2839,7 @@
           ) {
             (o = _).returnEnd || o.excludeEnd || (x += t), U(k(), b);
             do {
-              _.className && Y(), (w += _.relevance), (_ = _.parent);
+              _.className && Y(), (L += _.relevance), (_ = _.parent);
             } while (_ !== i.parent);
             return o.excludeEnd && F(t, b), (x = ""), i.starts && P(i.starts, ""), o.returnEnd ? 0 : t.length;
           }
@@ -2946,7 +2867,7 @@
                 e = t
                   ? v(_.subLanguage, x, !0, a, D[_.subLanguage])
                   : h(x, {subset: 0 === _.subLanguage.length ? void 0 : _.subLanguage, prefix: a});
-                _.relevance > 0 && (w += e.relevance);
+                _.relevance > 0 && (L += e.relevance);
                 t && (D[_.subLanguage] = e.top);
                 return [B(e.language, e.value, !0)];
               })()
@@ -2960,7 +2881,7 @@
                 (e = 0), (_.lexemesRe.lastIndex = 0), (t = _.lexemesRe.exec(x));
                 for (; t; )
                   F(x.substring(e, t.index), r),
-                    (a = G(_, t)) ? ((w += a[1]), (n = B(a[0], [])), r.push(n), F(t[0], n.children)) : F(t[0], r),
+                    (a = G(_, t)) ? ((L += a[1]), (n = B(a[0], [])), r.push(n), F(t[0], n.children)) : F(t[0], r),
                     (e = _.lexemesRe.lastIndex),
                     (t = _.lexemesRe.exec(x));
                 return F(x.substr(e), r), r;
@@ -3453,7 +3374,7 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(53),
+      var a = n(54),
         r = i(Error);
       function i(e) {
         return (t.displayName = e.displayName || e.name), t;
@@ -4370,7 +4291,10 @@
           contains: [
             e.COMMENT("/\\*\\*", "\\*/", {
               relevance: 0,
-              contains: [{begin: /\w+@/, relevance: 0}, {className: "doctag", begin: "@[A-Za-z]+"}],
+              contains: [
+                {begin: /\w+@/, relevance: 0},
+                {className: "doctag", begin: "@[A-Za-z]+"},
+              ],
             }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -4977,7 +4901,10 @@
               subLanguage: "javascript",
               excludeBegin: !0,
               excludeEnd: !0,
-              variants: [{begin: "```", end: "```"}, {begin: "`", end: "`"}],
+              variants: [
+                {begin: "```", end: "```"},
+                {begin: "`", end: "`"},
+              ],
             },
           ];
         a.contains = r;
@@ -5115,7 +5042,10 @@
           r = {className: "subst", begin: "#{", end: "}", keywords: a},
           i = {
             className: "template-variable",
-            variants: [{begin: "\\{\\{", end: "\\}\\}"}, {begin: "\\{%", end: "%\\}"}],
+            variants: [
+              {begin: "\\{\\{", end: "\\}\\}"},
+              {begin: "\\{%", end: "%\\}"},
+            ],
             keywords: a,
           };
         function o(e, t) {
@@ -5606,7 +5536,13 @@
             e.COMMENT(/\{/, /\}/, {relevance: 0}),
             e.COMMENT(/\(\*/, /\*\)/, {relevance: 10}),
           ],
-          a = {className: "meta", variants: [{begin: /\{\$/, end: /\}/}, {begin: /\(\*\$/, end: /\*\)/}]},
+          a = {
+            className: "meta",
+            variants: [
+              {begin: /\{\$/, end: /\}/},
+              {begin: /\(\*\$/, end: /\*\)/},
+            ],
+          },
           r = {className: "string", begin: /'/, end: /'/, contains: [{begin: /''/}]},
           i = {className: "string", begin: /(#\d+)+/},
           o = {begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(", returnBegin: !0, contains: [e.TITLE_MODE]},
@@ -5918,7 +5854,10 @@
           r = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, a],
-            variants: [{begin: /'/, end: /'/}, {begin: /"/, end: /"/}],
+            variants: [
+              {begin: /'/, end: /'/},
+              {begin: /"/, end: /"/},
+            ],
           },
           i = {
             className: "function",
@@ -5962,7 +5901,10 @@
                   className: "regexp",
                   illegal: "\\n",
                   contains: [e.BACKSLASH_ESCAPE, a],
-                  variants: [{begin: "/", end: "/[a-z]*"}, {begin: "%r\\[", end: "\\][a-z]*"}],
+                  variants: [
+                    {begin: "/", end: "/[a-z]*"},
+                    {begin: "%r\\[", end: "\\][a-z]*"},
+                  ],
                 },
               ],
               relevance: 0,
@@ -6180,7 +6122,10 @@
             begin: "#" + e.UNDERSCORE_IDENT_RE,
             relevance: 0,
             returnBegin: !0,
-            contains: [{begin: "#" + e.UNDERSCORE_IDENT_RE, relevance: 0}, {begin: "{", end: "}", relevance: 0}],
+            contains: [
+              {begin: "#" + e.UNDERSCORE_IDENT_RE, relevance: 0},
+              {begin: "{", end: "}", relevance: 0},
+            ],
           },
           u = {beginKeywords: "fun receive if try case", end: "end", keywords: a};
         u.contains = [r, o, e.inherit(e.APOS_STRING_MODE, {className: ""}), u, s, e.QUOTE_STRING_MODE, i, l, c, _, d];
@@ -6376,7 +6321,10 @@
           n = {className: "symbol", variants: [{begin: /\=[lgenxc]=/}, {begin: /\$/}]},
           a = {
             className: "comment",
-            variants: [{begin: "'", end: "'"}, {begin: '"', end: '"'}],
+            variants: [
+              {begin: "'", end: "'"},
+              {begin: '"', end: '"'},
+            ],
             illegal: "\\n",
             contains: [e.BACKSLASH_ESCAPE],
           },
@@ -6599,7 +6547,10 @@
           case_insensitive: !0,
           lexemes: "[A-Z_][A-Z0-9_.]*",
           keywords: "IF DO WHILE ENDWHILE CALL ENDIF SUB ENDSUB GOTO REPEAT ENDREPEAT EQ LT GT NE GE LE OR XOR",
-          contains: [{className: "meta", begin: "\\%"}, {className: "meta", begin: "([O])([0-9]+)"}].concat(t),
+          contains: [
+            {className: "meta", begin: "\\%"},
+            {className: "meta", begin: "([O])([0-9]+)"},
+          ].concat(t),
         };
       };
     },
@@ -6747,7 +6698,10 @@
           contains: [
             e.COMMENT("/\\*\\*", "\\*/", {
               relevance: 0,
-              contains: [{begin: /\w+@/, relevance: 0}, {className: "doctag", begin: "@[A-Za-z]+"}],
+              contains: [
+                {begin: /\w+@/, relevance: 0},
+                {className: "doctag", begin: "@[A-Za-z]+"},
+              ],
             }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -7268,7 +7222,13 @@
       e.exports = function(e) {
         var t = "[A-Za-zА-Яа-яёЁ_!][A-Za-zА-Яа-яёЁ_0-9]*",
           n = {className: "number", begin: e.NUMBER_RE, relevance: 0},
-          a = {className: "string", variants: [{begin: '"', end: '"'}, {begin: "'", end: "'"}]},
+          a = {
+            className: "string",
+            variants: [
+              {begin: '"', end: '"'},
+              {begin: "'", end: "'"},
+            ],
+          },
           r = {className: "doctag", begin: "\\b(?:TODO|DONE|BEGIN|END|STUB|CHG|FIXME|NOTE|BUG|XXX)\\b", relevance: 0},
           i = {
             variants: [
@@ -7360,7 +7320,10 @@
           contains: [
             e.COMMENT("/\\*\\*", "\\*/", {
               relevance: 0,
-              contains: [{begin: /\w+@/, relevance: 0}, {className: "doctag", begin: "@[A-Za-z]+"}],
+              contains: [
+                {begin: /\w+@/, relevance: 0},
+                {className: "doctag", begin: "@[A-Za-z]+"},
+              ],
             }),
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -7586,7 +7549,10 @@
           o = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, r, i],
-            variants: [{begin: /\w*"""/, end: /"""\w*/, relevance: 10}, {begin: /\w*"/, end: /"\w*/}],
+            variants: [
+              {begin: /\w*"""/, end: /"""\w*/, relevance: 10},
+              {begin: /\w*"/, end: /"\w*/},
+            ],
           },
           s = {className: "string", contains: [e.BACKSLASH_ESCAPE, r, i], begin: "`", end: "`"},
           l = {className: "meta", begin: "@" + n};
@@ -7601,7 +7567,13 @@
             o,
             s,
             l,
-            {className: "comment", variants: [{begin: "#=", end: "=#", relevance: 10}, {begin: "#", end: "$"}]},
+            {
+              className: "comment",
+              variants: [
+                {begin: "#=", end: "=#", relevance: 10},
+                {begin: "#", end: "$"},
+              ],
+            },
             e.HASH_COMMENT_MODE,
             {className: "keyword", begin: "\\b(((abstract|primitive)\\s+)type|(mutable\\s+)?struct)\\b"},
             {begin: /<:/},
@@ -7931,7 +7903,10 @@
             starts: {end: "[;}]", returnEnd: !0, contains: s},
           },
           u = {
-            variants: [{begin: "[\\.#:&\\[>]", end: "[;{}]"}, {begin: t, end: "{"}],
+            variants: [
+              {begin: "[\\.#:&\\[>]", end: "[;{}]"},
+              {begin: t, end: "{"},
+            ],
             returnBegin: !0,
             returnEnd: !0,
             illegal: "[<='$\"]",
@@ -8302,7 +8277,13 @@
               end: "$",
               contains: [
                 e.UNDERSCORE_TITLE_MODE,
-                {className: "params", variants: [{begin: "\\(", end: "\\)"}, {begin: "\\[", end: "\\]"}]},
+                {
+                  className: "params",
+                  variants: [
+                    {begin: "\\(", end: "\\)"},
+                    {begin: "\\[", end: "\\]"},
+                  ],
+                },
               ],
             },
             {className: "built_in", begin: /true|false/, relevance: 0, starts: t},
@@ -8688,7 +8669,10 @@
               {
                 className: "string",
                 contains: [e.BACKSLASH_ESCAPE, t],
-                variants: [{begin: /"/, end: /"/}, {begin: /'/, end: /'/}],
+                variants: [
+                  {begin: /"/, end: /"/},
+                  {begin: /'/, end: /'/},
+                ],
               },
               {begin: "([a-z]+):/", end: "\\s", endsWithParent: !0, excludeEnd: !0, contains: [t]},
               {
@@ -8769,7 +8753,14 @@
             built_in: "import abort baseNameOf dirOf isNull builtins map removeAttrs throw toString derivation",
           },
           n = {className: "subst", begin: /\$\{/, end: /}/, keywords: t},
-          a = {className: "string", contains: [n], variants: [{begin: "''", end: "''"}, {begin: '"', end: '"'}]},
+          a = {
+            className: "string",
+            contains: [n],
+            variants: [
+              {begin: "''", end: "''"},
+              {begin: '"', end: '"'},
+            ],
+          },
           r = [
             e.NUMBER_MODE,
             e.HASH_COMMENT_MODE,
@@ -8792,7 +8783,11 @@
           a = {className: "variable", begin: /\$+\([\w\^\.:-]+\)/},
           r = {
             className: "string",
-            variants: [{begin: '"', end: '"'}, {begin: "'", end: "'"}, {begin: "`", end: "`"}],
+            variants: [
+              {begin: '"', end: '"'},
+              {begin: "'", end: "'"},
+              {begin: "`", end: "`"},
+            ],
             illegal: /\n/,
             contains: [
               {className: "meta", begin: /\$(\\[nrt]|\$)/},
@@ -8868,7 +8863,15 @@
               className: "meta",
               begin: "#",
               end: "$",
-              contains: [{className: "meta-string", variants: [{begin: '"', end: '"'}, {begin: "<", end: ">"}]}],
+              contains: [
+                {
+                  className: "meta-string",
+                  variants: [
+                    {begin: '"', end: '"'},
+                    {begin: "<", end: ">"},
+                  ],
+                },
+              ],
             },
             {
               className: "class",
@@ -9323,11 +9326,17 @@
           n = {className: "variable", variants: [{begin: /\$[\w\d][\w\d_:]*/}]},
           a = {
             className: "string",
-            variants: [{begin: /"/, end: /"/}, {begin: /@"/, end: /^"@/}],
+            variants: [
+              {begin: /"/, end: /"/},
+              {begin: /@"/, end: /^"@/},
+            ],
             contains: [t, n, {className: "variable", begin: /\$[A-z]/, end: /[^A-z]/}],
           },
           r = e.inherit(e.COMMENT(null, null), {
-            variants: [{begin: /#/, end: /$/}, {begin: /<#/, end: /#>/}],
+            variants: [
+              {begin: /#/, end: /$/},
+              {begin: /<#/, end: /#>/},
+            ],
             contains: [
               {
                 className: "doctag",
@@ -9356,7 +9365,13 @@
             t,
             e.NUMBER_MODE,
             a,
-            {className: "string", variants: [{begin: /'/, end: /'/}, {begin: /@'/, end: /^'@/}]},
+            {
+              className: "string",
+              variants: [
+                {begin: /'/, end: /'/},
+                {begin: /@'/, end: /^'@/},
+              ],
+            },
             {className: "literal", begin: /\$(null|true|false)\b/},
             n,
             r,
@@ -9496,7 +9511,10 @@
           r = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, a],
-            variants: [{begin: /'/, end: /'/}, {begin: /"/, end: /"/}],
+            variants: [
+              {begin: /'/, end: /'/},
+              {begin: /"/, end: /"/},
+            ],
           };
         return {
           aliases: ["pp"],
@@ -9623,7 +9641,10 @@
               r,
               e.HASH_COMMENT_MODE,
               {
-                variants: [{className: "function", beginKeywords: "def"}, {className: "class", beginKeywords: "class"}],
+                variants: [
+                  {className: "function", beginKeywords: "def"},
+                  {className: "class", beginKeywords: "class"},
+                ],
                 end: /:/,
                 illegal: /[${=;\n,]/,
                 contains: [e.UNDERSCORE_TITLE_MODE, o, {begin: /->/, endsWithParent: !0, keywords: "None"}],
@@ -9769,7 +9790,10 @@
             {
               className: "string",
               contains: [e.BACKSLASH_ESCAPE],
-              variants: [{begin: '"', end: '"'}, {begin: "'", end: "'"}],
+              variants: [
+                {begin: '"', end: '"'},
+                {begin: "'", end: "'"},
+              ],
             },
           ],
         };
@@ -9935,7 +9959,10 @@
                 returnBegin: !0,
                 keywords: i,
                 relevance: 0,
-                contains: [{className: "module", relevance: 0, begin: n}, {begin: "{", end: "}", skip: !0}].concat(_),
+                contains: [
+                  {className: "module", relevance: 0, begin: n},
+                  {begin: "{", end: "}", skip: !0},
+                ].concat(_),
               },
               E,
             ],
@@ -10326,7 +10353,10 @@
             },
           },
           d = {
-            variants: [{begin: "\\(", end: "\\)"}, {begin: "\\[", end: "\\]"}],
+            variants: [
+              {begin: "\\(", end: "\\)"},
+              {begin: "\\[", end: "\\]"},
+            ],
             contains: [
               {
                 begin: /lambda/,
@@ -11208,7 +11238,10 @@
           r = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, a],
-            variants: [{begin: /"""/, end: /"""/}, {begin: /"/, end: /"/}],
+            variants: [
+              {begin: /"""/, end: /"""/},
+              {begin: /"/, end: /"/},
+            ],
           },
           i = {
             className: "number",
@@ -11295,7 +11328,13 @@
             variants: [{begin: /'/, end: /'/}, {begin: /"/, end: /"/}, {begin: /\S+/}],
             contains: [
               e.BACKSLASH_ESCAPE,
-              {className: "template-variable", variants: [{begin: "{{", end: "}}"}, {begin: "%{", end: "}"}]},
+              {
+                className: "template-variable",
+                variants: [
+                  {begin: "{{", end: "}}"},
+                  {begin: "%{", end: "}"},
+                ],
+              },
             ],
           };
         return {
@@ -11390,7 +11429,13 @@
                 endsWithParent: !0,
                 relevance: 0,
                 contains: [
-                  {className: "string", variants: [{begin: /\[/, end: /\]/}, {begin: /\{/, end: /\}/}]},
+                  {
+                    className: "string",
+                    variants: [
+                      {begin: /\[/, end: /\]/},
+                      {begin: /\{/, end: /\}/},
+                    ],
+                  },
                   {
                     begin: /\s*=\s*/,
                     endsWithParent: !0,
@@ -11409,7 +11454,10 @@
               className: "formula",
               contains: [t],
               relevance: 0,
-              variants: [{begin: /\$\$/, end: /\$\$/}, {begin: /\$/, end: /\$/}],
+              variants: [
+                {begin: /\$\$/, end: /\$\$/},
+                {begin: /\$/, end: /\$/},
+              ],
             },
             e.COMMENT("%", "$", {relevance: 0}),
           ],
@@ -11858,7 +11906,10 @@
             e.QUOTE_STRING_MODE,
             {
               className: "string",
-              variants: [{begin: "'", end: "[^\\\\]'"}, {begin: "`", end: "[^\\\\]`"}],
+              variants: [
+                {begin: "'", end: "[^\\\\]'"},
+                {begin: "`", end: "[^\\\\]`"},
+              ],
               relevance: 0,
             },
             {
@@ -12014,91 +12065,105 @@
         };
       };
     },
+    function(e, t) {
+      e.exports = function(e, t) {
+        if (null == e) return {};
+        var n,
+          a,
+          r = {},
+          i = Object.keys(e);
+        for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+        return r;
+      };
+    },
+    function(e, t) {
+      e.exports = function(e, t, n) {
+        return (
+          t in e ? Object.defineProperty(e, t, {value: n, enumerable: !0, configurable: !0, writable: !0}) : (e[t] = n),
+          e
+        );
+      };
+    },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(11)),
-        o = r(n(12)),
-        s = r(n(16)),
-        l = r(n(5)),
-        c = r(n(6)),
-        _ = a(n(0)),
-        d = r(n(29)),
-        u = r(n(241)),
-        p = r(n(23)),
-        m = null,
-        E = (function(e) {
+        o = r(n(15)),
+        s = r(n(6)),
+        l = r(n(7)),
+        c = a(n(0)),
+        _ = r(n(28)),
+        d = r(n(245)),
+        u = r(n(22)),
+        p = null,
+        m = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, c.default)((0, s.default)(t), "state", {isReady: !1}),
-              (0, c.default)(
-                (0, s.default)(t),
-                "handleInit",
-                (0, o.default)(
-                  i.default.mark(function e() {
-                    var n, a, r, o, s, l, c, _, p, E, g;
-                    return i.default.wrap(function(e) {
-                      for (;;)
-                        switch ((e.prev = e.next)) {
-                          case 0:
-                            if (d.default) {
-                              e.next = 2;
-                              break;
-                            }
-                            throw new Error("You can not use Facebook without DOM");
-                          case 2:
-                            if (!t.state.isReady) {
-                              e.next = 5;
-                              break;
-                            }
-                            return e.abrupt("return", m);
-                          case 5:
-                            return (
-                              m ||
-                                ((n = t.props),
-                                (a = n.domain),
-                                (r = n.version),
-                                (o = n.appId),
-                                (s = n.cookie),
-                                (l = n.status),
-                                (c = n.xfbml),
-                                (_ = n.language),
-                                (p = n.frictionlessRequests),
-                                (E = n.wait),
-                                (g = n.debug),
-                                (m = new u.default({
-                                  domain: a,
-                                  appId: o,
-                                  version: r,
-                                  cookie: s,
-                                  status: l,
-                                  xfbml: c,
-                                  language: _,
-                                  frictionlessRequests: p,
-                                  wait: E,
-                                  debug: g,
-                                }))),
-                              (e.next = 8),
-                              m.init()
-                            );
-                          case 8:
-                            return t.state.isReady || t.setState({isReady: !0}), e.abrupt("return", m);
-                          case 10:
-                          case "end":
-                            return e.stop();
+              (0, l.default)((0, o.default)(t), "state", {isReady: !1}),
+              (0, l.default)((0, o.default)(t), "handleInit", function() {
+                var e, n, a, r, o, s, l, c, u, m, E, g;
+                return i.default.async(function(S) {
+                  for (;;)
+                    switch ((S.prev = S.next)) {
+                      case 0:
+                        if (_.default) {
+                          S.next = 2;
+                          break;
                         }
-                    }, e);
-                  }),
-                ),
-              ),
+                        throw new Error("You can not use Facebook without DOM");
+                      case 2:
+                        if (!t.state.isReady) {
+                          S.next = 5;
+                          break;
+                        }
+                        return S.abrupt("return", p);
+                      case 5:
+                        return (
+                          p ||
+                            ((e = t.props),
+                            (n = e.domain),
+                            (a = e.version),
+                            (r = e.appId),
+                            (o = e.cookie),
+                            (s = e.status),
+                            (l = e.xfbml),
+                            (c = e.language),
+                            (u = e.frictionlessRequests),
+                            (m = e.wait),
+                            (E = e.debug),
+                            (g = e.chatSupport),
+                            (p = new d.default({
+                              domain: n,
+                              appId: r,
+                              version: a,
+                              cookie: o,
+                              status: s,
+                              xfbml: l,
+                              language: c,
+                              frictionlessRequests: u,
+                              wait: m,
+                              debug: E,
+                              chatSupport: g,
+                            }))),
+                          (S.next = 8),
+                          i.default.awrap(p.init())
+                        );
+                      case 8:
+                        return t.state.isReady || t.setState({isReady: !0}), S.abrupt("return", p);
+                      case 10:
+                      case "end":
+                        return S.stop();
+                    }
+                });
+              }),
               t
             );
           }
-          (0, l.default)(t, e);
+          (0, s.default)(t, e);
           var n = t.prototype;
           return (
             (n.componentDidMount = function() {
@@ -12107,14 +12172,14 @@
             (n.render = function() {
               var e = this.props.children,
                 t = this.state,
-                n = {isReady: t.isReady, error: t.error, handleInit: this.handleInit, api: m};
-              return _.default.createElement(p.default.Provider, {value: n}, e);
+                n = {isReady: t.isReady, error: t.error, handleInit: this.handleInit, api: p};
+              return c.default.createElement(u.default.Provider, {value: n}, e);
             }),
             t
           );
-        })(_.Component);
-      (t.default = E),
-        (0, c.default)(E, "defaultProps", {
+        })(c.Component);
+      (t.default = m),
+        (0, l.default)(m, "defaultProps", {
           version: "v3.1",
           cookie: !1,
           status: !1,
@@ -12125,7 +12190,37 @@
           children: void 0,
           wait: !1,
           debug: !1,
+          chatSupport: !1,
         });
+    },
+    function(e, t) {
+      function n(e) {
+        return (n =
+          "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+            ? function(e) {
+                return typeof e;
+              }
+            : function(e) {
+                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+                  ? "symbol"
+                  : typeof e;
+              })(e);
+      }
+      function a(t) {
+        return (
+          "function" == typeof Symbol && "symbol" === n(Symbol.iterator)
+            ? (e.exports = a = function(e) {
+                return n(e);
+              })
+            : (e.exports = a = function(e) {
+                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
+                  ? "symbol"
+                  : n(e);
+              }),
+          a(t)
+        );
+      }
+      e.exports = a;
     },
     function(e, t, n) {
       var a = (function(e) {
@@ -12472,17 +12567,16 @@
       var a = n(3);
       (t.__esModule = !0), (t.default = t.Method = void 0);
       var r = a(n(11)),
-        i = a(n(22)),
-        o = a(n(12)),
-        s = a(n(8)),
-        l = a(n(30)),
-        c = {GET: "get", POST: "post", DELETE: "delete"};
-      t.Method = c;
-      var _ = (function() {
+        i = a(n(21)),
+        o = a(n(8)),
+        s = a(n(29)),
+        l = {GET: "get", POST: "post", DELETE: "delete"};
+      t.Method = l;
+      var c = (function() {
         function e(e) {
           if (
             (void 0 === e && (e = {}),
-            (this.options = (0, s.default)(
+            (this.options = (0, o.default)(
               {
                 domain: "connect.facebook.net",
                 version: "v3.2",
@@ -12492,6 +12586,7 @@
                 language: "en_US",
                 frictionlessRequests: !1,
                 debug: !1,
+                chatSupport: !1,
               },
               e,
             )),
@@ -12505,732 +12600,565 @@
           (t.getAppId = function() {
             return this.options.appId;
           }),
-          (t.init = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                var t = this;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          if (!this.loadingPromise) {
-                            e.next = 2;
-                            break;
-                          }
-                          return e.abrupt("return", this.loadingPromise);
-                        case 2:
-                          return (
-                            (this.loadingPromise = new Promise(function(e) {
-                              var n = t.options,
-                                a = n.domain,
-                                r = n.language,
-                                o = n.debug,
-                                s = (0, i.default)(n, ["domain", "language", "debug"]);
-                              if (
-                                ((window.fbAsyncInit = function() {
-                                  window.FB.init({
-                                    appId: s.appId,
-                                    version: s.version,
-                                    cookie: s.cookie,
-                                    status: s.status,
-                                    xfbml: s.xfbml,
-                                    frictionlessRequests: t.frictionlessRequests,
-                                  }),
-                                    e(window.FB);
-                                }),
-                                !window.document.getElementById("facebook-jssdk"))
-                              ) {
-                                var l = window.document.createElement("script");
-                                (l.id = "facebook-jssdk"),
-                                  (l.async = !0),
-                                  (l.defer = !0),
-                                  (l.src = "https://" + a + "/" + r + "/sdk" + (o ? "/debug" : "") + ".js"),
-                                  window.document.body.appendChild(l);
-                              }
-                            })),
-                            e.abrupt("return", this.loadingPromise)
-                          );
-                        case 4:
-                        case "end":
-                          return e.stop();
+          (t.init = function() {
+            var e = this;
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      if (!this.loadingPromise) {
+                        t.next = 2;
+                        break;
                       }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.process = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n, a) {
-                var i;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return void 0 === n && (n = []), void 0 === a && (a = []), (e.next = 4), this.init();
-                        case 4:
-                          return (
-                            (i = e.sent),
-                            e.abrupt(
-                              "return",
-                              new Promise(function(e, r) {
-                                i[t].apply(
-                                  i,
-                                  n.concat(
-                                    [
-                                      function(t) {
-                                        if (t)
-                                          if (t.error) {
-                                            var n = t.error,
-                                              a = n.code,
-                                              i = n.type,
-                                              o = n.message,
-                                              s = new Error(o);
-                                            (s.code = a), (s.type = i), r(s);
-                                          } else e(t);
-                                        else r(new Error("Response is undefined"));
-                                      },
-                                    ],
-                                    a,
-                                  ),
-                                );
+                      return t.abrupt("return", this.loadingPromise);
+                    case 2:
+                      return (
+                        (this.loadingPromise = new Promise(function(t) {
+                          var n = e.options,
+                            a = n.domain,
+                            r = n.language,
+                            o = n.debug,
+                            s = n.chatSupport,
+                            l = (0, i.default)(n, ["domain", "language", "debug", "chatSupport"]);
+                          if (
+                            ((window.fbAsyncInit = function() {
+                              window.FB.init({
+                                appId: l.appId,
+                                version: l.version,
+                                cookie: l.cookie,
+                                status: l.status,
+                                xfbml: l.xfbml,
+                                frictionlessRequests: e.frictionlessRequests,
                               }),
-                            )
-                          );
-                        case 6:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function(t, n, a) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.ui = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.process("ui", [t]));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.api = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n, a) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            void 0 === n && (n = c.GET),
-                            void 0 === a && (a = {}),
-                            e.abrupt("return", this.process("api", [t, n, a]))
-                          );
-                        case 3:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function(t, n, a) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.login = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return void 0 === t && (t = null), e.abrupt("return", this.process("login", [], [t]));
-                        case 2:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.logout = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.process("logout"));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getLoginStatus = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.process("getLoginStatus"));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getAuthResponse = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.process("getAuthResponse"));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getTokenDetail = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                var n;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          if (t.status !== l.default.CONNECTED || !t.authResponse) {
-                            e.next = 2;
-                            break;
+                                t(window.FB);
+                            }),
+                            !window.document.getElementById("facebook-jssdk"))
+                          ) {
+                            var c = window.document.createElement("script");
+                            (c.id = "facebook-jssdk"),
+                              (c.async = !0),
+                              (c.defer = !0),
+                              (c.src =
+                                "https://" +
+                                a +
+                                "/" +
+                                r +
+                                "/sdk" +
+                                (s ? "/xfbml.customerchat" : "") +
+                                (o ? "/debug" : "") +
+                                ".js"),
+                              window.document.body.appendChild(c);
                           }
-                          return e.abrupt("return", t.authResponse);
-                        case 2:
-                          return (e.next = 4), this.getLoginStatus();
-                        case 4:
-                          if ((n = e.sent).status !== l.default.CONNECTED || !n.authResponse) {
-                            e.next = 7;
-                            break;
-                          }
-                          return e.abrupt("return", n.authResponse);
-                        case 7:
-                          throw new Error("Token is undefined");
-                        case 8:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+                        })),
+                        t.abrupt("return", this.loadingPromise)
+                      );
+                    case 4:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getProfile = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.api("/me", c.GET, t));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.process = function(e, t, n) {
+            var a;
+            return r.default.async(
+              function(i) {
+                for (;;)
+                  switch ((i.prev = i.next)) {
+                    case 0:
+                      return (
+                        void 0 === t && (t = []), void 0 === n && (n = []), (i.next = 4), r.default.awrap(this.init())
+                      );
+                    case 4:
+                      return (
+                        (a = i.sent),
+                        i.abrupt(
+                          "return",
+                          new Promise(function(r, i) {
+                            a[e].apply(
+                              a,
+                              t.concat(
+                                [
+                                  function(e) {
+                                    if (e)
+                                      if (e.error) {
+                                        var t = e.error,
+                                          n = t.code,
+                                          a = t.type,
+                                          o = t.message,
+                                          s = new Error(o);
+                                        (s.code = n), (s.type = a), i(s);
+                                      } else r(e);
+                                    else i(new Error("Response is undefined"));
+                                  },
+                                ],
+                                n,
+                              ),
+                            );
+                          }),
+                        )
+                      );
+                    case 6:
+                    case "end":
+                      return i.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getTokenDetailWithProfile = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                var a, i;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.getTokenDetail(n);
-                        case 2:
-                          return (a = e.sent), (e.next = 5), this.getProfile(t);
-                        case 5:
-                          return (i = e.sent), e.abrupt("return", {profile: i, tokenDetail: a});
-                        case 7:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.ui = function(e) {
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return t.abrupt("return", this.process("ui", [e]));
+                    case 1:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getToken = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                var t;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.getTokenDetail();
-                        case 2:
-                          return (t = e.sent), e.abrupt("return", t.accessToken);
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.api = function(e, t, n) {
+            return r.default.async(
+              function(a) {
+                for (;;)
+                  switch ((a.prev = a.next)) {
+                    case 0:
+                      return (
+                        void 0 === t && (t = l.GET),
+                        void 0 === n && (n = {}),
+                        a.abrupt("return", this.process("api", [e, t, n]))
+                      );
+                    case 3:
+                    case "end":
+                      return a.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getUserId = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                var t;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.getTokenDetail();
-                        case 2:
-                          return (t = e.sent), e.abrupt("return", t.userID);
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.login = function(e) {
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return void 0 === e && (e = null), t.abrupt("return", this.process("login", [], [e]));
+                    case 2:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.sendInvite = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.ui((0, s.default)({to: t, method: "apprequests"}, n)));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.logout = function() {
+            return r.default.async(
+              function(e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      return e.abrupt("return", this.process("logout"));
+                    case 1:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.postAction = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n, a, i, o) {
-                var s;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            (s = "/me/" + t + ":" + n + "?" + a + "=" + encodeURIComponent(i)),
-                            !0 === o && (s += "&no_feed_story=true"),
-                            e.abrupt("return", this.api(s, c.POST))
-                          );
-                        case 3:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getLoginStatus = function() {
+            return r.default.async(
+              function(e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      return e.abrupt("return", this.process("getLoginStatus"));
+                    case 1:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n, a, r, i) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getPermissions = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                var t;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.api("/me/permissions");
-                        case 2:
-                          return (t = e.sent), e.abrupt("return", t.data);
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getAuthResponse = function() {
+            return r.default.async(
+              function(e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      return e.abrupt("return", this.process("getAuthResponse"));
+                    case 1:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.hasPermissions = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                var n, a;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.getPermissions();
-                        case 2:
-                          return (
-                            (n = e.sent),
-                            (a = t.filter(function(e) {
-                              return !!n.find(function(t) {
-                                var n = t.permission;
-                                return "granted" === t.status && n === e;
-                              });
-                            })),
-                            e.abrupt("return", a.length === t.length)
-                          );
-                        case 5:
-                        case "end":
-                          return e.stop();
+          }),
+          (t.getTokenDetail = function(e) {
+            var t;
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      if (e.status !== s.default.CONNECTED || !e.authResponse) {
+                        n.next = 2;
+                        break;
                       }
-                  },
-                  e,
-                  this,
-                );
-              }),
-            );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.subscribe = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.init();
-                        case 2:
-                          e.sent.Event.subscribe(t, n);
-                        case 4:
-                        case "end":
-                          return e.stop();
+                      return n.abrupt("return", e.authResponse);
+                    case 2:
+                      return (n.next = 4), r.default.awrap(this.getLoginStatus());
+                    case 4:
+                      if ((t = n.sent).status !== s.default.CONNECTED || !t.authResponse) {
+                        n.next = 7;
+                        break;
                       }
-                  },
-                  e,
-                  this,
-                );
-              }),
+                      return n.abrupt("return", t.authResponse);
+                    case 7:
+                      throw new Error("Token is undefined");
+                    case 8:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.unsubscribe = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.init();
-                        case 2:
-                          e.sent.Event.unsubscribe(t, n);
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getProfile = function(e) {
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return t.abrupt("return", this.api("/me", l.GET, e));
+                    case 1:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.parse = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                var n;
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.init();
-                        case 2:
-                          (n = e.sent), void 0 === t ? n.XFBML.parse() : n.XFBML.parse(t);
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getTokenDetailWithProfile = function(e, t) {
+            var n, a;
+            return r.default.async(
+              function(i) {
+                for (;;)
+                  switch ((i.prev = i.next)) {
+                    case 0:
+                      return (i.next = 2), r.default.awrap(this.getTokenDetail(t));
+                    case 2:
+                      return (n = i.sent), (i.next = 5), r.default.awrap(this.getProfile(e));
+                    case 5:
+                      return (a = i.sent), i.abrupt("return", {profile: a, tokenDetail: n});
+                    case 7:
+                    case "end":
+                      return i.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.getRequests = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.api("/me/apprequests"));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getToken = function() {
+            var e;
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return (t.next = 2), r.default.awrap(this.getTokenDetail());
+                    case 2:
+                      return (e = t.sent), t.abrupt("return", e.accessToken);
+                    case 4:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.removeRequest = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt("return", this.api(t, c.DELETE));
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getUserId = function() {
+            var e;
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return (t.next = 2), r.default.awrap(this.getTokenDetail());
+                    case 2:
+                      return (e = t.sent), t.abrupt("return", e.userID);
+                    case 4:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.setAutoGrow = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e() {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (e.next = 2), this.init();
-                        case 2:
-                          e.sent.Canvas.setAutoGrow();
-                        case 4:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.sendInvite = function(e, t) {
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return n.abrupt("return", this.ui((0, o.default)({to: e, method: "apprequests"}, t)));
+                    case 1:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function() {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.paySimple = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return (
-                            void 0 === n && (n = 1),
-                            e.abrupt(
-                              "return",
-                              this.ui({method: "pay", action: "purchaseitem", product: t, quantity: n}),
-                            )
-                          );
-                        case 2:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.postAction = function(e, t, n, a, i) {
+            var o;
+            return r.default.async(
+              function(r) {
+                for (;;)
+                  switch ((r.prev = r.next)) {
+                    case 0:
+                      return (
+                        (o = "/me/" + e + ":" + t + "?" + n + "=" + encodeURIComponent(a)),
+                        !0 === i && (o += "&no_feed_story=true"),
+                        r.abrupt("return", this.api(o, l.POST))
+                      );
+                    case 3:
+                    case "end":
+                      return r.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
-          (t.pay = (function() {
-            var e = (0, o.default)(
-              r.default.mark(function e(t, n) {
-                return r.default.wrap(
-                  function(e) {
-                    for (;;)
-                      switch ((e.prev = e.next)) {
-                        case 0:
-                          return e.abrupt(
-                            "return",
-                            this.ui((0, s.default)({method: "pay", action: "purchaseitem", product: t}, n)),
-                          );
-                        case 1:
-                        case "end":
-                          return e.stop();
-                      }
-                  },
-                  e,
-                  this,
-                );
-              }),
+          }),
+          (t.getPermissions = function() {
+            var e;
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return (t.next = 2), r.default.awrap(this.api("/me/permissions"));
+                    case 2:
+                      return (e = t.sent), t.abrupt("return", e.data);
+                    case 4:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
             );
-            return function(t, n) {
-              return e.apply(this, arguments);
-            };
-          })()),
+          }),
+          (t.hasPermissions = function(e) {
+            var t, n;
+            return r.default.async(
+              function(a) {
+                for (;;)
+                  switch ((a.prev = a.next)) {
+                    case 0:
+                      return (a.next = 2), r.default.awrap(this.getPermissions());
+                    case 2:
+                      return (
+                        (t = a.sent),
+                        (n = e.filter(function(e) {
+                          return !!t.find(function(t) {
+                            var n = t.permission;
+                            return "granted" === t.status && n === e;
+                          });
+                        })),
+                        a.abrupt("return", n.length === e.length)
+                      );
+                    case 5:
+                    case "end":
+                      return a.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.subscribe = function(e, t) {
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return (n.next = 2), r.default.awrap(this.init());
+                    case 2:
+                      n.sent.Event.subscribe(e, t);
+                    case 4:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.unsubscribe = function(e, t) {
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return (n.next = 2), r.default.awrap(this.init());
+                    case 2:
+                      n.sent.Event.unsubscribe(e, t);
+                    case 4:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.parse = function(e) {
+            var t;
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return (n.next = 2), r.default.awrap(this.init());
+                    case 2:
+                      (t = n.sent), void 0 === e ? t.XFBML.parse() : t.XFBML.parse(e);
+                    case 4:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.getRequests = function() {
+            return r.default.async(
+              function(e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      return e.abrupt("return", this.api("/me/apprequests"));
+                    case 1:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.removeRequest = function(e) {
+            return r.default.async(
+              function(t) {
+                for (;;)
+                  switch ((t.prev = t.next)) {
+                    case 0:
+                      return t.abrupt("return", this.api(e, l.DELETE));
+                    case 1:
+                    case "end":
+                      return t.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.setAutoGrow = function() {
+            return r.default.async(
+              function(e) {
+                for (;;)
+                  switch ((e.prev = e.next)) {
+                    case 0:
+                      return (e.next = 2), r.default.awrap(this.init());
+                    case 2:
+                      e.sent.Canvas.setAutoGrow();
+                    case 4:
+                    case "end":
+                      return e.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.paySimple = function(e, t) {
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return (
+                        void 0 === t && (t = 1),
+                        n.abrupt("return", this.ui({method: "pay", action: "purchaseitem", product: e, quantity: t}))
+                      );
+                    case 2:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
+          (t.pay = function(e, t) {
+            return r.default.async(
+              function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return n.abrupt(
+                        "return",
+                        this.ui((0, o.default)({method: "pay", action: "purchaseitem", product: e}, t)),
+                      );
+                    case 1:
+                    case "end":
+                      return n.stop();
+                  }
+              },
+              null,
+              this,
+            );
+          }),
           e
         );
       })();
-      t.default = _;
+      t.default = c;
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
-        _ = r(n(18)),
+        c = r(n(13)),
+        _ = r(n(17)),
         d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -13299,126 +13227,105 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
         o = r(n(11)),
-        s = r(n(12)),
-        l = r(n(16)),
-        c = r(n(5)),
-        _ = r(n(6)),
-        d = a(n(0)),
-        u = r(n(18)),
+        s = r(n(15)),
+        l = r(n(6)),
+        c = r(n(7)),
+        _ = a(n(0)),
+        d = r(n(17)),
+        u = r(n(23)),
         p = r(n(24)),
-        m = r(n(25)),
-        E = (function(e) {
+        m = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, _.default)(
-                (0, l.default)(t),
-                "handleClick",
-                (function() {
-                  var e = (0, s.default)(
-                    o.default.mark(function e(n) {
-                      var a;
-                      return o.default.wrap(function(e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                n.preventDefault(),
-                                (a = t.props.handleProcess),
-                                e.abrupt(
-                                  "return",
-                                  a(
-                                    (function() {
-                                      var e = (0, s.default)(
-                                        o.default.mark(function e(n) {
-                                          var a, r, i, s, l, c, _, d;
-                                          return o.default.wrap(function(e) {
-                                            for (;;)
-                                              switch ((e.prev = e.next)) {
-                                                case 0:
-                                                  return (
-                                                    (a = t.props),
-                                                    (r = a.link),
-                                                    (i = void 0 === r ? (0, u.default)() : r),
-                                                    (s = a.display),
-                                                    (l = a.appId),
-                                                    (c = void 0 === l ? n.getAppId() : l),
-                                                    (_ = a.to),
-                                                    (d = a.redirectURI),
-                                                    e.abrupt(
-                                                      "return",
-                                                      n.ui(
-                                                        (0, p.default)({
-                                                          method: "send",
-                                                          link: i,
-                                                          display: s,
-                                                          app_id: c,
-                                                          to: _,
-                                                          redirect_uri: d,
-                                                        }),
-                                                      ),
-                                                    )
-                                                  );
-                                                case 2:
-                                                case "end":
-                                                  return e.stop();
-                                              }
-                                          }, e);
-                                        }),
+              (0, c.default)((0, s.default)(t), "handleClick", function(e) {
+                var n;
+                return o.default.async(function(a) {
+                  for (;;)
+                    switch ((a.prev = a.next)) {
+                      case 0:
+                        return (
+                          e.preventDefault(),
+                          (n = t.props.handleProcess),
+                          a.abrupt(
+                            "return",
+                            n(function(e) {
+                              var n, a, r, i, s, l, c, _;
+                              return o.default.async(function(o) {
+                                for (;;)
+                                  switch ((o.prev = o.next)) {
+                                    case 0:
+                                      return (
+                                        (n = t.props),
+                                        (a = n.link),
+                                        (r = void 0 === a ? (0, d.default)() : a),
+                                        (i = n.display),
+                                        (s = n.appId),
+                                        (l = void 0 === s ? e.getAppId() : s),
+                                        (c = n.to),
+                                        (_ = n.redirectURI),
+                                        o.abrupt(
+                                          "return",
+                                          e.ui(
+                                            (0, u.default)({
+                                              method: "send",
+                                              link: r,
+                                              display: i,
+                                              app_id: l,
+                                              to: c,
+                                              redirect_uri: _,
+                                            }),
+                                          ),
+                                        )
                                       );
-                                      return function(t) {
-                                        return e.apply(this, arguments);
-                                      };
-                                    })(),
-                                  ),
-                                )
-                              );
-                            case 3:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
+                                    case 2:
+                                    case "end":
+                                      return o.stop();
+                                  }
+                              });
+                            }),
+                          )
+                        );
+                      case 3:
+                      case "end":
+                        return a.stop();
+                    }
+                });
+              }),
               t
             );
           }
           return (
-            (0, c.default)(t, e),
+            (0, l.default)(t, e),
             (t.prototype.render = function() {
               var e = this.props;
               return (0, e.children)({loading: e.loading, handleClick: this.handleClick});
             }),
             t
           );
-        })(d.Component);
-      (0, _.default)(E, "defaultProps", {to: void 0, display: void 0, appId: void 0, redirectURI: void 0});
-      var g = (0, d.forwardRef)(function(e, t) {
-        return d.default.createElement(m.default, null, function(n) {
+        })(_.Component);
+      (0, c.default)(m, "defaultProps", {to: void 0, display: void 0, appId: void 0, redirectURI: void 0});
+      var E = (0, _.forwardRef)(function(e, t) {
+        return _.default.createElement(p.default, null, function(n) {
           var a = n.loading,
             r = n.handleProcess;
-          return d.default.createElement(E, (0, i.default)({}, e, {loading: a, handleProcess: r, ref: t}));
+          return _.default.createElement(m, (0, i.default)({}, e, {loading: a, handleProcess: r, ref: t}));
         });
       });
-      t.default = g;
+      t.default = E;
     },
     function(e, t, n) {
       "use strict";
       var a = n(3);
       (t.__esModule = !0), (t.default = l);
       var r = a(n(8)),
-        i = a(n(22)),
+        i = a(n(21)),
         o = a(n(0)),
         s = a(n(36));
       function l(e) {
@@ -13435,15 +13342,15 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
-        _ = r(n(18)),
+        c = r(n(13)),
+        _ = r(n(17)),
         d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -13515,9 +13422,9 @@
       var a = n(3);
       (t.__esModule = !0), (t.default = c);
       var r = a(n(8)),
-        i = a(n(22)),
+        i = a(n(21)),
         o = a(n(0)),
-        s = a(n(247)),
+        s = a(n(251)),
         l = a(n(37));
       function c(e) {
         var t = e.children,
@@ -13558,7 +13465,7 @@
         r = n(0),
         i = l(r),
         o = l(n(2)),
-        s = l(n(248));
+        s = l(n(252));
       function l(e) {
         return e && e.__esModule ? e : {default: e};
       }
@@ -13873,14 +13780,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -13917,14 +13824,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -13979,15 +13886,15 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
-        _ = r(n(18)),
+        c = r(n(13)),
+        _ = r(n(17)),
         d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14045,15 +13952,15 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
-        _ = r(n(18)),
+        c = r(n(13)),
+        _ = r(n(17)),
         d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14085,117 +13992,96 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
         o = r(n(11)),
-        s = r(n(12)),
-        l = r(n(16)),
-        c = r(n(5)),
-        _ = r(n(6)),
-        d = a(n(0)),
-        u = r(n(18)),
+        s = r(n(15)),
+        l = r(n(6)),
+        c = r(n(7)),
+        _ = a(n(0)),
+        d = r(n(17)),
+        u = r(n(23)),
         p = r(n(24)),
-        m = r(n(25)),
-        E = (function(e) {
+        m = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, _.default)(
-                (0, l.default)(t),
-                "handleClick",
-                (function() {
-                  var e = (0, s.default)(
-                    o.default.mark(function e(n) {
-                      var a;
-                      return o.default.wrap(function(e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              return (
-                                n.preventDefault(),
-                                (a = t.props.handleProcess),
-                                e.abrupt(
-                                  "return",
-                                  a(
-                                    (function() {
-                                      var e = (0, s.default)(
-                                        o.default.mark(function e(n) {
-                                          var a, r, i, s, l, c, _, d, m, E, g, S, f, T, b;
-                                          return o.default.wrap(function(e) {
-                                            for (;;)
-                                              switch ((e.prev = e.next)) {
-                                                case 0:
-                                                  return (
-                                                    (a = t.props),
-                                                    (r = a.link),
-                                                    (i = void 0 === r ? (0, u.default)() : r),
-                                                    (s = a.display),
-                                                    (l = a.appId),
-                                                    (c = void 0 === l ? n.getAppId() : l),
-                                                    (_ = a.redirectURI),
-                                                    (d = a.from),
-                                                    (m = a.to),
-                                                    (E = a.picture),
-                                                    (g = a.source),
-                                                    (S = a.name),
-                                                    (f = a.caption),
-                                                    (T = a.description),
-                                                    (b = a.dataRef),
-                                                    e.abrupt(
-                                                      "return",
-                                                      n.ui(
-                                                        (0, p.default)({
-                                                          method: "feed",
-                                                          link: i,
-                                                          display: s,
-                                                          app_id: c,
-                                                          redirect_uri: _,
-                                                          from: d,
-                                                          to: m,
-                                                          picture: E,
-                                                          source: g,
-                                                          name: S,
-                                                          caption: f,
-                                                          description: T,
-                                                          ref: b,
-                                                        }),
-                                                      ),
-                                                    )
-                                                  );
-                                                case 2:
-                                                case "end":
-                                                  return e.stop();
-                                              }
-                                          }, e);
-                                        }),
+              (0, c.default)((0, s.default)(t), "handleClick", function(e) {
+                var n;
+                return o.default.async(function(a) {
+                  for (;;)
+                    switch ((a.prev = a.next)) {
+                      case 0:
+                        return (
+                          e.preventDefault(),
+                          (n = t.props.handleProcess),
+                          a.abrupt(
+                            "return",
+                            n(function(e) {
+                              var n, a, r, i, s, l, c, _, p, m, E, g, S, f, T;
+                              return o.default.async(function(o) {
+                                for (;;)
+                                  switch ((o.prev = o.next)) {
+                                    case 0:
+                                      return (
+                                        (n = t.props),
+                                        (a = n.link),
+                                        (r = void 0 === a ? (0, d.default)() : a),
+                                        (i = n.display),
+                                        (s = n.appId),
+                                        (l = void 0 === s ? e.getAppId() : s),
+                                        (c = n.redirectURI),
+                                        (_ = n.from),
+                                        (p = n.to),
+                                        (m = n.picture),
+                                        (E = n.source),
+                                        (g = n.name),
+                                        (S = n.caption),
+                                        (f = n.description),
+                                        (T = n.dataRef),
+                                        o.abrupt(
+                                          "return",
+                                          e.ui(
+                                            (0, u.default)({
+                                              method: "feed",
+                                              link: r,
+                                              display: i,
+                                              app_id: l,
+                                              redirect_uri: c,
+                                              from: _,
+                                              to: p,
+                                              picture: m,
+                                              source: E,
+                                              name: g,
+                                              caption: S,
+                                              description: f,
+                                              ref: T,
+                                            }),
+                                          ),
+                                        )
                                       );
-                                      return function(t) {
-                                        return e.apply(this, arguments);
-                                      };
-                                    })(),
-                                  ),
-                                )
-                              );
-                            case 3:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
+                                    case 2:
+                                    case "end":
+                                      return o.stop();
+                                  }
+                              });
+                            }),
+                          )
+                        );
+                      case 3:
+                      case "end":
+                        return a.stop();
+                    }
+                });
+              }),
               t
             );
           }
           return (
-            (0, c.default)(t, e),
+            (0, l.default)(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.children,
@@ -14206,8 +14092,8 @@
             }),
             t
           );
-        })(d.Component);
-      (0, _.default)(E, "defaultProps", {
+        })(_.Component);
+      (0, c.default)(m, "defaultProps", {
         link: void 0,
         display: void 0,
         appId: void 0,
@@ -14221,31 +14107,31 @@
         description: void 0,
         dataRef: void 0,
       });
-      var g = (0, d.forwardRef)(function(e, t) {
-        return d.default.createElement(m.default, null, function(n) {
+      var E = (0, _.forwardRef)(function(e, t) {
+        return _.default.createElement(p.default, null, function(n) {
           var a = n.loading,
             r = n.handleProcess,
             o = n.error,
             s = n.data;
-          return d.default.createElement(
-            E,
+          return _.default.createElement(
+            m,
             (0, i.default)({}, e, {loading: a, handleProcess: r, data: s, error: o, ref: t}),
           );
         });
       });
-      t.default = g;
+      t.default = E;
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
-        _ = r(n(18)),
+        c = r(n(13)),
+        _ = r(n(17)),
         d = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14302,88 +14188,69 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
-      var i = r(n(11)),
-        o = r(n(16)),
-        s = r(n(5)),
-        l = r(n(6)),
-        c = r(n(12)),
-        _ = a(n(0)),
-        d = r(n(20)),
-        u = r(n(32));
-      function p(e) {
-        return m.apply(this, arguments);
+      var i = r(n(15)),
+        o = r(n(6)),
+        s = r(n(7)),
+        l = r(n(11)),
+        c = a(n(0)),
+        _ = r(n(19)),
+        d = r(n(31));
+      function u(e) {
+        var t;
+        return l.default.async(function(n) {
+          for (;;)
+            switch ((n.prev = n.next)) {
+              case 0:
+                return (n.next = 2), l.default.awrap(e.getLoginStatus());
+              case 2:
+                return (t = n.sent), n.abrupt("return", t.status);
+              case 4:
+              case "end":
+                return n.stop();
+            }
+        });
       }
-      function m() {
-        return (m = (0, c.default)(
-          i.default.mark(function e(t) {
-            var n;
-            return i.default.wrap(function(e) {
-              for (;;)
-                switch ((e.prev = e.next)) {
-                  case 0:
-                    return (e.next = 2), t.getLoginStatus();
-                  case 2:
-                    return (n = e.sent), e.abrupt("return", n.status);
-                  case 4:
-                  case "end":
-                    return e.stop();
-                }
-            }, e);
-          }),
-        )).apply(this, arguments);
-      }
-      var E = (function(e) {
+      var p = (function(e) {
         function t() {
           for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
           return (
             (t = e.call.apply(e, [this].concat(a)) || this),
-            (0, l.default)((0, o.default)(t), "state", {loading: !0}),
-            (0, l.default)(
-              (0, o.default)(t),
-              "handleReady",
-              (function() {
-                var e = (0, c.default)(
-                  i.default.mark(function e(n) {
-                    return i.default.wrap(function(e) {
-                      for (;;)
-                        switch ((e.prev = e.next)) {
-                          case 0:
-                            return (e.t0 = t), (e.next = 3), p(n);
-                          case 3:
-                            (e.t1 = e.sent), (e.t2 = {status: e.t1, loading: !1}), e.t0.setState.call(e.t0, e.t2);
-                          case 6:
-                          case "end":
-                            return e.stop();
-                        }
-                    }, e);
-                  }),
-                );
-                return function(t) {
-                  return e.apply(this, arguments);
-                };
-              })(),
-            ),
-            (0, l.default)((0, o.default)(t), "handleStatusChange", function(e) {
+            (0, s.default)((0, i.default)(t), "state", {loading: !0}),
+            (0, s.default)((0, i.default)(t), "handleReady", function(e) {
+              return l.default.async(function(n) {
+                for (;;)
+                  switch ((n.prev = n.next)) {
+                    case 0:
+                      return (n.t0 = t), (n.next = 3), l.default.awrap(u(e));
+                    case 3:
+                      (n.t1 = n.sent), (n.t2 = {status: n.t1, loading: !1}), n.t0.setState.call(n.t0, n.t2);
+                    case 6:
+                    case "end":
+                      return n.stop();
+                  }
+              });
+            }),
+            (0, s.default)((0, i.default)(t), "handleStatusChange", function(e) {
               t.setState({status: e.status, loading: !1});
             }),
             t
           );
         }
         return (
-          (0, s.default)(t, e),
+          (0, o.default)(t, e),
           (t.prototype.render = function() {
             var e = this.props.children,
               t = this.state,
               n = t.status,
               a = t.loading;
-            return _.default.createElement(
-              d.default,
+            return c.default.createElement(
+              _.default,
               {onReady: this.handleReady},
-              _.default.createElement(
-                u.default,
+              c.default.createElement(
+                d.default,
                 {event: "auth.statusChange", onChange: this.handleStatusChange},
                 e({status: n, loading: a}),
               ),
@@ -14391,119 +14258,98 @@
           }),
           t
         );
-      })(_.Component);
-      t.default = E;
+      })(c.Component);
+      t.default = p;
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(11)),
-        o = r(n(12)),
-        s = r(n(16)),
-        l = r(n(5)),
-        c = r(n(6)),
-        _ = a(n(0)),
-        d = r(n(20)),
-        u = r(n(32)),
-        p = r(n(31)),
-        m = r(n(30)),
-        E = (function(e) {
+        o = r(n(15)),
+        s = r(n(6)),
+        l = r(n(7)),
+        c = a(n(0)),
+        _ = r(n(19)),
+        d = r(n(31)),
+        u = r(n(30)),
+        p = r(n(29)),
+        m = (function(e) {
           function t() {
             for (var t, n = arguments.length, a = new Array(n), r = 0; r < n; r++) a[r] = arguments[r];
             return (
               (t = e.call.apply(e, [this].concat(a)) || this),
-              (0, c.default)((0, s.default)(t), "state", {loading: !0}),
-              (0, c.default)(
-                (0, s.default)(t),
-                "handleReady",
-                (function() {
-                  var e = (0, o.default)(
-                    i.default.mark(function e(n) {
-                      return i.default.wrap(function(e) {
-                        for (;;)
-                          switch ((e.prev = e.next)) {
-                            case 0:
-                              (t.api = n), t.updateProfile();
-                            case 2:
-                            case "end":
-                              return e.stop();
-                          }
-                      }, e);
-                    }),
-                  );
-                  return function(t) {
-                    return e.apply(this, arguments);
-                  };
-                })(),
-              ),
-              (0, c.default)((0, s.default)(t), "handleStatusChange", function() {
+              (0, l.default)((0, o.default)(t), "state", {loading: !0}),
+              (0, l.default)((0, o.default)(t), "handleReady", function(e) {
+                return i.default.async(function(n) {
+                  for (;;)
+                    switch ((n.prev = n.next)) {
+                      case 0:
+                        (t.api = e), t.updateProfile();
+                      case 2:
+                      case "end":
+                        return n.stop();
+                    }
+                });
+              }),
+              (0, l.default)((0, o.default)(t), "handleStatusChange", function() {
                 t.updateProfile();
               }),
               t
             );
           }
-          (0, l.default)(t, e);
+          (0, s.default)(t, e);
           var n = t.prototype;
           return (
-            (n.updateProfile = (function() {
-              var e = (0, o.default)(
-                i.default.mark(function e() {
-                  var t, n, a;
-                  return i.default.wrap(
-                    function(e) {
-                      for (;;)
-                        switch ((e.prev = e.next)) {
-                          case 0:
-                            if (((t = this.api), (n = this.props.fields), t)) {
-                              e.next = 3;
-                              break;
-                            }
-                            return e.abrupt("return");
-                          case 3:
-                            return (e.prev = 3), (e.next = 6), t.getLoginStatus();
-                          case 6:
-                            if (e.sent.status === m.default.CONNECTED) {
-                              e.next = 10;
-                              break;
-                            }
-                            return this.setState({profile: void 0, loading: !1, error: void 0}), e.abrupt("return");
-                          case 10:
-                            return (e.next = 12), t.getProfile({fields: n});
-                          case 12:
-                            (a = e.sent), this.setState({profile: a, loading: !1, error: void 0}), (e.next = 19);
-                            break;
-                          case 16:
-                            (e.prev = 16),
-                              (e.t0 = e.catch(3)),
-                              this.setState({profile: void 0, loading: !1, error: e.t0});
-                          case 19:
-                          case "end":
-                            return e.stop();
+            (n.updateProfile = function() {
+              var e, t, n;
+              return i.default.async(
+                function(a) {
+                  for (;;)
+                    switch ((a.prev = a.next)) {
+                      case 0:
+                        if (((e = this.api), (t = this.props.fields), e)) {
+                          a.next = 3;
+                          break;
                         }
-                    },
-                    e,
-                    this,
-                    [[3, 16]],
-                  );
-                }),
+                        return a.abrupt("return");
+                      case 3:
+                        return (a.prev = 3), (a.next = 6), i.default.awrap(e.getLoginStatus());
+                      case 6:
+                        if (a.sent.status === p.default.CONNECTED) {
+                          a.next = 10;
+                          break;
+                        }
+                        return this.setState({profile: void 0, loading: !1, error: void 0}), a.abrupt("return");
+                      case 10:
+                        return (a.next = 12), i.default.awrap(e.getProfile({fields: t}));
+                      case 12:
+                        (n = a.sent), this.setState({profile: n, loading: !1, error: void 0}), (a.next = 19);
+                        break;
+                      case 16:
+                        (a.prev = 16), (a.t0 = a.catch(3)), this.setState({profile: void 0, loading: !1, error: a.t0});
+                      case 19:
+                      case "end":
+                        return a.stop();
+                    }
+                },
+                null,
+                this,
+                [[3, 16]],
               );
-              return function() {
-                return e.apply(this, arguments);
-              };
-            })()),
+            }),
             (n.render = function() {
               var e = this.props.children,
                 t = this.state,
                 n = t.profile,
                 a = t.loading,
                 r = t.error;
-              return _.default.createElement(
-                d.default,
+              return c.default.createElement(
+                _.default,
                 {onReady: this.handleReady},
-                _.default.createElement(
-                  u.default,
+                c.default.createElement(
+                  d.default,
                   {event: "auth.statusChange", onChange: this.handleStatusChange},
                   e({profile: n, loading: a, error: r}),
                 ),
@@ -14511,19 +14357,19 @@
             }),
             t
           );
-        })(_.Component);
-      (t.default = E), (0, c.default)(E, "defaultProps", {fields: p.default});
+        })(c.Component);
+      (t.default = m), (0, l.default)(m, "defaultProps", {fields: u.default});
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14536,37 +14382,40 @@
             }),
             (n.render = function() {
               var e = this.props,
-                t = e.minimized,
-                n = e.children,
-                a = e.pageId,
-                r = e.themeColor,
-                i = e.loggedInGreeting,
-                o = e.loggedOutGreeting,
-                s = e.dataRef;
+                t = e.children,
+                n = e.pageId,
+                a = e.themeColor,
+                r = e.loggedInGreeting,
+                i = e.loggedOutGreeting,
+                o = e.dataRef,
+                s = e.greetingDialogDisplay,
+                c = e.greetingDialogDelay;
               return l.default.createElement(
                 "div",
                 {
                   className: "fb-customerchat",
-                  page_id: a,
-                  minimized: t,
-                  theme_color: r,
-                  logged_in_greeting: i,
-                  logged_out_greeting: o,
-                  "data-ref": s,
+                  page_id: n,
+                  theme_color: a,
+                  logged_in_greeting: r,
+                  logged_out_greeting: i,
+                  greeting_dialog_display: s,
+                  greeting_dialog_delay: c,
+                  "data-ref": o,
                 },
-                n,
+                t,
               );
             }),
             t
           );
         })(l.PureComponent);
       (0, s.default)(_, "defaultProps", {
-        minimized: void 0,
         children: void 0,
         themeColor: void 0,
         loggedInGreeting: void 0,
         loggedOutGreeting: void 0,
         dataRef: void 0,
+        greetingDialogDisplay: void 0,
+        greetingDialogDelay: void 0,
       });
       var d = (0, l.forwardRef)(function(e, t) {
         return l.default.createElement(c.default, null, function(n) {
@@ -14578,14 +14427,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14623,14 +14472,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14693,14 +14542,14 @@
     },
     function(e, t, n) {
       "use strict";
-      var a = n(7),
+      var a = n(5),
         r = n(3);
       (t.__esModule = !0), (t.default = void 0);
       var i = r(n(8)),
-        o = r(n(5)),
-        s = r(n(6)),
+        o = r(n(6)),
+        s = r(n(7)),
         l = a(n(0)),
-        c = r(n(14)),
+        c = r(n(13)),
         _ = (function(e) {
           function t() {
             return e.apply(this, arguments) || this;
@@ -14785,65 +14634,57 @@
       (t.__esModule = !0), (t.default = void 0);
       var r = a(n(11)),
         i = a(n(8)),
-        o = a(n(22)),
-        s = a(n(12)),
-        l = a(n(24)),
-        c = a(n(38));
+        o = a(n(21)),
+        s = a(n(23)),
+        l = a(n(38));
       t.default = function() {
-        var e = (0, c.default)()[1];
-        function t() {
-          return (t = (0, s.default)(
-            r.default.mark(function t(n) {
-              var a, s, c, _, d, u, p, m;
-              return r.default.wrap(function(t) {
-                for (;;)
-                  switch ((t.prev = t.next)) {
-                    case 0:
-                      return (
-                        (a = n.href),
-                        (s = n.display),
-                        (c = n.hashtag),
-                        (_ = n.redirectUri),
-                        (d = n.quote),
-                        (u = n.mobileIframe),
-                        (p = (0, o.default)(n, ["href", "display", "hashtag", "redirectUri", "quote", "mobileIframe"])),
-                        (t.next = 3),
-                        e()
-                      );
-                    case 3:
-                      return (
-                        (m = t.sent),
-                        t.abrupt(
-                          "return",
-                          m.ui(
-                            (0, l.default)(
-                              (0, i.default)(
-                                {
-                                  method: "share",
-                                  href: a,
-                                  display: s,
-                                  app_id: m.getAppId(),
-                                  hashtag: c,
-                                  redirect_uri: _,
-                                  quote: d,
-                                  mobile_iframe: u,
-                                },
-                                p,
-                              ),
-                            ),
+        var e = (0, l.default)()[1];
+        return function(t) {
+          var n, a, l, c, _, d, u, p;
+          return r.default.async(function(m) {
+            for (;;)
+              switch ((m.prev = m.next)) {
+                case 0:
+                  return (
+                    (n = t.href),
+                    (a = t.display),
+                    (l = t.hashtag),
+                    (c = t.redirectUri),
+                    (_ = t.quote),
+                    (d = t.mobileIframe),
+                    (u = (0, o.default)(t, ["href", "display", "hashtag", "redirectUri", "quote", "mobileIframe"])),
+                    (m.next = 3),
+                    r.default.awrap(e())
+                  );
+                case 3:
+                  return (
+                    (p = m.sent),
+                    m.abrupt(
+                      "return",
+                      p.ui(
+                        (0, s.default)(
+                          (0, i.default)(
+                            {
+                              method: "share",
+                              href: n,
+                              display: a,
+                              app_id: p.getAppId(),
+                              hashtag: l,
+                              redirect_uri: c,
+                              quote: _,
+                              mobile_iframe: d,
+                            },
+                            u,
                           ),
-                        )
-                      );
-                    case 5:
-                    case "end":
-                      return t.stop();
-                  }
-              }, t);
-            }),
-          )).apply(this, arguments);
-        }
-        return function(e) {
-          return t.apply(this, arguments);
+                        ),
+                      ),
+                    )
+                  );
+                case 5:
+                case "end":
+                  return m.stop();
+              }
+          });
         };
       };
     },
@@ -15523,7 +15364,7 @@
             e
           );
         })(),
-        T = n(21),
+        T = n(20),
         b = (function() {
           function e(t) {
             void 0 === t && (t = {}),
@@ -16020,11 +15861,11 @@
             t
           );
         })(a.PureComponent),
-        w = "undefined" != typeof document,
-        L = function(e) {
+        L = "undefined" != typeof document,
+        w = function(e) {
           var t = e.url,
             n = e.id;
-          return w
+          return L
             ? new Promise(function(e, a) {
                 var r = document.getElementById(n),
                   i = window;
@@ -16136,7 +15977,7 @@
         }, []),
           Object(a.useEffect)(
             function() {
-              w && u && k();
+              L && u && k();
             },
             [u],
           ),
@@ -16160,10 +16001,10 @@
             function e() {
               m.current && (S(!0), (G = h));
             }
-            w &&
+            L &&
               (window.google && G === h
                 ? e()
-                : L({id: n, url: h})
+                : w({id: n, url: h})
                     .then(e)
                     .catch(function(e) {
                       m.current && b(e),
@@ -16209,7 +16050,7 @@
                 return Promise.resolve(
                   new Promise(function(e) {
                     if (F) {
-                      if (w)
+                      if (L)
                         var t = window.setInterval(function() {
                           F || (window.clearInterval(t), e());
                         }, 1);
@@ -16252,7 +16093,7 @@
             (t.injectScript = function() {
               t.props.preventGoogleFontsLoading && k(), t.props.id || l()(!1);
               var e = {id: t.props.id, url: U(t.props)};
-              L(e)
+              w(e)
                 .then(function() {
                   t.props.onLoad && t.props.onLoad(),
                     t.setState(function() {
@@ -16277,7 +16118,7 @@
         var n = t.prototype;
         return (
           (n.componentDidMount = function() {
-            if (w) {
+            if (L) {
               if (window.google && !F) return void console.error("google api is already presented");
               this.isCleaningUp()
                 .then(this.injectScript)
@@ -16291,7 +16132,7 @@
               console.warn(
                 "Performance warning! Loadscript has been reloaded unintentionally! You should not pass `libraries` prop as new array. Please keep an array of libraries as static class property for Components and PureComponents, or just a const variable ounside of component, or somwhere in config files or ENV variables",
               ),
-              w &&
+              L &&
                 e.language !== this.props.language &&
                 (this.cleanup(),
                 this.setState(function() {
@@ -16300,7 +16141,7 @@
           }),
           (n.componentWillUnmount = function() {
             var e = this;
-            if (w) {
+            if (L) {
               this.cleanup();
               window.setTimeout(function() {
                 e.check.current || (delete window.google, (F = !1));
@@ -16531,7 +16372,7 @@
           onVisibleChanged: "visible_changed",
           onZindexChanged: "zindex_changed",
         },
-        Q = {
+        j = {
           animation: function(e, t) {
             e.setAnimation(t);
           },
@@ -16575,7 +16416,7 @@
             e.setZIndex(t);
           },
         },
-        j = (function(e) {
+        Q = (function(e) {
           function t() {
             var t;
             return (
@@ -16599,7 +16440,7 @@
                 ? this.props.clusterer.addMarker(t, !!this.props.noClustererRedraw)
                 : t.setMap(this.context),
                 (this.registeredEvents = A({
-                  updaterMap: Q,
+                  updaterMap: j,
                   eventMap: K,
                   prevProps: {},
                   nextProps: this.props,
@@ -16613,7 +16454,7 @@
               null !== this.state.marker &&
                 (y(this.registeredEvents),
                 (this.registeredEvents = A({
-                  updaterMap: Q,
+                  updaterMap: j,
                   eventMap: K,
                   prevProps: e,
                   nextProps: this.props,
@@ -16634,7 +16475,7 @@
             t
           );
         })(a.PureComponent);
-      j.contextType = O;
+      Q.contextType = O;
       var $ = {
           onClick: "click",
           onClusteringBegin: "clusteringbegin",
@@ -17954,8 +17795,8 @@
           t
         );
       })(a.PureComponent).contextType = O;
-      var we = {onPlaceChanged: "place_changed"},
-        Le = {
+      var Le = {onPlaceChanged: "place_changed"},
+        we = {
           bounds: function(e, t) {
             e.setBounds(t);
           },
@@ -18071,7 +17912,7 @@
                 },
                 function(e) {
                   return o.map(function(t) {
-                    return r.a.createElement(j, {
+                    return r.a.createElement(Q, {
                       key: t.Ref,
                       position: {lat: Number(t.Latitude), lng: Number(t.Longitude)},
                       clusterer: e,
@@ -18207,8 +18048,8 @@
             if (e) {
               var t = new google.maps.places.Autocomplete(e, this.props.options);
               (this.registeredEvents = A({
-                updaterMap: Le,
-                eventMap: we,
+                updaterMap: we,
+                eventMap: Le,
                 prevProps: {},
                 nextProps: this.props,
                 instance: t,
@@ -18221,8 +18062,8 @@
           (n.componentDidUpdate = function(e) {
             y(this.registeredEvents),
               (this.registeredEvents = A({
-                updaterMap: Le,
-                eventMap: we,
+                updaterMap: we,
+                eventMap: Le,
                 prevProps: e,
                 nextProps: this.props,
                 instance: this.state.autocomplete,
@@ -18281,9 +18122,9 @@
         r = n.n(a),
         i = n(0),
         o = n.n(i),
-        s = n(8),
+        s = n(43),
         l = n.n(s),
-        c = n(27),
+        c = n(26),
         _ = n.n(c);
       function d(e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -18511,8 +18352,8 @@
               D = e.CodeTag,
               M = void 0 === D ? "code" : D,
               x = e.code,
-              w = void 0 === x ? (Array.isArray(n) ? n[0] : n) : x,
-              L = e.astGenerator,
+              L = void 0 === x ? (Array.isArray(n) ? n[0] : n) : x,
+              w = e.astGenerator,
               P = r()(e, [
                 "language",
                 "children",
@@ -18532,23 +18373,23 @@
                 "code",
                 "astGenerator",
               ]);
-            L = L || T;
+            w = w || T;
             var k = m
                 ? o.a.createElement(E, {
                     containerStyle: C,
                     codeStyle: _.style || {},
                     numberStyle: v,
                     startingLineNumber: h,
-                    codeString: w,
+                    codeString: L,
                   })
                 : null,
               U = i.hljs || i['pre[class*="language-"]'] || {backgroundColor: "#fff"},
               F = u
                 ? Object.assign({}, P, {style: Object.assign({}, U, l)})
                 : Object.assign({}, P, {className: "hljs"});
-            if (!L) return o.a.createElement(A, F, k, o.a.createElement(M, _, w));
+            if (!w) return o.a.createElement(A, F, k, o.a.createElement(M, _, L));
             (O = !(!I || void 0 !== O) || O), (I = I || f);
-            var B = [{type: "text", value: w}],
+            var B = [{type: "text", value: L}],
               G = (function(e) {
                 var t = e.astGenerator,
                   n = e.language,
@@ -18563,7 +18404,7 @@
                 } catch (e) {
                   return {value: r};
                 }
-              })({astGenerator: L, language: t, code: w, defaultCodeValue: B});
+              })({astGenerator: w, language: t, code: L, defaultCodeValue: B});
             null === G.language && (G.value = B);
             var Y = O ? S(G, N) : G.value;
             return o.a.createElement(A, F, k, o.a.createElement(M, _, I({rows: Y, stylesheet: i, useInlineStyles: u})));
