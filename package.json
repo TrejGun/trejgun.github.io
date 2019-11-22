@@ -18,7 +18,7 @@
     "@babel/preset-react": "7.7.0",
     "@babel/preset-typescript": "7.7.2",
     "@hot-loader/react-dom": "16.11.0",
-    "@material-ui/core": "4.6.1",
+    "@material-ui/core": "4.7.0",
     "@trejgun/eslint-config": "0.0.1",
     "@trejgun/nova-poshta-google-maps": "0.0.1",
     "@types/dotenv-webpack": "1.7.0",
