@@ -192,8 +192,17 @@
               null,
               r.createElement(
                 s.Link,
+                {component: u, to: "/articles/apollo-client-for-authorization-with-nestjs"},
+                "Apollo client for authorization with Nest.js",
+              ),
+            ),
+            r.createElement(
+              "li",
+              null,
+              r.createElement(
+                s.Link,
                 {component: u, to: "/articles/how-to-convert-http-exception-to-rpc-exception"},
-                "How to convert HttpException to RpcException",
+                "How to convert HttpException to RpcException?",
               ),
             ),
             r.createElement(
@@ -289,12 +298,12 @@
         },
         {name: "MyDate"},
       ),
-      v = function(e) {
+      E = function(e) {
         var t = e.date,
           n = y();
         return r.createElement("div", {className: n.date}, new Date(t).toISOString().split("T")[0]);
       },
-      E = n(279),
+      v = n(279),
       w = n(277);
     function k() {
       return (k =
@@ -330,7 +339,7 @@
     var T = function(e) {
         var t = e.children,
           n = j(e, ["children"]);
-        return r.createElement(E.a, k({style: w.a}, n), t);
+        return r.createElement(v.a, k({style: w.a}, n), t);
       },
       x = n(34),
       S = function(e) {
@@ -343,11 +352,11 @@
               r.createElement(x.Comments, {href: "https://trejgun.github.io/articles/".concat(t)}),
             );
       },
-      O = function() {
+      R = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-25T17:42:20.324Z"}),
+          r.createElement(E, {date: "2019-10-25T17:42:20.324Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Custom Transport for Nest.js"),
           r.createElement(
             "p",
@@ -411,11 +420,11 @@
           r.createElement(S, {slug: "custom-transport-for-nestjs"}),
         );
       },
-      P = function() {
+      I = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-26T14:08:19.626Z"}),
+          r.createElement(E, {date: "2019-10-26T14:08:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Session based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -467,11 +476,11 @@
           r.createElement(S, {slug: "session-based-authorization-for-nestjs"}),
         );
       },
-      I = function() {
+      O = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-10-27T10:11:34.152Z"}),
+          r.createElement(E, {date: "2019-10-27T10:11:34.152Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Ethereum Server for Nest.js"),
           r.createElement(
             "p",
@@ -507,11 +516,11 @@
           r.createElement(S, {slug: "ethereum-server-for-nestjs"}),
         );
       },
-      R = function() {
+      A = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-03T14:18:19.626Z"}),
+          r.createElement(E, {date: "2019-11-03T14:18:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "JWT based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -554,7 +563,7 @@
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-03T14:56:19.626Z"}),
+          r.createElement(E, {date: "2019-11-03T14:56:19.626Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "GraphQL based authorization for Nest.js"),
           r.createElement(
             "p",
@@ -599,8 +608,8 @@
           r.createElement(S, {slug: "graphql-based-authorization-for-nestjs"}),
         );
       },
-      N = n(278),
-      A = Object(s.makeStyles)(
+      P = n(278),
+      N = Object(s.makeStyles)(
         function() {
           return {
             map: {width: 600, height: 400, backgroundColor: "#c0c0c0", position: "relative"},
@@ -610,16 +619,16 @@
         },
         {name: "NovaPoshta"},
       ),
-      M = function(e) {
+      L = function(e) {
         var t = e.setWarehouse,
           n = e.googleMapsApiKey,
           o = e.novaPoshtaApiKey,
-          a = A();
+          a = N();
         return n && o
           ? "ReactSnap" === navigator.userAgent
             ? null
             : r.createElement(
-                N.a,
+                P.a,
                 {
                   onError: console.error.bind(console),
                   googleMapsApiKey: n,
@@ -671,10 +680,10 @@
         })()
       );
     }
-    var G,
+    var M,
       z,
-      L = function() {
-        var e = A(),
+      G = function() {
+        var e = N(),
           t = U(r.useState(null), 2),
           n = t[0],
           o = t[1],
@@ -687,7 +696,7 @@
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-10T13:20:19.556Z"}),
+          r.createElement(E, {date: "2019-11-10T13:20:19.556Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Nova Poshta Google Maps widget"),
           r.createElement(
             "p",
@@ -710,7 +719,7 @@
             },
           }),
           r.createElement("br", null),
-          r.createElement(M, {setWarehouse: o, googleMapsApiKey: i, novaPoshtaApiKey: u}),
+          r.createElement(L, {setWarehouse: o, googleMapsApiKey: i, novaPoshtaApiKey: u}),
           r.createElement("p", null, "Selected: ", n ? n.Description : "N/A"),
           r.createElement(
             "p",
@@ -730,7 +739,7 @@
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-14T18:40:19.556Z"}),
+          r.createElement(E, {date: "2019-11-14T18:40:19.556Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Collecting data from workers in Nest.js"),
           r.createElement(
             "p",
@@ -775,32 +784,32 @@
           r.createElement(S, {slug: "collecting-data-from-workers-in-nestjs"}),
         );
       },
-      W = function() {
+      _ = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-16T14:31:19.556Z"}),
+          r.createElement(E, {date: "2019-11-16T14:31:19.556Z"}),
           r.createElement(
             s.Typography,
             {component: "h2", variant: "h4"},
-            "How to convert HttpException to RpcException",
+            "How to convert HttpException to RpcException?",
           ),
           r.createElement(
             "p",
             null,
-            "It really easy to return erroneous http response in Nest.js application, you just have to throw",
+            "It is really easy to return erroneous http response in Nest.js application, you just have to throw",
             r.createElement("em", null, "HttpException"),
-            " or one of its implementations like ",
+            " or one of it`s implementations like ",
             r.createElement("em", null, "UnauthorizedException"),
             ",",
             r.createElement("em", null, "NotFoundException"),
             " or ",
             r.createElement("em", null, "BadRequestException"),
-            ". It is meaningful and you dont have to reinvent the wheel each time. But What about microservices? Potentially you can throw the same ",
+            ". It is meaningful and you don`t have to reinvent the wheel each time. But What about microservices? Potentially you can throw the same ",
             r.createElement("em", null, "Exception"),
-            " from there too but on the other side you will receive",
+            " from there too, but on the other side you will receive",
             r.createElement("em", null, "Internal Server Error"),
-            " Which is not meaningfull at all, so to use build in exceptions they has to be converted to ",
+            ", which is not meaningful at all, so to use built-in exceptions they has to be converted to ",
             r.createElement("em", null, "RpcException"),
             " first. To do this I wrote this simple filter.",
           ),
@@ -812,30 +821,88 @@
           r.createElement(S, {slug: "how-to-convert-http-exception-to-rpc-exception"}),
         );
       },
+      W = function() {
+        return r.createElement(
+          "div",
+          null,
+          r.createElement(E, {date: "2019-11-23T19:18:19.556Z"}),
+          r.createElement(
+            s.Typography,
+            {component: "h2", variant: "h4"},
+            "Apollo client and authorization with Nest.js",
+          ),
+          r.createElement(
+            "p",
+            null,
+            "As of recently I was working on the front-end part of authorization, for my project based on GraphQL. So today I want to share Apollo client configuration which you can use with example from my previous article",
+            r.createElement(
+              s.Link,
+              {component: u, to: "/articles/graphql-based-authorization-for-nestjs"},
+              "GraphQL based authorization for Nest.js",
+            ),
+            "This code is for ",
+            r.createElement("em", null, "react-native"),
+            " but can be easily adopted to any other frontend framework.",
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            "export interface IAuth {\n  accessToken: string;\n  accessTokenExpiresAt: number;\n  refreshToken?: string;\n  refreshTokenExpiresAt?: number;\n}\n",
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'export const AUTH_STORE_KEY = "AUTH_STORE_KEY";\n\nexport enum ERRORS {\n  AUTH_ERROR = "AUTH_ERROR",\n}\n',
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import AsyncStorage from "@react-native-community/async-storage";\n\n\nexport async function getItem<T>(key: string): Promise<T | null> {\n  const value = await AsyncStorage.getItem(key);\n  return value ? JSON.parse(value) : null;\n}\n\nexport async function setItem(key: string, value: any): Promise<void> {\n  return AsyncStorage.setItem(key, JSON.stringify(value));\n}\n',
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {ApolloClient} from "apollo-client";\nimport {createHttpLink} from "apollo-link-http";\nimport {InMemoryCache} from "apollo-cache-inmemory";\nimport {onError} from "apollo-link-error";\nimport {setContext} from "apollo-link-context";\n// eslint-disable-next-line import/named\nimport {GATEWAY_URL} from "react-native-dotenv";\nimport {ApolloLink, Observable} from "apollo-link";\n\nimport {AUTH_STORE_KEY, ERRORS} from "./constants";\nimport {getItem, setItem} from "./storage";\nimport {IAuth} from "./interface";\n\n\nconst httpLink = createHttpLink({\n  uri: GATEWAY_URL,\n});\n\nconst authLink = setContext(async (_, {headers}) => {\n  const auth = await getItem<IAuth>(AUTH_STORE_KEY);\n\n  if (auth) {\n    return {\n      headers: {\n        ...headers,\n        authorization: auth ? `Bearer ${auth.accessToken}` : "",\n      },\n    };\n  } else {\n    return {headers};\n  }\n});\n\nconst refreshToken = async (): Promise<IAuth | null> => {\n  let auth = await getItem<IAuth>(AUTH_STORE_KEY);\n\n  if (!auth) {\n    return null;\n  }\n\n  const response = await fetch(GATEWAY_URL, {\n    method: "POST",\n    headers: {\n      "Content-Type": "application/json",\n    },\n    body: JSON.stringify({\n      query: `\n        mutation($refreshToken: String!) {\n          refreshToken(refreshToken: $refreshToken) {\n            accessToken\n            refreshToken\n            accessTokenExpiresAt\n            refreshTokenExpiresAt\n          }\n        }\n      `,\n      variables: auth,\n    }),\n  });\n\n  const json = await response.json();\n\n  auth = json.data ? json.data.refreshToken : null;\n\n  await setItem(AUTH_STORE_KEY, auth);\n\n  return auth;\n};\n\n// @ts-ignore\nconst retryLink = onError(({graphQLErrors, operation, forward}) => {\n  // GraphQL types are so broken :(\n  // @ts-ignore\n  if (graphQLErrors && graphQLErrors[0].message.statusCode === 401) {\n    return new Observable((observer): void => {\n      refreshToken()\n        .then(auth => {\n          if (!auth) {\n            throw new Error(ERRORS.AUTH_ERROR);\n          }\n          operation.setContext(({headers = {}}: Record<string, any>) => ({\n            headers: {\n              ...headers,\n              authorization: `Bearer ${auth.accessToken}`,\n            },\n          }));\n        })\n        .then(() => {\n          forward(operation).subscribe(observer);\n        })\n        .catch(error => {\n          observer.error(error);\n        });\n    });\n  }\n  // do not return empty observable from here\n});\n\nexport const client = new ApolloClient({\n  link: ApolloLink.from([authLink, retryLink, httpLink]),\n  cache: new InMemoryCache(),\n});\n',
+          ),
+          r.createElement(
+            "p",
+            null,
+            "You should consider to use it if you have application with client side rendering and should not otherwise. In other words do not use it with Next.js and Server Side Rendering (better don`t use Next.js at all), because you won`t be able to obtain and refresh ",
+            r.createElement("em", null, "JWT"),
+            " from server side. Use session based auth and share cookies between clients but this would be a topic for my next article",
+          ),
+          r.createElement(S, {slug: "apollo-client-for-authorization-with-nestjs"}),
+        );
+      },
       B = function() {
         return r.createElement(
           a.d,
           null,
-          r.createElement(a.b, {component: O, path: "/articles/custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: P, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: R, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: R, path: "/articles/custom-transport-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: O, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: A, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: C, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: L, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
+          r.createElement(a.b, {component: G, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
           r.createElement(a.b, {component: H, path: "/articles/collecting-data-from-workers-in-nestjs", exact: !0}),
           r.createElement(a.b, {
-            component: W,
+            component: _,
             path: "/articles/how-to-convert-http-exception-to-rpc-exception",
+            exact: !0,
+          }),
+          r.createElement(a.b, {
+            component: W,
+            path: "/articles/apollo-client-for-authorization-with-nestjs",
             exact: !0,
           }),
           r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
-      q = function() {
+      Q = function() {
         return r.createElement(
           "div",
           null,
-          r.createElement(v, {date: "2019-11-03T15:25:20.324Z"}),
+          r.createElement(E, {date: "2019-11-03T15:25:20.324Z"}),
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "About this site"),
           r.createElement(
             "p",
@@ -846,7 +913,7 @@
           ),
         );
       },
-      Q = function() {
+      q = function() {
         return r.createElement(
           "div",
           null,
@@ -872,7 +939,7 @@
           ),
         );
       },
-      _ = Object(o.hot)(function() {
+      K = Object(o.hot)(function() {
         return r.createElement(
           d,
           null,
@@ -881,22 +948,22 @@
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
             r.createElement(a.b, {path: "/articles", component: B}),
-            r.createElement(a.b, {path: "/about", component: q}),
+            r.createElement(a.b, {path: "/about", component: Q}),
             r.createElement(a.b, {path: "/terms-and-conditions", component: F}),
-            r.createElement(a.b, {path: "/page-not-found", component: Q}),
+            r.createElement(a.b, {path: "/page-not-found", component: q}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      K = n(20);
-    (G = _),
+      Y = n(20);
+    (M = K),
       (z = document.getElementById("app")) &&
-        K[z.hasChildNodes() ? "hydrate" : "render"](
+        Y[z.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
-            r.createElement(i.a, null, r.createElement(G, null)),
+            r.createElement(i.a, null, r.createElement(M, null)),
           ),
           z,
         );

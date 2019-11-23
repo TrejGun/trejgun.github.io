@@ -1,0 +1,11 @@
+import AsyncStorage from "@react-native-community/async-storage";
+
+
+export async function getItem<T>(key: string): Promise<T | null> {
+  const value = await AsyncStorage.getItem(key);
+  return value ? JSON.parse(value) : null;
+}
+
+export async function setItem(key: string, value: any): Promise<void> {
+  return AsyncStorage.setItem(key, JSON.stringify(value));
+}

@@ -11,16 +11,16 @@ export const Page0008: React.FC = () => {
     <div>
       <MyDate date={"2019-11-16T14:31:19.556Z"} />
       <Typography component="h2" variant="h4">
-        How to convert HttpException to RpcException
+        How to convert HttpException to RpcException?
       </Typography>
 
       <p>
-        It really easy to return erroneous http response in Nest.js application, you just have to throw
-        <em>HttpException</em> or one of its implementations like <em>UnauthorizedException</em>,
-        <em>NotFoundException</em> or <em>BadRequestException</em>. It is meaningful and you dont have to reinvent the
+        It is really easy to return erroneous http response in Nest.js application, you just have to throw
+        <em>HttpException</em> or one of it`s implementations like <em>UnauthorizedException</em>,
+        <em>NotFoundException</em> or <em>BadRequestException</em>. It is meaningful and you don`t have to reinvent the
         wheel each time. But What about microservices? Potentially you can throw the same <em>Exception</em> from there
-        too but on the other side you will receive
-        <em>Internal Server Error</em> Which is not meaningfull at all, so to use build in exceptions they has to be
+        too, but on the other side you will receive
+        <em>Internal Server Error</em>, which is not meaningful at all, so to use built-in exceptions they has to be
         converted to <em>RpcException</em> first. To do this I wrote this simple filter.
       </p>
 
