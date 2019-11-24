@@ -1,0 +1,28 @@
+import {Module} from "@nestjs/common";
+import {Request} from "express";
+import {GraphQLModule} from "@nestjs/graphql";
+import {TypeOrmModule} from "@nestjs/typeorm";
+
+import {AuthModule} from "./auth/auth.module";
+import ormconfig from "./orm.config";
+
+
+@Module({
+  imports: [
+    TypeOrmModule.forRoot(ormconfig),
+    GraphQLModule.forRootAsync({
+      useFactory: () => ({
+        debug: process.env.NODE_ENV !== "production",
+        playground: process.env.NODE_ENV !== "production",
+        context: ({req}: {req: Request}): any => ({req}),
+        autoSchemaFile: "./schema.gql",
+        cors: {
+          origin: ["http://localhost:3001"],
+          credentials: true,
+        },
+      }),
+    }),
+    AuthModule,
+  ],
+})
+export class ApplicationModule {}

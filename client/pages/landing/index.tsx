@@ -12,6 +12,11 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application">
+            SSR Next.js authentication for GraphQL Nest.js application
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/apollo-client-for-authorization-with-nestjs">
             Apollo client for authorization with Nest.js
           </Link>

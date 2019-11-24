@@ -1,0 +1,26 @@
+import fetch from "isomorphic-unfetch";
+
+
+export default function ajax<T>(url: string, body: object): Promise<T> {
+  const headers = new Headers();
+  headers.append("Accept", "application/json");
+  headers.append("Content-Type", "application/json; charset=utf-8");
+  return fetch(`http:/localhost:3000/${url}`, {
+    headers,
+    method: "POST",
+    credentials: "include",
+    mode: "cors",
+    body: JSON.stringify(body),
+  }).then(response => {
+    if (response.status === 200) {
+      return response.json();
+    }
+    throw new Error(response.statusText);
+  });
+}
+
+
+// ajax<IUser>("auth/login", {
+//   login: "trejgun@gmail.com",
+//   password: "My5up3r5tr0ngP@55w0rd"
+// })

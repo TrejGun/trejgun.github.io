@@ -10,6 +10,7 @@ import {Page0006} from "./0006";
 import {Page0007} from "./0007";
 import {Page0008} from "./0008";
 import {Page0009} from "./0009";
+import {Page0010} from "./0010";
 
 
 export const Articles: React.FC = () => {
@@ -24,6 +25,7 @@ export const Articles: React.FC = () => {
       <Route component={Page0007} path="/articles/collecting-data-from-workers-in-nestjs" exact />
       <Route component={Page0008} path="/articles/how-to-convert-http-exception-to-rpc-exception" exact />
       <Route component={Page0009} path="/articles/apollo-client-for-authorization-with-nestjs" exact />
+      <Route component={Page0010} path="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );

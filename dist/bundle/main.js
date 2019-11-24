@@ -192,6 +192,15 @@
               null,
               r.createElement(
                 s.Link,
+                {component: u, to: "/articles/ssr-nextjs-authentication-for-graphql-nestjs-application"},
+                "SSR Next.js authentication for GraphQL Nest.js application",
+              ),
+            ),
+            r.createElement(
+              "li",
+              null,
+              r.createElement(
+                s.Link,
                 {component: u, to: "/articles/apollo-client-for-authorization-with-nestjs"},
                 "Apollo client for authorization with Nest.js",
               ),
@@ -277,8 +286,8 @@
           ),
         );
       };
-    function b() {
-      return (b =
+    function g() {
+      return (g =
         Object.assign ||
         function(e) {
           for (var t = 1; t < arguments.length; t++) {
@@ -288,9 +297,9 @@
           return e;
         }).apply(this, arguments);
     }
-    var g = r.forwardRef(function(e, t) {
-        var n = b({}, e);
-        return r.createElement(s.Link, b({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
+    var b = r.forwardRef(function(e, t) {
+        var n = g({}, e);
+        return r.createElement(s.Link, g({innerRef: t, rel: "noopener noreferrer nofollow", target: "_blank"}, n));
       }),
       y = Object(s.makeStyles)(
         function() {
@@ -364,7 +373,7 @@
             "Yesterday I tried to implement ",
             r.createElement("em", null, "CustomTransportStrategy"),
             " for Nest.js and after googling for half an hour I realize there are only examples for RabbitMQ like this",
-            r.createElement(g, {href: "https://github.com/AlariCode/nestjs-rmq"}, "nestjs-rmq"),
+            r.createElement(b, {href: "https://github.com/AlariCode/nestjs-rmq"}, "nestjs-rmq"),
             ", which is already included in ",
             r.createElement("em", null, "@nestjs/microservice"),
             " package. But there were nothing simple where one can see a logic related only to Nest.js itself until now",
@@ -420,7 +429,7 @@
           r.createElement(S, {slug: "custom-transport-for-nestjs"}),
         );
       },
-      I = function() {
+      A = function() {
         return r.createElement(
           "div",
           null,
@@ -450,12 +459,12 @@
             "p",
             null,
             "But unfortunately there were no good docs covering this part of framework. I mean there are, couple of pages in official documentation ",
-            r.createElement(g, {href: "https://docs.nestjs.com/guards"}, "Guards"),
+            r.createElement(b, {href: "https://docs.nestjs.com/guards"}, "Guards"),
             ",",
-            r.createElement(g, {href: "https://docs.nestjs.com/techniques/authentication"}, "Authentication"),
+            r.createElement(b, {href: "https://docs.nestjs.com/techniques/authentication"}, "Authentication"),
             ";",
             r.createElement(
-              g,
+              b,
               {href: "https://dev.to/nestjs/authentication-and-sessions-for-mvc-apps-with-nestjs-55a4"},
               "one good article with code samples",
             ),
@@ -467,7 +476,7 @@
             null,
             "This example is a fully functional",
             r.createElement(
-              g,
+              b,
               {href: "https://github.com/TrejGun/session-based-authorization-for-nestjs"},
               "boilerplate",
             ),
@@ -476,7 +485,7 @@
           r.createElement(S, {slug: "session-based-authorization-for-nestjs"}),
         );
       },
-      O = function() {
+      I = function() {
         return r.createElement(
           "div",
           null,
@@ -516,7 +525,7 @@
           r.createElement(S, {slug: "ethereum-server-for-nestjs"}),
         );
       },
-      A = function() {
+      O = function() {
         return r.createElement(
           "div",
           null,
@@ -554,7 +563,7 @@
             "p",
             null,
             "As always you can find code in my",
-            r.createElement(g, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
+            r.createElement(b, {href: "https://github.com/TrejGun/jwt-based-authorization-for-nestjs"}, "github repo"),
           ),
           r.createElement(S, {slug: "jwt-based-authorization-for-nestjs"}),
         );
@@ -600,7 +609,7 @@
             null,
             "As always you can find code in my",
             r.createElement(
-              g,
+              b,
               {href: "https://github.com/TrejGun/graphql-based-authorization-for-nestjs"},
               "github repo",
             ),
@@ -681,8 +690,8 @@
       );
     }
     var M,
-      z,
-      G = function() {
+      G,
+      q = function() {
         var e = N(),
           t = U(r.useState(null), 2),
           n = t[0],
@@ -730,12 +739,12 @@
             "p",
             null,
             "As always you can find code in my",
-            r.createElement(g, {href: "https://github.com/TrejGun/trejgun-nova-poshta-google-maps"}, "github repo"),
+            r.createElement(b, {href: "https://github.com/TrejGun/trejgun-nova-poshta-google-maps"}, "github repo"),
           ),
           r.createElement(S, {slug: "nova-poshta-google-maps-widget"}),
         );
       },
-      H = function() {
+      z = function() {
         return r.createElement(
           "div",
           null,
@@ -784,7 +793,7 @@
           r.createElement(S, {slug: "collecting-data-from-workers-in-nestjs"}),
         );
       },
-      _ = function() {
+      H = function() {
         return r.createElement(
           "div",
           null,
@@ -821,7 +830,7 @@
           r.createElement(S, {slug: "how-to-convert-http-exception-to-rpc-exception"}),
         );
       },
-      W = function() {
+      _ = function() {
         return r.createElement(
           "div",
           null,
@@ -874,31 +883,102 @@
           r.createElement(S, {slug: "apollo-client-for-authorization-with-nestjs"}),
         );
       },
-      B = function() {
+      Q = function() {
+        return r.createElement(
+          "div",
+          null,
+          r.createElement(E, {date: "2019-11-24T19:40:19.556Z"}),
+          r.createElement(
+            s.Typography,
+            {component: "h2", variant: "h4"},
+            "SSR Next.js authentication for GraphQL Nest.js application",
+          ),
+          r.createElement(
+            "p",
+            null,
+            "In last article I promised to show how to authenticate Next.js frontend with Server Side Rendering with Nest.js GraphQL application. Here it comes. The theory is REST client posts login/password to ",
+            r.createElement("em", null, "/login"),
+            "endpoint and saves session to cookies, then shares this session with Apollo client to make requests to",
+            r.createElement("em", null, "/graphql"),
+            " endpoint. To illustrate backend lets take code from another my article",
+            r.createElement(
+              s.Link,
+              {component: u, to: "/articles/session-based-authorization-for-nestjs"},
+              "Session based authorization for Nest.js",
+            ),
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {Request} from "express";\nimport {promisify} from "util";\nimport {Body, Controller, Get, Post, Req, UseGuards, HttpCode} from "@nestjs/common";\n\nimport {Public, User} from "../common/decorators";\nimport {LoginGuard, LocalGuard} from "../common/guards";\nimport {UserEntity} from "../user/user.entity";\nimport {UserService} from "../user/user.service";\nimport {UserCreateSchema} from "./schemas";\n\n\n@Controller("auth")\n@UseGuards(LocalGuard)\nexport class AuthController {\n  constructor(private readonly userService: UserService) {}\n\n  @Public()\n  @UseGuards(LoginGuard)\n  @HttpCode(200)\n  @Post("login")\n  public login(@User() user: UserEntity): UserEntity {\n    return user;\n  }\n\n  @Public()\n  @Get("logout")\n  public logout(@Req() req: Request): void {\n    req.logout();\n  }\n\n  @Public()\n  @Post("signup")\n  public async signup(@Body() data: UserCreateSchema, @Req() req: Request): Promise<UserEntity> {\n    const user = await this.userService.create(data);\n    // @ts-ignore\n    await promisify(req.logIn.bind(req))(user);\n    return user;\n  }\n}\n',
+          ),
+          r.createElement(
+            "p",
+            null,
+            "This controller will authorize user based on credentials sent by this small fetch wrapper",
+          ),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import fetch from "isomorphic-unfetch";\n\n\nexport default function ajax<T>(url: string, body: object): Promise<T> {\n  const headers = new Headers();\n  headers.append("Accept", "application/json");\n  headers.append("Content-Type", "application/json; charset=utf-8");\n  return fetch(`http:/localhost:3000/${url}`, {\n    headers,\n    method: "POST",\n    credentials: "include",\n    mode: "cors",\n    body: JSON.stringify(body),\n  }).then(response => {\n    if (response.status === 200) {\n      return response.json();\n    }\n    throw new Error(response.statusText);\n  });\n}\n\n\n// ajax<IUser>("auth/login", {\n//   login: "trejgun@gmail.com",\n//   password: "My5up3r5tr0ngP@55w0rd"\n// })\n',
+          ),
+          r.createElement("p", null, "Now it`s time to look at ApplicationModule and GraphQL configuration."),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {Module} from "@nestjs/common";\nimport {Request} from "express";\nimport {GraphQLModule} from "@nestjs/graphql";\nimport {TypeOrmModule} from "@nestjs/typeorm";\n\nimport {AuthModule} from "./auth/auth.module";\nimport ormconfig from "./orm.config";\n\n\n@Module({\n  imports: [\n    TypeOrmModule.forRoot(ormconfig),\n    GraphQLModule.forRootAsync({\n      useFactory: () => ({\n        debug: process.env.NODE_ENV !== "production",\n        playground: process.env.NODE_ENV !== "production",\n        context: ({req}: {req: Request}): any => ({req}),\n        autoSchemaFile: "./schema.gql",\n        cors: {\n          origin: ["http://localhost:3001"],\n          credentials: true,\n        },\n      }),\n    }),\n    AuthModule,\n  ],\n})\nexport class ApplicationModule {}\n',
+          ),
+          r.createElement(
+            "p",
+            null,
+            "CORS should be there because frontend and backend apps are most likely running on different ports even on localhost. In this example I assume backend is on 3000 and frontend is on 3001 port. CORS middleware also should be applied to app itself for login to work.",
+          ),
+          r.createElement("p", null, "And here comes actual Apollo config. It is tiny but powerful."),
+          r.createElement(
+            T,
+            {language: "typescript"},
+            'import {ApolloClient} from "apollo-client";\nimport {InMemoryCache} from "apollo-cache-inmemory";\nimport withApollo from "next-with-apollo";\nimport {createHttpLink} from "apollo-link-http";\nimport fetch from "isomorphic-unfetch";\n\n\nconst link = createHttpLink({\n  fetch,\n  uri: `http:/localhost:3000/graphql`,\n  fetchOptions: {\n    credentials: "include",\n    mode: "cors",\n  },\n});\n\nexport default withApollo(\n  ({initialState = {}}: {initialState?: any}) =>\n    new ApolloClient({\n      link,\n      cache: new InMemoryCache().restore(initialState),\n    }),\n  {getDataFromTree: "ssr"},\n);\n',
+          ),
+          r.createElement(
+            "p",
+            null,
+            "Notice how it uses ",
+            r.createElement("em", null, "unfetch"),
+            " to make rest requests from backend and the part it shares with frontend fetch call. This attributes allows server to share cookies or rather pass headers from initial page request (which includes cookies) to subsequent GraphQL requests.",
+          ),
+          r.createElement(S, {slug: "ssr-nextjs-authentication-for-graphql-nestjs-application"}),
+        );
+      },
+      W = function() {
         return r.createElement(
           a.d,
           null,
           r.createElement(a.b, {component: R, path: "/articles/custom-transport-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: I, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: O, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: A, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: A, path: "/articles/session-based-authorization-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: I, path: "/articles/ethereum-server-for-nestjs", exact: !0}),
+          r.createElement(a.b, {component: O, path: "/articles/jwt-based-authorization-for-nestjs", exact: !0}),
           r.createElement(a.b, {component: C, path: "/articles/graphql-based-authorization-for-nestjs", exact: !0}),
-          r.createElement(a.b, {component: G, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
-          r.createElement(a.b, {component: H, path: "/articles/collecting-data-from-workers-in-nestjs", exact: !0}),
+          r.createElement(a.b, {component: q, path: "/articles/nova-poshta-google-maps-widget", exact: !0}),
+          r.createElement(a.b, {component: z, path: "/articles/collecting-data-from-workers-in-nestjs", exact: !0}),
           r.createElement(a.b, {
-            component: _,
+            component: H,
             path: "/articles/how-to-convert-http-exception-to-rpc-exception",
             exact: !0,
           }),
           r.createElement(a.b, {
-            component: W,
+            component: _,
             path: "/articles/apollo-client-for-authorization-with-nestjs",
+            exact: !0,
+          }),
+          r.createElement(a.b, {
+            component: Q,
+            path: "/articles/ssr-nextjs-authentication-for-graphql-nestjs-application",
             exact: !0,
           }),
           r.createElement(a.a, {to: "/page-not-found"}),
         );
       },
-      Q = function() {
+      B = function() {
         return r.createElement(
           "div",
           null,
@@ -908,19 +988,19 @@
             "p",
             null,
             "I used to code js for pretty long time, and was quite tired of doing same stuff over and over again. At some point I even thought server side js have faced some stagnation. An then someone, some where mentioned",
-            r.createElement(g, {href: "https://nestjs.com/"}, "Nest.js"),
+            r.createElement(b, {href: "https://nestjs.com/"}, "Nest.js"),
             ", one month later I tried it and felt in love. Unfortunately it looks like the documentation is not as great as framework itself, so I decided to add my 2 cents to popularization on this awesome framework. Once I already had blog about coding and other related stuff, so I decided to make second attempt, and post here some tutorials and gotchas.",
           ),
         );
       },
-      q = function() {
+      F = function() {
         return r.createElement(
           "div",
           null,
           r.createElement(s.Typography, {component: "h2", variant: "h4"}, "Page Not Found"),
         );
       },
-      F = function() {
+      K = function() {
         return r.createElement(
           "div",
           null,
@@ -929,7 +1009,7 @@
             "p",
             null,
             "This is a static website with",
-            r.createElement(g, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
+            r.createElement(b, {href: "https://github.com/TrejGun/trejgun.github.io"}, "open source code"),
             ". It is not using cookies and/or not collecting any personal data by itself. All articles and source code of this site are available for education purposes under MIT license",
           ),
           r.createElement(
@@ -939,7 +1019,7 @@
           ),
         );
       },
-      K = Object(o.hot)(function() {
+      Y = Object(o.hot)(function() {
         return r.createElement(
           d,
           null,
@@ -947,25 +1027,25 @@
             a.d,
             null,
             r.createElement(a.b, {path: "/", component: f, exact: !0}),
-            r.createElement(a.b, {path: "/articles", component: B}),
-            r.createElement(a.b, {path: "/about", component: Q}),
-            r.createElement(a.b, {path: "/terms-and-conditions", component: F}),
-            r.createElement(a.b, {path: "/page-not-found", component: q}),
+            r.createElement(a.b, {path: "/articles", component: W}),
+            r.createElement(a.b, {path: "/about", component: B}),
+            r.createElement(a.b, {path: "/terms-and-conditions", component: K}),
+            r.createElement(a.b, {path: "/page-not-found", component: F}),
             r.createElement(a.a, {to: "/page-not-found"}),
           ),
         );
       }),
-      Y = n(20);
-    (M = K),
-      (z = document.getElementById("app")) &&
-        Y[z.hasChildNodes() ? "hydrate" : "render"](
+      J = n(20);
+    (M = Y),
+      (G = document.getElementById("app")) &&
+        J[G.hasChildNodes() ? "hydrate" : "render"](
           r.createElement(
             s.MuiThemeProvider,
             {theme: Object(s.createMuiTheme)({typography: {fontSize: 16}})},
             r.createElement(s.CssBaseline, null),
             r.createElement(i.a, null, r.createElement(M, null)),
           ),
-          z,
+          G,
         );
   },
   45: function(e, t, n) {
