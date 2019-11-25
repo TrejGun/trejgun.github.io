@@ -50,8 +50,8 @@ export const Page0010: React.FC = () => {
 
       <p>
         Notice how it uses <em>unfetch</em> to make rest requests from backend and the part it shares with frontend
-        fetch call. This attributes allows server to share cookies or rather pass headers from initial page request
-        (which includes cookies) to subsequent GraphQL requests.
+        fetch call. This attributes allows server to share cookies, you can also pass headers from initial page request
+        to subsequent GraphQL requests using context.
       </p>
 
       <Comments slug="ssr-nextjs-authentication-for-graphql-nestjs-application" />
