@@ -16,6 +16,11 @@ type AutoCompleteWrapperProps = TextFieldProps &
   FieldRenderProps<string, HTMLElement> &
   IAutoCompleteWrapperProps;
 
+declare interface IOption {
+  value: string;
+  label: string;
+}
+
 export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => {
   const {formatMessage} = useIntl();
 
@@ -33,7 +38,9 @@ export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => 
     <Autocomplete
       {...rest}
       multiple={multiple}
-      options={multiple ? (maxReached ? [] : options.filter((option: any) => !value.includes(option.value))) : options}
+      options={
+        multiple ? (maxReached ? [] : options.filter((option: IOption) => !value.includes(option.value))) : options
+      }
       defaultValue={
         multiple
           ? options.filter((option: any) => value.includes(option.value))
@@ -41,25 +48,25 @@ export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => 
       }
       onChange={
         multiple
-          ? (_e, values): void => {
+          ? (_e: React.ChangeEvent<{}>, values: Array<IOption>): void => {
             setMaxReached(value.length >= max - 1);
-            onChange(values.map(({value}: {value: string}) => value));
+            onChange(values.map(({value}: IOption) => value));
           }
-          : (_e, {value}: {value: string}): void => onChange(value)
+          : (_e: React.ChangeEvent<{}>, {value}: IOption): void => onChange(value)
       }
-      getOptionLabel={(option): string => option.label}
+      getOptionLabel={(option: IOption): string => option.label}
       noOptionsText={
         maxReached
           ? formatMessage({id: "components.autocomplete.max"}, {max})
           : formatMessage({id: "components.autocomplete.no"})
       }
-      renderInput={(params): React.ReactElement => (
+      renderInput={(params: any): React.ReactElement => (
         <TextField
           {...params}
           {...restInput}
           label={label}
           placeholder={placeholder}
-          helperText={(hasError && formatMessage({id: error}, {label: label})) || helperText}
+          helperText={hasError ? formatMessage({id: error}, {label}) : helperText}
           error={hasError}
           fullWidth
         />
