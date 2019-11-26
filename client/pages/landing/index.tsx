@@ -12,8 +12,8 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
-          <Link component={LinkAdapter} to="/articles/material-ui-autocomplete-bindings-to-final-form">
-            Material UI Autocomplete bindings to Final Form
+          <Link component={LinkAdapter} to="/articles/bindings-for-using-final-form-with-material-ui-autocomplete">
+            Bindings for using Final Form with Material UI Autocomplete
           </Link>
         </li>
         <li>

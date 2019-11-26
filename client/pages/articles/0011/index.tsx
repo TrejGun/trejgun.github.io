@@ -11,7 +11,7 @@ export const Page0011: React.FC = () => {
     <div>
       <MyDate date={"2019-11-26T18:56:19.556Z"} />
       <Typography component="h2" variant="h4">
-        Material UI Autocomplete bindings to Final Form
+        Bindings for using Final Form with Material UI Autocomplete
       </Typography>
 
       <p>
@@ -25,7 +25,7 @@ export const Page0011: React.FC = () => {
 
       <p>Hope this helps</p>
 
-      <Comments slug="material-ui-autocomplete-bindings-to-final-form" />
+      <Comments slug="bindings-for-using-final-form-with-material-ui-autocomplete" />
     </div>
   );
 };

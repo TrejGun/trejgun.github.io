@@ -27,7 +27,7 @@ export const Articles: React.FC = () => {
       <Route component={Page0008} path="/articles/how-to-convert-http-exception-to-rpc-exception" exact />
       <Route component={Page0009} path="/articles/apollo-client-for-authorization-with-nestjs" exact />
       <Route component={Page0010} path="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application" exact />
-      <Route component={Page0011} path="/articles/material-ui-autocomplete-bindings-to-final-form" exact />
+      <Route component={Page0011} path="/articles/bindings-for-using-final-form-with-material-ui-autocomplete" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );
