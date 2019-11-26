@@ -1,0 +1,73 @@
+import * as React from "react";
+import {useIntl} from "react-intl";
+
+import {FieldRenderProps} from "react-final-form";
+
+import TextField, {TextFieldProps} from "@material-ui/core/TextField";
+import Autocomplete, {AutocompleteProps} from "@material-ui/lab/Autocomplete";
+
+
+declare interface IAutoCompleteWrapperProps {
+  max: number;
+}
+
+type AutoCompleteWrapperProps = TextFieldProps &
+  AutocompleteProps &
+  FieldRenderProps<string, HTMLElement> &
+  IAutoCompleteWrapperProps;
+
+export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => {
+  const {formatMessage} = useIntl();
+
+  const {input, meta, helperText, max, options = [], ...rest} = props;
+  const {name, onChange, value, multiple, ...restInput} = input;
+  const label = formatMessage({id: `form.labels.${name}`});
+  const placeholder = formatMessage({id: `form.placeholders.${name}`});
+
+  const error = meta.error || meta.submitError;
+  const hasError = error && (meta.dirty || meta.submitFailed);
+
+  const [maxReached, setMaxReached] = React.useState(false);
+
+  return (
+    <Autocomplete
+      {...rest}
+      multiple={multiple}
+      options={multiple ? (maxReached ? [] : options.filter((option: any) => !value.includes(option.value))) : options}
+      defaultValue={
+        multiple
+          ? options.filter((option: any) => value.includes(option.value))
+          : options.find((option: any) => option.value === value)
+      }
+      onChange={
+        multiple
+          ? (_e, values): void => {
+            setMaxReached(value.length >= max - 1);
+            onChange(values.map(({value}: {value: string}) => value));
+          }
+          : (_e, {value}: {value: string}): void => onChange(value)
+      }
+      getOptionLabel={(option): string => option.label}
+      noOptionsText={
+        maxReached
+          ? formatMessage({id: "components.autocomplete.max"}, {max})
+          : formatMessage({id: "components.autocomplete.no"})
+      }
+      renderInput={(params): React.ReactElement => (
+        <TextField
+          {...params}
+          {...restInput}
+          label={label}
+          placeholder={placeholder}
+          helperText={(hasError && formatMessage({id: error}, {label: label})) || helperText}
+          error={hasError}
+          fullWidth
+        />
+      )}
+    />
+  );
+};
+
+AutoCompleteWrapper.defaultProps = {
+  max: Infinity,
+};

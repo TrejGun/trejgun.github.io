@@ -12,6 +12,11 @@ export const Landing: React.FC = () => {
 
       <ul>
         <li>
+          <Link component={LinkAdapter} to="/articles/material-ui-autocomplete-bindings-to-final-form">
+            Material UI Autocomplete bindings to Final Form
+          </Link>
+        </li>
+        <li>
           <Link component={LinkAdapter} to="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application">
             SSR Next.js authentication for GraphQL Nest.js application
           </Link>
