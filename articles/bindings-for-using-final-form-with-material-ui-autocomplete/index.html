@@ -4,7 +4,7 @@
 <span style="font-weight:700;color:navy">import</span> {FieldRenderProps} <span style="font-weight:700;color:navy">from</span> <span style="color:green;font-weight:700">"react-final-form"</span>;
 
 <span style="font-weight:700;color:navy">import</span> TextField, {TextFieldProps} <span style="font-weight:700;color:navy">from</span> <span style="color:green;font-weight:700">"@material-ui/core/TextField"</span>;
-<span style="font-weight:700;color:navy">import</span> Autocomplete, {AutocompleteProps} <span style="font-weight:700;color:navy">from</span> <span style="color:green;font-weight:700">"@material-ui/lab/Autocomplete"</span>;
+<span style="font-weight:700;color:navy">import</span> Autocomplete, {AutocompleteProps, RenderInputParams} <span style="font-weight:700;color:navy">from</span> <span style="color:green;font-weight:700">"@material-ui/lab/Autocomplete"</span>;
 
 
 <span style="font-weight:700;color:navy">declare</span> <span style="font-weight:700;color:navy">interface</span> IAutoCompleteWrapperProps {
@@ -43,16 +43,16 @@
       }
       <span class="hljs-params">defaultValue</span>={
         <span class="hljs-params">multiple</span>
-          ? <span class="hljs-params">options</span>.<span class="hljs-params">filter</span>(<span class="hljs-params">(<span class="hljs-params">option: <span class="hljs-built_in">any</span></span>) => value.includes(<span class="hljs-params">option.value</span>)</span>)
-          : <span class="hljs-params">options</span>.<span class="hljs-params">find</span>(<span class="hljs-params">(<span class="hljs-params">option: <span class="hljs-built_in">any</span></span>) => option.value === value</span>)
+          ? <span class="hljs-params">options</span>.<span class="hljs-params">filter</span>(<span class="hljs-params">(<span class="hljs-params">option: IOption</span>) => value.includes(<span class="hljs-params">option.value</span>)</span>)
+          : <span class="hljs-params">options</span>.<span class="hljs-params">find</span>(<span class="hljs-params">(<span class="hljs-params">option: IOption</span>) => option.value === value</span>)
       }
       <span class="hljs-params">onChange</span>={
         <span class="hljs-params">multiple</span>
           ? (<span class="hljs-params">_e: React.ChangeEvent&lt;{}>, values: <span class="hljs-built_in">Array</span>&lt;IOption></span>): <span class="hljs-params">void</span> =></span> {
             setMaxReached(value.length >= max - <span style="font-weight:400;color:#00f">1</span>);
-            onChange(values.map(<span class="hljs-function">(<span class="hljs-params">{value}: IOption</span>) =></span> value));
+            onChange(values.map(<span class="hljs-function">(<span class="hljs-params">option: IOption</span>) =></span> option.value));
           }
-          : (_e: React.ChangeEvent&lt;{}>, {value}: IOption): <span class="hljs-function"><span class="hljs-params">void</span> =></span> onChange(value)
+          : (_e: React.ChangeEvent&lt;{}>, option: IOption): <span class="hljs-function"><span class="hljs-params">void</span> =></span> onChange(option.value)
       }
       getOptionLabel={(option: IOption): <span class="hljs-function"><span class="hljs-params">string</span> =></span> option.label}
       noOptionsText={
@@ -60,7 +60,7 @@
           ? formatMessage({id: <span style="color:green;font-weight:700">"components.autocomplete.max"</span>}, {max})
           : formatMessage({id: <span style="color:green;font-weight:700">"components.autocomplete.no"</span>})
       }
-      renderInput={(params: <span class="hljs-built_in">any</span>): React.ReactElement => (
+      renderInput={(params: RenderInputParams): React.ReactElement => (
         &lt;TextField
           {...params}
           {...restInput}
