@@ -13,6 +13,13 @@ export const Landing: React.FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/biometric-authentication-for-nestjs">
+              Biometric authentication for Nest.js
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/bindings-for-using-final-form-with-material-ui-autocomplete">
               Bindings for using Final Form with Material UI Autocomplete
             </Link>

@@ -12,6 +12,7 @@ import {Page0008} from "./0008";
 import {Page0009} from "./0009";
 import {Page0010} from "./0010";
 import {Page0011} from "./0011";
+import {Page0012} from "./0012";
 
 
 export const Articles: React.FC = () => {
@@ -28,6 +29,7 @@ export const Articles: React.FC = () => {
       <Route component={Page0009} path="/articles/apollo-client-for-authorization-with-nestjs" exact />
       <Route component={Page0010} path="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application" exact />
       <Route component={Page0011} path="/articles/bindings-for-using-final-form-with-material-ui-autocomplete" exact />
+      <Route component={Page0012} path="/articles/biometric-authentication-for-nestjs" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );
