@@ -19,8 +19,8 @@ export const Page0013: React.FC = () => {
       </Typography>
 
       <p>
-        Global validation for GraphQl is a bit tricky and does not work under some conditions, but today i will show how
-        to use it on your project.
+        Global validation for GraphQl is a bit tricky and does not work under some conditions, but today I will show you
+        how to use it on your project.
       </p>
 
       <p>
@@ -41,7 +41,7 @@ export const Page0013: React.FC = () => {
       <Code language="typescript">{dto}</Code>
 
       <p>
-        Using this <span style={{textDecoration: "line-through"}}>ugly workarounds</span> simple rules you can now
+        Following this <span style={{textDecoration: "line-through"}}>ugly workarounds</span> simple rules you can now
         create nice REST-like validation with GraphQL
       </p>
 
