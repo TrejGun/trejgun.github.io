@@ -13,6 +13,13 @@ export const Landing: React.FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/graphql-global-validation-pipeline-code-first">
+              GraphQL global validation pipeline (code first)
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/biometric-authentication-for-nestjs">
               Biometric authentication for Nest.js
             </Link>

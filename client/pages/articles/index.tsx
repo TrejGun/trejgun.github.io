@@ -13,6 +13,7 @@ import {Page0009} from "./0009";
 import {Page0010} from "./0010";
 import {Page0011} from "./0011";
 import {Page0012} from "./0012";
+import {Page0013} from "./0013";
 
 
 export const Articles: React.FC = () => {
@@ -30,6 +31,7 @@ export const Articles: React.FC = () => {
       <Route component={Page0010} path="/articles/ssr-nextjs-authentication-for-graphql-nestjs-application" exact />
       <Route component={Page0011} path="/articles/bindings-for-using-final-form-with-material-ui-autocomplete" exact />
       <Route component={Page0012} path="/articles/biometric-authentication-for-nestjs" exact />
+      <Route component={Page0013} path="/articles/graphql-global-validation-pipeline-code-first" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );

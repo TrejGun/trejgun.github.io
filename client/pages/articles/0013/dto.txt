@@ -1,0 +1,4 @@
+  @Mutation(_returns => UserType)
+  public createUser(@Args("input") data: UserCreateDto): Promise<UserEntity> {
+    return this.userService.create(data);
+  }
