@@ -13,6 +13,13 @@ export const Landing: React.FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/valid-code-with-5-reserved-words-in-a-row">
+              Valid code with 5 reserved words in a row
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/graphql-global-validation-pipeline-code-first">
               GraphQL global validation pipeline (code first)
             </Link>
