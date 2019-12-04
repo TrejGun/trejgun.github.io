@@ -35,7 +35,7 @@
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "babel-loader": "8.0.6",
-    "babel-plugin-parameter-decorator": "1.0.12",
+    "babel-plugin-parameter-decorator": "1.0.14",
     "babel-plugin-transform-typescript-metadata": "0.2.2",
     "babel-watch": "7.0.0",
     "dotenv": "8.2.0",
