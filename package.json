@@ -49,7 +49,7 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-standard": "4.0.1",
     "express": "4.17.1",
-    "husky": "4.2.2",
+    "husky": "4.2.3",
     "lint-staged": "10.0.7",
     "mini-css-extract-plugin": "0.9.0",
     "morgan": "1.9.1",
