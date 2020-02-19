@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC, useState, ChangeEvent, ReactElement} from "react";
 import {useIntl} from "react-intl";
 
 import {FieldRenderProps} from "react-final-form";
@@ -21,7 +21,7 @@ declare interface IOption {
   label: string;
 }
 
-export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => {
+export const AutoCompleteWrapper: FC<AutoCompleteWrapperProps> = props => {
   const {formatMessage} = useIntl();
 
   const {input, meta, helperText, max, options = [], ...rest} = props;
@@ -32,7 +32,7 @@ export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => 
   const error = meta.error || meta.submitError;
   const hasError = error && (meta.dirty || meta.submitFailed);
 
-  const [maxReached, setMaxReached] = React.useState(false);
+  const [maxReached, setMaxReached] = useState(false);
 
   return (
     <Autocomplete
@@ -48,11 +48,11 @@ export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => 
       }
       onChange={
         multiple
-          ? (_e: React.ChangeEvent<{}>, values: Array<IOption>): void => {
+          ? (_e: ChangeEvent<{}>, values: Array<IOption>): void => {
             setMaxReached(value.length >= max - 1);
             onChange(values.map((option: IOption) => option.value));
           }
-          : (_e: React.ChangeEvent<{}>, option: IOption): void => onChange(option.value)
+          : (_e: ChangeEvent<{}>, option: IOption): void => onChange(option.value)
       }
       getOptionLabel={(option: IOption): string => option.label}
       noOptionsText={
@@ -60,7 +60,7 @@ export const AutoCompleteWrapper: React.FC<AutoCompleteWrapperProps> = props => 
           ? formatMessage({id: "components.autocomplete.max"}, {max})
           : formatMessage({id: "components.autocomplete.no"})
       }
-      renderInput={(params: RenderInputParams): React.ReactElement => (
+      renderInput={(params: RenderInputParams): ReactElement => (
         <TextField
           {...params}
           {...restInput}

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Redirect, Route, Switch} from "react-router";
 
 import {Page0001} from "./0001";
@@ -17,7 +17,7 @@ import {Page0013} from "./0013";
 import {Page0014} from "./0014";
 
 
-export const Articles: React.FC = () => {
+export const Articles: FC = () => {
   return (
     <Switch>
       <Route component={Page0001} path="/articles/custom-transport-for-nestjs" exact />

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Link, Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
 import {Comments} from "../../components/common/comments";
@@ -10,7 +10,7 @@ import module from "./module.txt";
 import apollo from "./apollo.txt";
 
 
-export const Page0010: React.FC = () => {
+export const Page0010: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-24T19:40:19.556Z"} />

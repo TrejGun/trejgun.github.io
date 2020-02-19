@@ -1,9 +1,9 @@
 {
-  "root": true,
+  "extends": [
+    "@trejgun/eslint-config/presets/tsx"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": [
-    "@trejgun/eslint-config/presets/tsx"
-  ]
+  "root": true
 }

@@ -1,10 +1,10 @@
-import * as React from "react";
+import React, {FunctionComponent} from "react";
 import * as ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import {createMuiTheme, CssBaseline, MuiThemeProvider} from "@material-ui/core";
 
 
-export default (App: React.FunctionComponent): void => {
+export default (App: FunctionComponent): void => {
   const rootElement = document.getElementById("app");
   if (!rootElement) {
     return;

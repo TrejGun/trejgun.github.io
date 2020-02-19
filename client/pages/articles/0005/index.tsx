@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
@@ -8,7 +8,7 @@ import resolver from "./resolver.txt";
 import login from "./login.txt";
 
 
-export const Page0005: React.FC = () => {
+export const Page0005: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-03T14:56:19.626Z"} />

@@ -1,10 +1,10 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../components/common/date";
 import {ExternalLink} from "../components/common/external-link";
 
 
-export const About: React.FC = () => {
+export const About: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-03T15:25:20.324Z"} />

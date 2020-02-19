@@ -1,9 +1,9 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Link, Typography, ListItemText, ListItem, List} from "@material-ui/core";
 import {LinkAdapter} from "../components/common/link-adapter";
 
 
-export const Landing: React.FC = () => {
+export const Landing: FC = () => {
   return (
     <div>
       <Typography component="h2" variant="h4">

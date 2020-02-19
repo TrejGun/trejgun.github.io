@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC, useState, ChangeEvent} from "react";
 import {Typography, Input} from "@material-ui/core";
 
 import {ExternalLink} from "../../components/common/external-link";
@@ -8,12 +8,12 @@ import {Map} from "./map";
 import useStyles from "./styles";
 
 
-export const Page0006: React.FC = () => {
+export const Page0006: FC = () => {
   const classes = useStyles();
-  const [warehouse, setWarehouse] = React.useState<any>(null);
+  const [warehouse, setWarehouse] = useState<any>(null);
 
-  const [googleMapsApiKey, setGoogleMapsApiKey] = React.useState<string>("");
-  const [novaPoshtaApiKey, setNovaPoshtaApiKey] = React.useState<string>("");
+  const [googleMapsApiKey, setGoogleMapsApiKey] = useState<string>("");
+  const [novaPoshtaApiKey, setNovaPoshtaApiKey] = useState<string>("");
 
   return (
     <div>
@@ -33,12 +33,12 @@ export const Page0006: React.FC = () => {
       <Input
         className={classes.input}
         placeholder={"Google Maps API key"}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => setGoogleMapsApiKey(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>): void => setGoogleMapsApiKey(e.target.value)}
       />
       <Input
         className={classes.input}
         placeholder={"Nova Poshta API key"}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => setNovaPoshtaApiKey(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>): void => setNovaPoshtaApiKey(e.target.value)}
       />
 
       <br />

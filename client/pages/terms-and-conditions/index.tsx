@@ -1,9 +1,9 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../components/common/external-link";
 
 
-export const TermsAndConditions: React.FC = () => {
+export const TermsAndConditions: FC = () => {
   return (
     <div>
       <Typography component="h2" variant="h4">

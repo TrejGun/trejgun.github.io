@@ -21,7 +21,7 @@
   label: <span class="hljs-built_in">string</span>;
 }
 
-<span style="font-weight:700;color:navy">export</span> <span style="font-weight:700;color:navy">const</span> AutoCompleteWrapper: React.FC&lt;AutoCompleteWrapperProps> = <span class="hljs-function"><span class="hljs-params">props</span> =></span> {
+<span style="font-weight:700;color:navy">export</span> <span style="font-weight:700;color:navy">const</span> AutoCompleteWrapper: FC&lt;AutoCompleteWrapperProps> = <span class="hljs-function"><span class="hljs-params">props</span> =></span> {
   <span style="font-weight:700;color:navy">const</span> {formatMessage} = useIntl();
 
   <span style="font-weight:700;color:navy">const</span> {input, meta, helperText, max, options = [], ...rest} = props;

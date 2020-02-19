@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {NovaPoshtaMap} from "@trejgun/nova-poshta-google-maps";
 import {CircularProgress} from "@material-ui/core";
 import useStyles from "./styles";
@@ -10,7 +10,7 @@ interface IMapProps {
   novaPoshtaApiKey: string;
 }
 
-export const Map: React.FC<IMapProps> = ({setWarehouse, googleMapsApiKey, novaPoshtaApiKey}) => {
+export const Map: FC<IMapProps> = ({setWarehouse, googleMapsApiKey, novaPoshtaApiKey}) => {
   const classes = useStyles();
 
   const getCoordinates = (setCoordinates: (coordinates: any) => {}, onError: PositionErrorCallback): void => {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {AppBar, Hidden, Link, Toolbar} from "@material-ui/core";
 
 import {LinkAdapter} from "../link-adapter";
@@ -6,7 +6,7 @@ import {LinkAdapter} from "../link-adapter";
 import useStyles from "./styles";
 
 
-export const Header: React.FC = () => {
+export const Header: FC = () => {
   const classes = useStyles();
   return (
     <AppBar className={classes.appbar} position="fixed">

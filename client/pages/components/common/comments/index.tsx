@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Comments as FacebookComments, FacebookProvider} from "react-facebook";
 
 
@@ -6,7 +6,7 @@ interface ICommentsProps {
   slug: string;
 }
 
-export const Comments: React.FC<ICommentsProps> = ({slug}) => {
+export const Comments: FC<ICommentsProps> = ({slug}) => {
   if (navigator.userAgent === "ReactSnap") {
     return null;
   }

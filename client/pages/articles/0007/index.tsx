@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
 import {Comments} from "../../components/common/comments";
@@ -9,7 +9,7 @@ import orchestratorResolver from "./orchestrator.resolver.txt";
 import orchestratorService from "./orchestrator.service.txt";
 
 
-export const Page0007: React.FC = () => {
+export const Page0007: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-14T18:40:19.556Z"} />

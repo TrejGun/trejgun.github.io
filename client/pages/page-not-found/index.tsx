@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 
 
-export const PageNotFound: React.FC = () => {
+export const PageNotFound: FC = () => {
   return (
     <div>
       <Typography component="h2" variant="h4">

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
 import {Comments} from "../../components/common/comments";
@@ -6,7 +6,7 @@ import {Code} from "../../components/common/code";
 import filter from "./filter.txt";
 
 
-export const Page0008: React.FC = () => {
+export const Page0008: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-16T14:31:19.556Z"} />

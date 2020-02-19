@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {FC} from "react";
 import {hot} from "react-hot-loader/root";
 import {Switch, Route, Redirect} from "react-router";
 
@@ -10,7 +10,7 @@ import {PageNotFound} from "./page-not-found";
 import {TermsAndConditions} from "./terms-and-conditions";
 
 
-const App: React.FC = () => {
+const App: FC = () => {
   return (
     <Layout>
       <Switch>
