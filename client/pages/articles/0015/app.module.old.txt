@@ -1,0 +1,18 @@
+import {Module} from "@nestjs/common";
+import {TypeOrmModule} from "@nestjs/typeorm";
+import {TypeOrmConfigService} from "./typeorm.options";
+import {TerminusConfigService} from "./terminus.options";
+import {TerminusModule, TypeOrmHealthIndicator} from "@nestjs/terminus";
+
+@Module({
+  imports: [
+    TypeOrmModule.forRootAsync({
+      useClass: TypeOrmConfigService,
+    }),
+    TerminusModule.forRootAsync({
+      inject: [TypeOrmHealthIndicator],
+      useClass: TerminusConfigService,
+    }),
+  ],
+})
+export class AppModule {}

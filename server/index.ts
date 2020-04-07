@@ -12,7 +12,7 @@ app.use(assets);
 const server = app.listen(process.env.PORT, () => {
   const {port} = server.address() as AddressInfo;
   // eslint-disable-next-line no-console
-  console.info(`Express server listening on port ${port}`);
+  console.info(`Express server listening on  http://localhost:${port}/`);
 });
 
 // eslint-disable-next-line no-console,@typescript-eslint/unbound-method

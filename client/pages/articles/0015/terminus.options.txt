@@ -1,0 +1,28 @@
+import {Injectable} from "@nestjs/common";
+import {
+  HealthIndicatorResult,
+  TerminusOptionsFactory,
+  TypeOrmHealthIndicator,
+  TerminusModuleOptions,
+} from "@nestjs/terminus";
+
+@Injectable()
+export class TerminusConfigService implements TerminusOptionsFactory {
+  constructor(private readonly db: TypeOrmHealthIndicator) {}
+
+  public createTerminusOptions(): TerminusModuleOptions {
+    return {
+      endpoints: [
+        {
+          url: "/health",
+          healthIndicators: [
+            (): Promise<HealthIndicatorResult> =>
+              this.db.pingCheck("database", {
+                timeout: 300,
+              }),
+          ],
+        },
+      ],
+    };
+  }
+}
