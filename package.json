@@ -31,7 +31,7 @@
     "@types/react-router-dom": "5.1.4",
     "@types/react-syntax-highlighter": "11.0.4",
     "@types/webpack-dev-middleware": "3.7.0",
-    "@types/webpack-hot-middleware": "2.25.0",
+    "@types/webpack-hot-middleware": "2.25.1",
     "@typescript-eslint/eslint-plugin": "2.27.0",
     "@typescript-eslint/parser": "2.27.0",
     "babel-loader": "8.1.0",
