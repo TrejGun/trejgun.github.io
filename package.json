@@ -39,7 +39,7 @@
     "babel-plugin-transform-typescript-metadata": "0.3.0",
     "babel-watch": "7.0.0",
     "dotenv": "8.2.0",
-    "dotenv-webpack": "1.7.0",
+    "dotenv-webpack": "1.8.0",
     "eslint": "7.0.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-config-standard": "14.1.1",
