@@ -13,6 +13,13 @@ export const Landing: FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/hot-potato-using-nestjs-microservices">
+              Hot Potato using Nest.js microservices
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/terminus-migration-guide">
               Terminus migration guide
             </Link>

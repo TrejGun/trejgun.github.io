@@ -16,6 +16,7 @@ import {Page0012} from "./0012";
 import {Page0013} from "./0013";
 import {Page0014} from "./0014";
 import {Page0015} from "./0015";
+import {Page0016} from "./0016";
 
 
 export const Articles: FC = () => {
@@ -36,6 +37,7 @@ export const Articles: FC = () => {
       <Route component={Page0013} path="/articles/graphql-global-validation-pipeline-code-first" exact />
       <Route component={Page0014} path="/articles/valid-code-with-5-reserved-words-in-a-row" exact />
       <Route component={Page0015} path="/articles/terminus-migration-guide" exact />
+      <Route component={Page0016} path="/articles/hot-potato-using-nestjs-microservices" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );
