@@ -13,6 +13,13 @@ export const Landing: FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/s3-module-for-nestjs">
+              S3 module for Nest.js
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/hot-potato-using-nestjs-microservices">
               Hot Potato using Nest.js microservices
             </Link>

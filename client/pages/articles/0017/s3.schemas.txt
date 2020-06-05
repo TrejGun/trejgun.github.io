@@ -1,0 +1,25 @@
+import {ApiProperty} from "@nestjs/swagger";
+import {IsNotEmpty, IsString} from "class-validator";
+
+import {IS3DeleteFields, IS3PutFields} from "../s3.types";
+
+
+export class S3DeleteSchema implements IS3DeleteFields {
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  public objectName: string;
+}
+
+
+export class S3PutSchema implements IS3PutFields {
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  public objectName: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
+  @IsString()
+  public contentType: string;
+}
