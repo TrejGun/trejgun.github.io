@@ -19,7 +19,7 @@
     "@babel/preset-typescript": "7.10.1",
     "@hot-loader/react-dom": "16.13.0",
     "@material-ui/core": "4.10.2",
-    "@trejgun/eslint-config": "0.0.10",
+    "@trejgun/eslint-config": "0.0.11",
     "@trejgun/nova-poshta-google-maps": "0.0.2",
     "@types/dotenv-webpack": "1.8.0",
     "@types/mini-css-extract-plugin": "0.9.1",
