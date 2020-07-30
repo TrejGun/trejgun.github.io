@@ -69,7 +69,7 @@
     "react-syntax-highlighter": "13.0.0",
     "size-plugin": "2.0.1",
     "typescript": "3.9.7",
-    "webpack": "4.43.0",
+    "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
     "webpack-dev-middleware": "3.7.2",
     "webpack-hot-middleware": "2.25.0"
