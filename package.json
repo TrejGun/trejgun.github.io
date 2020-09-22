@@ -62,7 +62,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-facebook": "8.1.4",
-    "react-hot-loader": "4.12.21",
+    "react-hot-loader": "4.13.0",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-snap": "1.23.0",
