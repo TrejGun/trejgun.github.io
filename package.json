@@ -58,7 +58,7 @@
     "morgan": "1.10.0",
     "prettier": "2.1.2",
     "progress-bar-webpack-plugin": "2.1.0",
-    "raw-loader": "4.0.1",
+    "raw-loader": "4.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-facebook": "8.1.4",
