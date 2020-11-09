@@ -144,6 +144,13 @@ export const Landing: FC = () => {
             </Link>
           </ListItemText>
         </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
+            <Link component={LinkAdapter} to="/articles/jwks-based-authorization-for-nestjs">
+              JWKS based authorization for Nest.js
+            </Link>
+          </ListItemText>
+        </ListItem>
       </List>
     </div>
   );
