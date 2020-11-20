@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import autocomplete from "./autocomplete.txt";
 
@@ -24,8 +23,6 @@ export const Page0011: FC = () => {
       <Code language="typescript">{autocomplete}</Code>
 
       <p>Hope this helps</p>
-
-      <Comments slug="bindings-for-using-final-form-with-material-ui-autocomplete" />
     </div>
   );
 };

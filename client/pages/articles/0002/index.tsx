@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 
 
 export const Page0002: FC = () => {
@@ -55,8 +54,6 @@ export const Page0002: FC = () => {
         with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I
         tried to make it simple, so you can adjust it for your own needs
       </p>
-
-      <Comments slug="session-based-authorization-for-nestjs" />
     </div>
   );
 };

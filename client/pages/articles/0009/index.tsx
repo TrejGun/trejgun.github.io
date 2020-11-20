@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Link, Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import {LinkAdapter} from "../../components/common/link-adapter";
 import types from "./types.txt";
@@ -38,8 +37,6 @@ export const Page0009: FC = () => {
         won`t be able to obtain and refresh <em>JWT</em> from server side. Use session based auth and share cookies
         between clients but this would be a topic for my next article
       </p>
-
-      <Comments slug="apollo-client-for-authorization-with-nestjs" />
     </div>
   );
 };

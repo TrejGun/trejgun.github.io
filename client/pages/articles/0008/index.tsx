@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import filter from "./filter.txt";
 
@@ -25,8 +24,6 @@ export const Page0008: FC = () => {
       </p>
 
       <Code language="typescript">{filter}</Code>
-
-      <Comments slug="how-to-convert-http-exception-to-rpc-exception" />
     </div>
   );
 };

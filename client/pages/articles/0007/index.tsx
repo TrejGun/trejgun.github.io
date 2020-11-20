@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import workerController from "./worker.controller.txt";
 import workerService from "./worker.service.txt";
@@ -43,8 +42,6 @@ export const Page0007: FC = () => {
         In comparison to promise based solution, this method is faster and more stable, because it allows you to end
         stream by timeout even if not all elements were received.
       </p>
-
-      <Comments slug="collecting-data-from-workers-in-nestjs" />
     </div>
   );
 };

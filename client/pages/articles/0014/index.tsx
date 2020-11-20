@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 
 import reserved from "./reserved.txt";
@@ -20,8 +19,6 @@ export const Page0014: FC = () => {
       <Code language="typescript">{reserved}</Code>
 
       <p>Who can find longer chain?</p>
-
-      <Comments slug="valid-code-with-5-reserved-words-in-a-row" />
     </div>
   );
 };

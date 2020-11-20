@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {ExternalLink} from "../../components/common/external-link";
 
 
@@ -23,8 +22,6 @@ export const Page0016: FC = () => {
         As always you can find code in my
         <ExternalLink href="https://github.com/TrejGun/hot-potato-using-nestjs-microservices">github repo</ExternalLink>
       </p>
-
-      <Comments slug="hot-potato-using-nestjs-microservices" />
     </div>
   );
 };

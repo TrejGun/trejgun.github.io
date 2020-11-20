@@ -4,7 +4,6 @@ import {Link, Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 import {LinkAdapter} from "../../components/common/link-adapter";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import controller from "./controller.txt";
 import bootstrap from "./bootstrap.txt";
@@ -46,8 +45,6 @@ export const Page0004: FC = () => {
         As always you can find code in my
         <ExternalLink href="https://github.com/TrejGun/jwt-based-authorization-for-nestjs">github repo</ExternalLink>
       </p>
-
-      <Comments slug="jwt-based-authorization-for-nestjs" />
     </div>
   );
 };

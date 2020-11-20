@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 
 import S3Module from "./s3.module.txt";
@@ -28,8 +27,6 @@ export const Page0017: FC = () => {
       <Code language="typescript">{S3Service}</Code>
 
       <p>Amazon is fucking expensive and over complicated. Just saying.</p>
-
-      <Comments slug="s3-module-for-nestjs" />
     </div>
   );
 };

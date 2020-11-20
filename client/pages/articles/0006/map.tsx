@@ -13,7 +13,7 @@ interface IMapProps {
 export const Map: FC<IMapProps> = ({setWarehouse, googleMapsApiKey, novaPoshtaApiKey}) => {
   const classes = useStyles();
 
-  const getCoordinates = (setCoordinates: (coordinates: any) => {}, onError: PositionErrorCallback): void => {
+  const getCoordinates = (setCoordinates: (coordinates: any) => void, onError: PositionErrorCallback): void => {
     setCoordinates({
       lat: 50.45466,
       lng: 30.5238,

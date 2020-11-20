@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import resolver from "./resolver.txt";
 import login from "./login.txt";
@@ -44,8 +43,6 @@ export const Page0005: FC = () => {
           github repo
         </ExternalLink>
       </p>
-
-      <Comments slug="graphql-based-authorization-for-nestjs" />
     </div>
   );
 };

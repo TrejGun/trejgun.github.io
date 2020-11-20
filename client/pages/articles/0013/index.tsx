@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import {ExternalLink} from "../../components/common/external-link";
 
@@ -49,8 +48,6 @@ export const Page0013: FC = () => {
         As always you can find code in my
         <ExternalLink href="https://github.com/TrejGun/graphql-global-validation-pipeline">github repo</ExternalLink>
       </p>
-
-      <Comments slug="graphql-global-validation-pipeline-code-first" />
     </div>
   );
 };

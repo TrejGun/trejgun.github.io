@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Link, Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import {LinkAdapter} from "../../components/common/link-adapter";
 import controller from "./controller.txt";
@@ -53,8 +52,6 @@ export const Page0010: FC = () => {
         fetch call, that is used for CORS. And cookies are shared by <em>withApollo</em> or rather it passes headers
         from initial page request (which includes cookies) to subsequent GraphQL requests.
       </p>
-
-      <Comments slug="ssr-nextjs-authentication-for-graphql-nestjs-application" />
     </div>
   );
 };

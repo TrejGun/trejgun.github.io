@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 
 import oldAppModule from "./app.module.old.txt";
@@ -39,8 +38,6 @@ export const Page0015: FC = () => {
         There is no HealthCheckResult exported from @nestjs/terminus module so I created a
         <ExternalLink href="https://github.com/nestjs/terminus/issues/639">bug report</ExternalLink>
       </p>
-
-      <Comments slug="terminus-migration-guide" />
     </div>
   );
 };

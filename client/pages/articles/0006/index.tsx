@@ -3,7 +3,6 @@ import {Typography, Input} from "@material-ui/core";
 
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Map} from "./map";
 import useStyles from "./styles";
 
@@ -56,8 +55,6 @@ export const Page0006: FC = () => {
         As always you can find code in my
         <ExternalLink href="https://github.com/TrejGun/trejgun-nova-poshta-google-maps">github repo</ExternalLink>
       </p>
-
-      <Comments slug="nova-poshta-google-maps-widget" />
     </div>
   );
 };

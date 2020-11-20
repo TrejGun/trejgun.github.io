@@ -5,7 +5,6 @@ import {Code} from "../../components/common/code";
 import server from "./server.txt";
 import controller from "./controller.txt";
 import {LinkAdapter} from "../../components/common/link-adapter";
-import {Comments} from "../../components/common/comments";
 
 
 export const Page0003: FC = () => {
@@ -40,8 +39,6 @@ export const Page0003: FC = () => {
       </p>
 
       <Code language="typescript">{controller}</Code>
-
-      <Comments slug="ethereum-server-for-nestjs" />
     </div>
   );
 };

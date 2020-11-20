@@ -3,7 +3,6 @@ import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
-import {Comments} from "../../components/common/comments";
 import ticker from "./ticker.txt";
 import server from "./server.txt";
 import controller from "./controller.txt";
@@ -54,8 +53,6 @@ export const Page0001: FC = () => {
       <Code language="typescript">{controller}</Code>
 
       <p>This is all for today, good luck with your code!</p>
-
-      <Comments slug="custom-transport-for-nestjs" />
     </div>
   );
 };

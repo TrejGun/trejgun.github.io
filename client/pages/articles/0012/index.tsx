@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Link, Typography} from "@material-ui/core";
 import {MyDate} from "../../components/common/date";
-import {Comments} from "../../components/common/comments";
 import {Code} from "../../components/common/code";
 import biometric from "./biometric.txt";
 import ssh from "./ssh.txt";
@@ -43,8 +42,6 @@ export const Page0012: FC = () => {
         </Link>
         but in fact it can return JWToken instead of saving user to session.
       </p>
-
-      <Comments slug="biometric-authentication-for-nestjs" />
     </div>
   );
 };
