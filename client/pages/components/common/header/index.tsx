@@ -5,7 +5,6 @@ import {LinkAdapter} from "../link-adapter";
 
 import useStyles from "./styles";
 
-
 export const Header: FC = () => {
   const classes = useStyles();
   return (

@@ -5,7 +5,6 @@ import {Header} from "../header";
 
 import useStyles from "./styles";
 
-
 export const Layout: FC = ({children}) => {
   const classes = useStyles();
   return (

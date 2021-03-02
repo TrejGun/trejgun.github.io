@@ -8,7 +8,6 @@ import {Code} from "../../components/common/code";
 import controller from "./controller.txt";
 import bootstrap from "./bootstrap.txt";
 
-
 export const Page0004: FC = () => {
   return (
     <div>

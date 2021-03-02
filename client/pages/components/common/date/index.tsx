@@ -2,7 +2,6 @@ import React, {FC} from "react";
 
 import useStyles from "./styles";
 
-
 interface IDateProps {
   date: Date | string | number;
 }

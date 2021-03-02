@@ -7,7 +7,6 @@ import workerService from "./worker.service.txt";
 import orchestratorResolver from "./orchestrator.resolver.txt";
 import orchestratorService from "./orchestrator.service.txt";
 
-
 export const Page0007: FC = () => {
   return (
     <div>

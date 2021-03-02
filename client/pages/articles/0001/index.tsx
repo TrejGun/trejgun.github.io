@@ -7,7 +7,6 @@ import ticker from "./ticker.txt";
 import server from "./server.txt";
 import controller from "./controller.txt";
 
-
 export const Page0001: FC = () => {
   return (
     <div>

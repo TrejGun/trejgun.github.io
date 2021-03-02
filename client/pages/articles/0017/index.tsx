@@ -9,7 +9,6 @@ import S3Schemas from "./s3.schemas.txt";
 import S3Controller from "./s3.controller.txt";
 import S3Service from "./s3.service.txt";
 
-
 export const Page0017: FC = () => {
   return (
     <div>

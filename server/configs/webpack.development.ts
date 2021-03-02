@@ -1,13 +1,10 @@
 import path from "path";
 import {Configuration, HotModuleReplacementPlugin} from "webpack";
-// eslint-disable-next-line import/default
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-// eslint-disable-next-line import/default
 import DotEnvPlugin from "dotenv-webpack";
 
-
 const config: Configuration = {
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  mode: "development",
   devtool: "cheap-module-source-map",
   entry: {
     main: ["webpack-hot-middleware/client", "./client"],
@@ -24,6 +21,9 @@ const config: Configuration = {
     modules: ["node_modules"],
     alias: {
       "react-dom": "@hot-loader/react-dom",
+    },
+    fallback: {
+      path: require.resolve("path-browserify"),
     },
   },
   module: {
@@ -69,7 +69,7 @@ const config: Configuration = {
       },
       {
         test: /\.[tj]sx?$/,
-        exclude: /node_modules\/(?!(@trejgun)\/).*/,
+        exclude: [/node_modules/],
         use: [
           {
             loader: "babel-loader",
@@ -113,16 +113,18 @@ const config: Configuration = {
     hints: false,
   },
   optimization: {
-    noEmitOnErrors: true,
     splitChunks: {
       cacheGroups: {
-        vendors: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           chunks: "all",
         },
       },
     },
+  },
+  watchOptions: {
+    aggregateTimeout: 0,
   },
 };
 

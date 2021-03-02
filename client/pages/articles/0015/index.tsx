@@ -10,7 +10,6 @@ import HealthModule from "./health.module.txt";
 import HealthController from "./health.controller.txt";
 import {ExternalLink} from "../../components/common/external-link";
 
-
 export const Page0015: FC = () => {
   return (
     <div>

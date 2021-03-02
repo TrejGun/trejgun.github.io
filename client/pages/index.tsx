@@ -9,7 +9,6 @@ import {About} from "./about";
 import {PageNotFound} from "./page-not-found";
 import {TermsAndConditions} from "./terms-and-conditions";
 
-
 const App: FC = () => {
   return (
     <Layout>

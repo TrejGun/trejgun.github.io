@@ -8,7 +8,6 @@ import fetch from "./fetch.txt";
 import module from "./module.txt";
 import apollo from "./apollo.txt";
 
-
 export const Page0010: FC = () => {
   return (
     <div>

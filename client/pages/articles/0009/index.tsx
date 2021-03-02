@@ -8,7 +8,6 @@ import constants from "./constants.txt";
 import storage from "./storage.txt";
 import client from "./client.txt";
 
-
 export const Page0009: FC = () => {
   return (
     <div>

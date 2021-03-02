@@ -1,13 +1,9 @@
-// eslint-disable-next-line import/default
-import webpack from "webpack";
+import {webpack} from "webpack";
 import {Router} from "express";
-// eslint-disable-next-line import/default
 import webpackDevMiddleware from "webpack-dev-middleware";
-// eslint-disable-next-line import/default
 import webpackHotMiddleware from "webpack-hot-middleware";
 import configDev from "./webpack.development";
 import configHot from "./webpack.hot";
-
 
 const router = Router(); // eslint-disable-line new-cap
 

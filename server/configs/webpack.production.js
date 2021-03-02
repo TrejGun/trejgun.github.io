@@ -6,7 +6,6 @@ const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 const DotEnvPlugin = require("dotenv-webpack");
 const SizePlugin = require("size-plugin");
 
-
 module.exports = {
   mode: "production",
   devtool: "source-map",
@@ -28,6 +27,9 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
     modules: ["node_modules"],
+    fallback: {
+      path: require.resolve("path-browserify"),
+    },
   },
   module: {
     rules: [
@@ -55,10 +57,12 @@ module.exports = {
             loader: "babel-loader",
             options: {
               babelrc: false,
+              sourceType: "unambiguous",
               presets: [
                 [
                   "@babel/env",
                   {
+                    modules: false,
                     targets: {
                       browsers: ["> 1%"],
                     },
@@ -94,15 +98,17 @@ module.exports = {
   stats: "minimal",
   optimization: {
     minimize: true,
-    noEmitOnErrors: true,
     splitChunks: {
       cacheGroups: {
-        vendors: {
+        defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
           name: "vendors",
           chunks: "all",
         },
       },
     },
+  },
+  watchOptions: {
+    aggregateTimeout: 0,
   },
 };

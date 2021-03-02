@@ -2,7 +2,6 @@ import path from "path";
 import {Router, static as serveStatic} from "express";
 import webpack from "../../configs/webpack";
 
-
 const router = Router(); // eslint-disable-line new-cap
 
 if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "staging") {

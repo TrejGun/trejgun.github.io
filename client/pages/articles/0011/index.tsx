@@ -4,7 +4,6 @@ import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
 import autocomplete from "./autocomplete.txt";
 
-
 export const Page0011: FC = () => {
   return (
     <div>

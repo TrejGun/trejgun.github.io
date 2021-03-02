@@ -6,7 +6,6 @@ import {MyDate} from "../../components/common/date";
 import {Map} from "./map";
 import useStyles from "./styles";
 
-
 export const Page0006: FC = () => {
   const classes = useStyles();
   const [warehouse, setWarehouse] = useState<any>(null);

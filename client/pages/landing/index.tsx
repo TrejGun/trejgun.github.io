@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import {Link, Typography, ListItemText, ListItem, List} from "@material-ui/core";
 import {LinkAdapter} from "../components/common/link-adapter";
 
-
 export const Landing: FC = () => {
   return (
     <div>

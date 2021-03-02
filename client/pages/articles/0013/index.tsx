@@ -8,7 +8,6 @@ import primitives from "./primitives.txt";
 import custom from "./custom.txt";
 import dto from "./dto.txt";
 
-
 export const Page0013: FC = () => {
   return (
     <div>

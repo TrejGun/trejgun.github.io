@@ -3,7 +3,6 @@ import {Typography} from "@material-ui/core";
 import {ExternalLink} from "../../components/common/external-link";
 import {MyDate} from "../../components/common/date";
 
-
 export const Page0002: FC = () => {
   return (
     <div>

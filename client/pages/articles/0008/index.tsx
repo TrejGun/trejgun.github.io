@@ -4,7 +4,6 @@ import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
 import filter from "./filter.txt";
 
-
 export const Page0008: FC = () => {
   return (
     <div>

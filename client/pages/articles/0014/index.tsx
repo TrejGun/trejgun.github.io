@@ -5,7 +5,6 @@ import {Code} from "../../components/common/code";
 
 import reserved from "./reserved.txt";
 
-
 export const Page0014: FC = () => {
   return (
     <div>

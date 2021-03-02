@@ -6,7 +6,6 @@ import server from "./server.txt";
 import controller from "./controller.txt";
 import {LinkAdapter} from "../../components/common/link-adapter";
 
-
 export const Page0003: FC = () => {
   return (
     <div>

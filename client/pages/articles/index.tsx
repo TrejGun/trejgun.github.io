@@ -20,7 +20,6 @@ import {Page0016} from "./0016";
 import {Page0017} from "./0017";
 import {Page0018} from "./0018";
 
-
 export const Articles: FC = () => {
   return (
     <Switch>

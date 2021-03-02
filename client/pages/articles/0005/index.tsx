@@ -6,7 +6,6 @@ import {Code} from "../../components/common/code";
 import resolver from "./resolver.txt";
 import login from "./login.txt";
 
-
 export const Page0005: FC = () => {
   return (
     <div>

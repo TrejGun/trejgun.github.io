@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import {Typography} from "@material-ui/core";
 
-
 export const PageNotFound: FC = () => {
   return (
     <div>

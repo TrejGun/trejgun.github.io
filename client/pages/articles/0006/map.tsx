@@ -3,7 +3,6 @@ import {NovaPoshtaMap} from "@trejgun/nova-poshta-google-maps";
 import {CircularProgress} from "@material-ui/core";
 import useStyles from "./styles";
 
-
 interface IMapProps {
   setWarehouse: (warehouse: any) => void;
   googleMapsApiKey: string;

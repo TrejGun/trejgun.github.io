@@ -7,7 +7,6 @@ import ssh from "./ssh.txt";
 import {ExternalLink} from "../../components/common/external-link";
 import {LinkAdapter} from "../../components/common/link-adapter";
 
-
 export const Page0012: FC = () => {
   return (
     <div>
