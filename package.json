@@ -70,7 +70,7 @@
     "react-syntax-highlighter": "15.4.3",
     "size-plugin": "2.0.2",
     "typescript": "4.2.2",
-    "webpack": "5.24.2",
+    "webpack": "5.24.3",
     "webpack-cli": "4.5.0",
     "webpack-dev-middleware": "4.1.0",
     "webpack-hot-middleware": "git+https://github.com/lukeapage/webpack-hot-middleware#2cdfe0d0111dab6432b8683112fd2d17a5e80572"
