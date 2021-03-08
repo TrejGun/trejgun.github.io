@@ -7,14 +7,14 @@
     "url": "https://github.com/TrejGun/trejgun.github.io"
   },
   "dependencies": {
-    "@babel/cli": "7.13.0",
-    "@babel/core": "7.13.8",
-    "@babel/node": "7.13.0",
+    "@babel/cli": "7.13.10",
+    "@babel/core": "7.13.10",
+    "@babel/node": "7.13.10",
     "@babel/plugin-proposal-class-properties": "7.13.0",
     "@babel/plugin-proposal-decorators": "7.13.5",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.13.8",
     "@babel/plugin-proposal-optional-chaining": "7.13.8",
-    "@babel/preset-env": "7.13.9",
+    "@babel/preset-env": "7.13.10",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.13.0",
     "@hot-loader/react-dom": "17.0.1",
