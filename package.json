@@ -42,7 +42,7 @@
     "babel-watch": "7.4.1",
     "dotenv": "8.2.0",
     "dotenv-webpack": "6.0.4",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-config-standard": "16.0.2",
     "eslint-import-resolver-ts": "0.4.2",
