@@ -23,7 +23,7 @@
     "@trejgun/nova-poshta-google-maps": "0.0.3",
     "@types/dotenv-webpack": "5.0.0",
     "@types/express": "4.17.11",
-    "@types/mini-css-extract-plugin": "1.4.1",
+    "@types/mini-css-extract-plugin": "1.4.2",
     "@types/morgan": "1.9.2",
     "@types/node": "12.20.10",
     "@types/react": "17.0.3",
