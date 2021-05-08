@@ -31,7 +31,7 @@
     "@types/react-router": "5.1.14",
     "@types/react-router-dom": "5.1.7",
     "@types/react-syntax-highlighter": "13.5.0",
-    "@types/webpack": "4.41.28",
+    "@types/webpack": "5.28.0",
     "@types/webpack-dev-middleware": "4.1.2",
     "@types/webpack-hot-middleware": "2.25.4",
     "@typescript-eslint/eslint-plugin": "4.22.1",
