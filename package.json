@@ -22,7 +22,7 @@
     "@trejgun/eslint-config": "0.1.7",
     "@trejgun/nova-poshta-google-maps": "0.0.4",
     "@types/dotenv-webpack": "7.0.2",
-    "@types/express": "4.17.11",
+    "@types/express": "4.17.12",
     "@types/mini-css-extract-plugin": "1.4.3",
     "@types/morgan": "1.9.2",
     "@types/node": "12.20.13",
