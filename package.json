@@ -25,7 +25,7 @@
     "@types/express": "4.17.12",
     "@types/mini-css-extract-plugin": "1.4.3",
     "@types/morgan": "1.9.2",
-    "@types/node": "12.20.13",
+    "@types/node": "12.20.14",
     "@types/react": "17.0.9",
     "@types/react-dom": "17.0.6",
     "@types/react-router": "5.1.14",
