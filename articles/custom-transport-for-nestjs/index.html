@@ -34,10 +34,12 @@
   }
 
 <span>  </span><span style="font-weight:700;color:navy">public</span><span> </span><span style="font-weight:700;color:navy">async</span><span> listener(e: </span><span class="hljs-built_in">number</span><span>): </span><span class="hljs-built_in">Promise</span><span>&lt;</span><span class="hljs-built_in">void</span><span>> {
-</span><span>    </span><span style="font-weight:700;color:navy">const</span><span> handler: MessageHandler | </span><span style="font-weight:700;color:navy">undefined</span><span> = </span><span class="hljs-built_in">this</span><span>.messageHandlers.get(</span><span style="color:green;font-weight:700">"TICK"</span><span>);
-</span><span>    </span><span style="font-weight:700;color:navy">if</span><span> (!handler) {
+</span><span>    </span><span style="font-weight:700;color:navy">const</span><span> handler = </span><span class="hljs-built_in">this</span><span>.getHandlerByPattern(</span><span style="color:green;font-weight:700">"TICK"</span><span>);
+</span>
+<span>    </span><span style="font-weight:700;color:navy">if</span><span> (!handler) {
 </span><span>      </span><span style="font-weight:700;color:navy">return</span><span>;
 </span>    }
+
 <span>    </span><span style="font-weight:700;color:navy">const</span><span> result = </span><span style="font-weight:700;color:navy">await</span><span> handler(e);
 </span><span>    </span><span class="hljs-built_in">console</span><span>.log(result);
 </span>  }

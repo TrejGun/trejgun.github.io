@@ -4,7 +4,7 @@ import {S3PutSchema, S3DeleteSchema} from "./s3.schemas";
 import {S3Service} from "./s3.service";
 import {IS3Result} from "./s3.types";
 
-@Controller("s3")
+@Controller("/s3")
 export class S3Controller {
   constructor(private readonly s3Service: S3Service) {}
 

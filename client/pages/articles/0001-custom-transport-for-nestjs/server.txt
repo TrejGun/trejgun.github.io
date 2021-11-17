@@ -15,10 +15,12 @@ export class TickerServer extends Server implements CustomTransportStrategy {
   }
 
   public async listener(e: number): Promise<void> {
-    const handler: MessageHandler | undefined = this.messageHandlers.get("TICK");
+    const handler = this.getHandlerByPattern("TICK");
+
     if (!handler) {
       return;
     }
+
     const result = await handler(e);
     console.log(result);
   }

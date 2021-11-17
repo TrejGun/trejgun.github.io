@@ -40,12 +40,12 @@ export const Page0013: FC = () => {
 
       <p>
         Following this <span style={{textDecoration: "line-through"}}>ugly workarounds</span> simple rules you can now
-        create nice REST-like validation with GraphQL
+        create nice REST-like validation for GraphQL
       </p>
 
       <p>
-        As always you can find code in my
-        <ExternalLink href="https://github.com/TrejGun/graphql-global-validation-pipeline">github repo</ExternalLink>
+        The code for this article evolved over time and now shows validation for REST, GraphQL and WebSockets in this
+        <ExternalLink href="https://github.com/GemunIon/nestjs-validation">github repo</ExternalLink>
       </p>
     </div>
   );

@@ -8,7 +8,7 @@ export const Page0002: FC = () => {
     <div>
       <MyDate date={"2019-10-26T14:08:19.626Z"} />
       <Typography component="h2" variant="h4">
-        Session based authorization for Nest.js
+        Authorization for Nest.js
       </Typography>
 
       <p>
@@ -27,7 +27,7 @@ export const Page0002: FC = () => {
         <li>Authorization with social networks</li>
         <li>Private/Public areas (controllers/routes)</li>
         <li>Role based ACL</li>
-        <li>Persisted sessions</li>
+        <li>Persisted data</li>
       </ul>
 
       <p>
@@ -46,12 +46,22 @@ export const Page0002: FC = () => {
       </Typography>
 
       <p>
-        This example is a fully functional
-        <ExternalLink href="https://github.com/TrejGun/session-based-authorization-for-nestjs">
-          boilerplate
-        </ExternalLink>
-        with all features mentioned above. It also includes some very basic tests, typeorm, migrations and utils. I
-        tried to make it simple, so you can adjust it for your own needs
+        Here is a set of fully functional
+        <ExternalLink href="https://github.com/GemunIon/nestjs-auth">boilerplates</ExternalLink>
+        with all features mentioned above, and more:
+      </p>
+
+      <ul>
+        <li>Popular authorization services like Firebase, Auth0, Cognito, OneLogin</li>
+        <li>Popular social networks Facebook, Google, Apple, etc</li>
+        <li>Biometric authorization for mobile devices</li>
+        <li>REST, GQL, WebSockets API</li>
+        <li>Sessions and JWT approach</li>
+      </ul>
+
+      <p>
+        It also includes some very basic tests, typeorm, migrations and utils. I tried to make it simple, so you can
+        adjust it for your own needs
       </p>
     </div>
   );

@@ -20,7 +20,7 @@ export default function ajax<T>(url: string, body: object): Promise<T> {
 }
 
 
-// ajax<IUser>("auth/login", {
-//   login: "trejgun@gmail.com",
-//   password: "My5up3r5tr0ngP@55w0rd"
-// })
+ajax<IUser>("auth/login", {
+  login: "trejgun@gmail.com",
+  password: "My5up3r5tr0ngP@55w0rd"
+})

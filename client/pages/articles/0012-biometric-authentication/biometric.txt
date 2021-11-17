@@ -13,7 +13,7 @@ const email = "trejgun@gmail.com"; // user's login
 
 const payload = email; // JSON.stringify({email, ...});
 
-console.log("payload", email);
+console.log("payload", payload);
 
 const signature = key1.sign(payload, "base64"); // I found it easier to use just email here
 

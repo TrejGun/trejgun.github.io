@@ -1,18 +1,19 @@
 import React, {FC} from "react";
-import {Link, Typography} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
+
 import {MyDate} from "../../components/common/date";
 import {Code} from "../../components/common/code";
+import {ExternalLink} from "../../components/common/external-link";
+
 import biometric from "./biometric.txt";
 import ssh from "./ssh.txt";
-import {ExternalLink} from "../../components/common/external-link";
-import {LinkAdapter} from "../../components/common/link-adapter";
 
 export const Page0012: FC = () => {
   return (
     <div>
       <MyDate date={"2019-11-29T19:23:19.556Z"} />
       <Typography component="h2" variant="h4">
-        Biometric authentication for Nest.js
+        Biometric authentication
       </Typography>
 
       <p>
@@ -27,19 +28,14 @@ export const Page0012: FC = () => {
 
       <Code language="bash">{ssh}</Code>
 
-      <p>
-        New code is built on top of <em>passport-local</em> authentication strategy and is interesting only in part
-        where it verifies payload, so here is full algorithm with explanations
-      </p>
+      <p>Here is full algorithm of how to generate and verify signature with explanations</p>
 
       <Code language="typescript">{biometric}</Code>
 
       <p>
-        Biometric strategy was added to my old code sample for article
-        <Link component={LinkAdapter} to="/articles/session-based-authorization-for-nestjs">
-          Session based authorization for Nest.js
-        </Link>
-        but in fact it can return JWToken instead of saving user to session.
+        You can check this in action as a part of my
+        <ExternalLink href="https://github.com/GemunIon/nestjs-auth">demo repository</ExternalLink>
+        with authorization examples
       </p>
     </div>
   );

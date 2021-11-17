@@ -19,8 +19,8 @@ export const Page0009: FC = () => {
       <p>
         As of recently I was working on the front-end part of authorization, for my project based on GraphQL. So today I
         want to share Apollo client configuration which you can use with example from my previous article
-        <Link component={LinkAdapter} to="/articles/graphql-based-authorization-for-nestjs">
-          GraphQL based authorization for Nest.js
+        <Link component={LinkAdapter} to="/articles/authorization-for-nestjs">
+          Authorization for Nest.js
         </Link>
         This code is for <em>react-native</em> but can be easily adopted to any other frontend framework.
       </p>

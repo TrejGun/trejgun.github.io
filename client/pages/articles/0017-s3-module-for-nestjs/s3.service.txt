@@ -23,7 +23,7 @@ export class S3Service {
   }
 
   putObject({contentType}: IS3PutFields): Promise<IS3Result> {
-    const filename = `${v4()}.${contentType.split("/")[0]}`;
+    const filename = `${v4()}.${contentType.split("/")[1]}`;
 
     const params = {
       Bucket: process.env.AWS_S3_BUCKET_NAME,

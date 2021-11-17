@@ -60,11 +60,11 @@
 }
 
 
-<span></span><span style="color:grey;font-style:italic">// ajax&lt;IUser>("auth/login", {</span><span>
-</span><span></span><span style="color:grey;font-style:italic">//   login: "trejgun@gmail.com",</span><span>
-</span><span></span><span style="color:grey;font-style:italic">//   password: "My5up3r5tr0ngP@55w0rd"</span><span>
-</span><span></span><span style="color:grey;font-style:italic">// })</span><span>
-</span>
+<span>ajax&lt;IUser>(</span><span style="color:green;font-weight:700">"auth/login"</span><span>, {
+</span><span>  </span><span class="hljs-attr">login</span><span>: </span><span style="color:green;font-weight:700">"trejgun@gmail.com"</span><span>,
+</span><span>  </span><span class="hljs-attr">password</span><span>: </span><span style="color:green;font-weight:700">"My5up3r5tr0ngP@55w0rd"</span><span>
+</span>})
+
 </code></pre><p>Now it`s time to look at ApplicationModule and GraphQL configuration.</p><pre style="display:block;overflow-x:auto;padding:.5em;color:#000;background:#fff"><code class="language-typescript" style="white-space:pre"><span style="font-weight:700;color:navy">import</span><span> {Module} </span><span style="font-weight:700;color:navy">from</span><span> </span><span style="color:green;font-weight:700">"@nestjs/common"</span><span>;
 </span><span></span><span style="font-weight:700;color:navy">import</span><span> {Request} </span><span style="font-weight:700;color:navy">from</span><span> </span><span style="color:green;font-weight:700">"express"</span><span>;
 </span><span></span><span style="font-weight:700;color:navy">import</span><span> {GraphQLModule} </span><span style="font-weight:700;color:navy">from</span><span> </span><span style="color:green;font-weight:700">"@nestjs/graphql"</span><span>;

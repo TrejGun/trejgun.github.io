@@ -38,6 +38,12 @@ export const Page0003: FC = () => {
       </p>
 
       <Code language="typescript">{controller}</Code>
+
+      <p>
+        I was experimenting around web3.js library or a while and realized that ethers.js is just better. Module based
+        on ethers.js which can worth with block/transactions as well as with contract events is available for sale.
+        Please contact me at trejgun@gmail.com
+      </p>
     </div>
   );
 };

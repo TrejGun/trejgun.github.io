@@ -9,7 +9,7 @@ import {ApolloLink, Observable} from "apollo-link";
 
 import {AUTH_STORE_KEY, ERRORS} from "./constants";
 import {getItem, setItem} from "./storage";
-import {IAuth} from "./interface";
+import {IJwt} from "./interface";
 
 
 const httpLink = createHttpLink({
@@ -17,7 +17,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext(async (_, {headers}) => {
-  const auth = await getItem<IAuth>(AUTH_STORE_KEY);
+  const auth = await getItem<IJwt>(AUTH_STORE_KEY);
 
   if (auth) {
     return {
@@ -31,8 +31,8 @@ const authLink = setContext(async (_, {headers}) => {
   }
 });
 
-const refreshToken = async (): Promise<IAuth | null> => {
-  let auth = await getItem<IAuth>(AUTH_STORE_KEY);
+const refreshToken = async (): Promise<IJwt | null> => {
+  let auth = await getItem<IJwt>(AUTH_STORE_KEY);
 
   if (!auth) {
     return null;
