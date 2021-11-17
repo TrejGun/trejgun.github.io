@@ -12,6 +12,13 @@ export const Landing: FC = () => {
       <List>
         <ListItem disableGutters>
           <ListItemText>
+            <Link component={LinkAdapter} to="/articles/transfet-ethereun-using-smart-contract">
+              Transfer ETH using smart contract
+            </Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem disableGutters>
+          <ListItemText>
             <Link component={LinkAdapter} to="/articles/s3-module-for-nestjs">
               S3 module for Nest.js
             </Link>

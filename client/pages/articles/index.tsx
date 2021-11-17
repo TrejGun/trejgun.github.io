@@ -14,6 +14,7 @@ import {Page0013} from "./0013-graphql-global-validation-pipeline-code-first";
 import {Page0014} from "./0014-valid-code-with-5-reserved-words-in-a-row";
 import {Page0016} from "./0016-hot-potato-using-nestjs-microservices";
 import {Page0017} from "./0017-s3-module-for-nestjs";
+import {Page0018} from "./0018-transfet-ethereun-using-smart-contract";
 
 export const Articles: FC = () => {
   return (
@@ -31,6 +32,7 @@ export const Articles: FC = () => {
       <Route component={Page0014} path="/articles/valid-code-with-5-reserved-words-in-a-row" exact />
       <Route component={Page0016} path="/articles/hot-potato-using-nestjs-microservices" exact />
       <Route component={Page0017} path="/articles/s3-module-for-nestjs" exact />
+      <Route component={Page0018} path="/articles/transfet-ethereun-using-smart-contract" exact />
       <Redirect to="/page-not-found" />
     </Switch>
   );
