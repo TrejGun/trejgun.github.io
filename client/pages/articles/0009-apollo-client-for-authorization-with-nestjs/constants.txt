@@ -1,5 +1,0 @@
-export const AUTH_STORE_KEY = "AUTH_STORE_KEY";
-
-export enum ERRORS {
-  AUTH_ERROR = "AUTH_ERROR",
-}

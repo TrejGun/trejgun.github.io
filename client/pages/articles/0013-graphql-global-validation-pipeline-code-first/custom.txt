@@ -1,4 +1,0 @@
-  @Query(_returns => UserType)
-  public getByRole(@Args({name: "role", type: () => UserRole, nullable: true}) role: UserRole): Promise<UserEntity | undefined> {
-    return this.userService.findOne({roles: role});
-  }

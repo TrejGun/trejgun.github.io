@@ -1,3 +1,0 @@
-export default void async function f(): Promise<void> {
-  await Promise.resolve();
-};

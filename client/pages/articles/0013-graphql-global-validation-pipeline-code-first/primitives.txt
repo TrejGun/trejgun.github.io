@@ -1,4 +1,0 @@
-  @Query(_returns => UserType)
-  public getById(@Args({name: "id", type: () => Int}) id: number): Promise<UserEntity | undefined> {
-    return this.userService.findOne({id});
-  }

@@ -1,6 +1,0 @@
-await library
-  .getSigner()
-  .sendTransaction({
-    to: CONTRACT_ADDR,
-    value: parseEther("1"),
-  });

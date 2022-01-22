@@ -1,2 +1,0 @@
-const contract = new ethers.Contract(CONTRACT_ADDR, abi, library.getSigner());
-await contract.deposit({ value: parseEther("1") });
